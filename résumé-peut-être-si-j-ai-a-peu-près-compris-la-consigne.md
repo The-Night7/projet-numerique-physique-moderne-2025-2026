@@ -20,7 +20,7 @@ Le projet est organisé en **quatre grandes parties** :
 ### 2️⃣ Superposition d'Ondes Planes
 - Justification de la linéarité de l'équation de Schrödinger 
 - Étude de la superposition de trois ondes planes et calcul de la **densité de probabilité de présence** 
-- Représentation graphique avec enveloppe sur l'intervalle $[-\pi/\Delta k,\ \pi/\Delta k]$$ 
+- Représentation graphique avec enveloppe sur l'intervalle $$[-\pi/\Delta k,\ \pi/\Delta k]$$ 
 
 ### 3️⃣ Paquets d'Ondes Gaussiens
 - Expression générale d'un paquet d'ondes en 3D et 1D 
