@@ -37,3 +37,58 @@ Si la particule est confinée dans un puits de potentiel de profondeur infinie d
 #### h. Montrer que ces fonctions d’onde (pour une particule libre) ne sont pas des solutions physiquement acceptables. 
 Réponse : Si l'on cherche à normaliser l'onde plane libre $\Psi(x,t)=\Psi_0 e^{i(kx-\omega t)}$, le calcul donne : $\int_{-\infty}^{+\infty}|\Psi_0 e^{i(kx-\omega t)}|^2\,dx=\int_{-\infty}^{+\infty}|\Psi_0|^2\,dx$. <br>
 Comme $|\Psi_0|^2$ est une constante, cette intégrale diverge vers l'infini et ne converge jamais vers 1. Ainsi, bien que l'onde plane soit une solution mathématique valide de l'équation de Schrödinger, elle n'est pas normalisable et ne peut donc pas représenter l'état physique réel et acceptable d'une particule isolée. *(Dans la réalité, on utilise des paquets d'ondes, c'est-à-dire une superposition d'ondes planes, pour obtenir des solutions localisées et normalisables).*
+
+### 2. Un peu de Python
+Réponse : Le programme `OndePlane1d2A.py` a été créé pour tracer le graphique décrit ci-dessus. Voir le fichier Python associé.
+
+---
+
+## Superposition d'ondes planes
+### 1. Notions physiques
+
+#### a. Justifier qu'une superposition d'ondes planes reste solution de l'équation de Schrödinger.
+Réponse : L'équation de Schrödinger est une équation **linéaire** en $\Psi$. Cela signifie que si $\Psi_1$ et $\Psi_2$ sont deux solutions, alors toute combinaison linéaire $\alpha\Psi_1 + \beta\Psi_2$ (avec $\alpha, \beta \in \mathbb{C}$) est également solution : c'est le **principe de superposition**. <br>
+En effet, en notant $\hat{H} = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}$ l'opérateur hamiltonien (pour une particule libre), l'équation de Schrödinger s'écrit $i\hbar\frac{\partial\Psi}{\partial t} = \hat{H}\Psi$. Par linéarité de la dérivée et de $\hat{H}$ :
+
+$$i\hbar\frac{\partial}{\partial t}(\alpha\Psi_1+\beta\Psi_2) = \alpha\,i\hbar\frac{\partial\Psi_1}{\partial t}+\beta\,i\hbar\frac{\partial\Psi_2}{\partial t} = \alpha\hat{H}\Psi_1+\beta\hat{H}\Psi_2 = \hat{H}(\alpha\Psi_1+\beta\Psi_2)$$
+
+Une superposition (finie ou infinie) d'ondes planes est donc toujours solution de l'équation de Schrödinger.
+
+#### b. On considère à présent trois ondes planes au même instant $t=0$, de nombres d'onde $k_0$, $k_0-\Delta k/2$ et $k_0+\Delta k/2$. La deuxième et la troisième ont une amplitude deux fois plus petite que la première. Déterminer l'expression de l'onde résultant de la somme de ces trois ondes planes.
+Réponse : À $t=0$, les trois ondes planes s'écrivent :
+
+$$\Psi_1(x,0) = A\,e^{ik_0 x}, \quad \Psi_2(x,0) = \frac{A}{2}\,e^{i(k_0-\Delta k/2)x}, \quad \Psi_3(x,0) = \frac{A}{2}\,e^{i(k_0+\Delta k/2)x}$$
+
+Leur somme vaut :
+$\Psi(x,0) = A\,e^{ik_0 x} + \frac{A}{2}\,e^{i(k_0-\Delta k/2)x} + \frac{A}{2}\,e^{i(k_0+\Delta k/2)x}$
+
+On factorise par $A\,e^{ik_0 x}$ :
+$\Psi(x,0) = A\,e^{ik_0 x}\left[1 + \frac{1}{2}e^{-i\Delta k\,x/2} + \frac{1}{2}e^{+i\Delta k\,x/2}\right]$
+
+En utilisant la formule d'Euler ($e^{i\theta}+e^{-i\theta}=2\cos\theta$), le crochet se simplifie :
+
+$$\Psi(x,0) = A\,e^{ik_0 x}\left[1 + \cos\!\left(\frac{\Delta k\,x}{2}\right)\right]$$
+
+#### c. En déduire la densité de probabilité de présence au même instant.
+Réponse : La densité de probabilité de présence est $\rho(x) = |\Psi(x,0)|^2$. Comme $|e^{ik_0 x}|^2 = 1$, on obtient directement :
+
+$$\boxed{\rho(x) = |\Psi(x,0)|^2 = A^2\left[1+\cos\!\left(\frac{\Delta k\,x}{2}\right)\right]^2}$$
+
+Cette expression est réelle et positive, comme attendu pour une densité de probabilité. Elle présente des **modulations périodiques** de période spatiale $\frac{4\pi}{\Delta k}$ : la particule est plus probablement trouvée là où les ondes interfèrent de manière constructive.
+
+#### d. Représenter graphiquement les parties réelles de ces trois ondes et la partie réelle de leur somme sur l'intervalle $[-\pi/\Delta k,\, \pi/\Delta k]$. Sur le même graphique, représenter l'enveloppe.
+Réponse : Les parties réelles des trois ondes composantes sont :
+
+$$\Re(\Psi_1) = A\cos(k_0 x), \quad \Re(\Psi_2) = \frac{A}{2}\cos\!\left(\!\left(k_0-\frac{\Delta k}{2}\right)x\right), \quad \Re(\Psi_3) = \frac{A}{2}\cos\!\left(\!\left(k_0+\frac{\Delta k}{2}\right)x\right)$$
+
+La partie réelle de la somme est :
+$\Re(\Psi) = A\cos(k_0 x)\left[1+\cos\!\left(\frac{\Delta k\,x}{2}\right)\right]$
+
+L'**enveloppe** correspond au facteur modulant (toujours positif sur l'intervalle considéré) :
+
+$$\mathcal{E}(x) = A\left[1+\cos\!\left(\frac{\Delta k\,x}{2}\right)\right]$$
+
+Sur l'intervalle $[-\pi/\Delta k,\, \pi/\Delta k]$, l'enveloppe est maximale en $x=0$ (valeur $2A$) et s'annule aux bords (valeur $0$), ce qui illustre bien la localisation spatiale apportée par la superposition. Le tracé Python ci-dessous (section 2) permet de visualiser ces courbes.
+
+### 2. Un peu de Python
+Réponse : Le programme `OndePlane1d2A.py` a été étendu pour tracer les graphiques décrits ci-dessus. Voir le fichier Python associé.
