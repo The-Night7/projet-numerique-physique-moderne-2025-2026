@@ -58,3 +58,7 @@ Cette section modélise un paquet d'ondes gaussien en 1D, qui constitue une repr
 - L'essentiel du projet réside dans la maîtrise de chaque étape intermédiaire (physique et code) plutôt que dans la complétion exhaustive.
 - L'utilisation d'intelligences artificielles est strictement encadrée (tolérée uniquement pour la relecture/correction de forme). Tout usage abusif (génération de code non comprise) est proscrit. Nous ne l'avons utilisé que pour vérifier certaines notions de cours sous la forme de NotebookLM.
 - Pour davantage de détails sur le cahier des charges d'origine, consultez le fichier [Projet_2526.pdf](./Projet_2526.pdf).
+
+
+
+## Projet réalisé dans le cadre de l'UE Sciences - Module Introduction à la Physique Moderne - CY Tech - 2025/2026.
