@@ -20,18 +20,18 @@ avec $\vec{r} \cdot \vec{k} = xk_x + yk_y + zk_z$.
 **Remarque sur les notations**
 Bien souvent, en physique vous verrez l'expression condensée
 
-$$\Psi(\vec{r}, t) = [2\pi]^{-3/2} \int g(\vec{k}) \exp \left[ \mathrm{i}\vec{r} \cdot \vec{k} - \mathrm{i}\omega t \right] \mathrm{d}^3k \tag{2}$$
+$$\Psi(\vec{r}, t) = [2\pi]^{-3/2} \int g(\vec{k}) \exp \left[ \mathrm{i}\vec{r} \cdot \vec{k} - \mathrm{i}\omega t \right] \mathrm{d}^3k$$
 
 ou encore si on note $\mathbf{k} = \vec{k}$ :
 
-$$\Psi(\mathbf{r}, t) = [2\pi]^{-3/2} \int g(\mathbf{k}) \exp \left[ \mathrm{i}\mathbf{r} \cdot \mathbf{k} - \mathrm{i}\omega t \right] \mathrm{d}\mathbf{k}. \tag{3}$$
+$$\Psi(\mathbf{r}, t) = [2\pi]^{-3/2} \int g(\mathbf{k}) \exp \left[ \mathrm{i}\mathbf{r} \cdot \mathbf{k} - \mathrm{i}\omega t \right] \mathrm{d}\mathbf{k}.$$
 
 ### 2.2 Paquets d'ondes gaussien
 
 Un cas particulier de paquet d'ondes est celui pour lequel la fonction $g$ est une gaussienne (loi normale). Ce cas particulier est assez important notamment parce que les calculs sont plus simples et parce que ce type de paquet d'ondes est réalisable en laboratoire.
 En dimension une
 
-$$g(k) = \sqrt{a}[2\pi]^{-1/4} \exp \left[ -a^2(k - k_0)^2/4 \right] , \tag{4}$$
+$$g(k) = \sqrt{a}[2\pi]^{-1/4} \exp \left[ -a^2(k - k_0)^2/4 \right]$$
 
 où $a$ est une grandeur qui sera interprétée par la suite.
 
