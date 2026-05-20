@@ -53,7 +53,7 @@ Un paquet d'ondes est gaussien si la fonction de distribution des nombres d'onde
 c. En calculant l'intégrale, déterminer l'expression du paquet d'ondes gaussien à l'instant $t$. <br>
 
 L'insertion de $g(k)$ dans l'expression de $\Psi(x,t)$ donne une intégrale gaussienne complexe. En effectuant l'intégration (généralement via une complétion du carré dans l'exponentielle), on obtient l'expression analytique du paquet d'ondes au cours du temps :
-**$\Psi(x,t) = \left(\frac{2a}{\pi}\right)^{1/4} \frac{1}{\sqrt{2\alpha(t)}} \exp\left[ -\frac{(x - v_g t)^2}{4\alpha(t)} \right] \exp\left[ i\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$**
+**$$\Psi(x,t) = \left(\frac{2a}{\pi}\right)^{1/4} \frac{1}{\sqrt{2\alpha(t)}} \exp\left[ -\frac{(x - v_g t)^2}{4\alpha(t)} \right] \exp\left[ i\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$$**
 Où :
 *   $v_g = \frac{\hbar k_0}{m}$ est la vitesse de groupe (vitesse classique de la particule).
 *   $\alpha(t) = a + i\frac{\hbar t}{2m}$ est un paramètre complexe traduisant l'étalement temporel du paquet d'ondes.
