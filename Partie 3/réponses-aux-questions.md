@@ -66,7 +66,9 @@ Comparaison : La dérivée seconde de $x²$
 
 L’équation de Schrödinger décrit l’évolution de la fonction d’onde dans le temps et l’espace. Dès lors, la fonction d’onde ne peut pas être stockée dans un tableau 1d, mais un tableau 4d. Dans la mesure où nous n’étudions que des problèmes à une dimension d’espace, des tableaux 2d seront suffisants.
 
-1. Rappeler l’équation de Schrödinger à une dimension d’espace pour une particule dans un potentiel constant `V0`.
+### 1. Rappeler l’équation de Schrödinger à une dimension d’espace pour une particule dans un potentiel constant `V0`.
+
+**Réponse :**
 
    Pour une particule de masse `m` se déplaçant selon l’axe `(Ox)` dans un potentiel constant `V0`, l’équation de Schrödinger s’écrit :
 
@@ -85,7 +87,9 @@ L’équation de Schrödinger décrit l’évolution de la fonction d’onde dan
    -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi(x,t)}{\partial x^2}.
    $$
 
-2. Définir une fonction d’onde (tableau 2d) contenant `nx` lignes et `nt` colonnes. La première ligne doit contenir un paquet d’ondes gaussien à instant donné et le reste du tableau doit contenir des zéros (ou mieux, des nombres aléatoires `empty`).
+### 2. Définir une fonction d’onde (tableau 2d) contenant `nx` lignes et `nt` colonnes. La première ligne doit contenir un paquet d’ondes gaussien à instant donné et le reste du tableau doit contenir des zéros (ou mieux, des nombres aléatoires `empty`).
+
+**Réponse :**
 
    En pratique, il est plus cohérent de stocker la fonction d’onde sous la forme `psi[j, i] = psi(t_j, x_i)`, donc dans un tableau de taille `(nt, nx)` :
 
@@ -103,7 +107,9 @@ L’équation de Schrödinger décrit l’évolution de la fonction d’onde dan
 
    Si l’on veut suivre strictement l’idée de l’énoncé, on peut dire que la première ligne contient le paquet d’ondes gaussien initial et que toutes les autres cases sont initialisées à zéro en attendant le calcul de l’évolution temporelle.
 
-3. Définir (`numpy.linspace`) des tableaux 1d pour les intervalles d’espace `x` et de temps `t`.
+### 3. Définir (`numpy.linspace`) des tableaux 1d pour les intervalles d’espace `x` et de temps `t`.
+
+**Réponse :**
 
    On définit un intervalle spatial `[xmin, xmax]` discrétisé en `nx` points, et un intervalle temporel `[tmin, tmax]` discrétisé en `nt` points :
 
@@ -121,8 +127,27 @@ L’équation de Schrödinger décrit l’évolution de la fonction d’onde dan
 
    Ces deux pas `dx` et `dt` sont essentiels pour écrire les dérivées numériques.
 
-4. Écrire un algorithme combinant les dérivées première par rapport au temps et seconde par rapport à l’espace pour décrire l’évolution de la fonction d’ondes initiale (paquet d’ondes dans notre cas) selon l’équation de Schrödinger.
+### 4. Écrire un algorithme combinant les dérivées première par rapport au temps et seconde par rapport à l’espace pour décrire l’évolution de la fonction d’ondes initiale (paquet d’ondes dans notre cas) selon l’équation de Schrödinger.
+
+**Réponse :** 
+En isolant la dérivée temporelle et en utilisant un schéma d'Euler explicite (analogue à celui de l'équation de la chaleur
+) :
+```python
+# Pré-calcul de la constante pour optimiser l'itération
+coeff = dt / (1j * hbar)
+
+for n in range(0, nt - 1):
+    # Calcul de la dérivée seconde spatiale à l'instant n (points intérieurs)
+    d2psi_dx2 = (psi[:-2, n] - 2*psi[1:-1, n] + psi[2:, n]) / dx**2
+    
+    # Action de l'opérateur Hamiltonien sur la fonction d'onde
+    H_psi = -(hbar**2 / (2*m)) * d2psi_dx2 + V0 * psi[1:-1, n]
+    
+    # Mise à jour de la fonction d'onde à l'instant n+1
+    psi[1:-1, n+1] = psi[1:-1, n] + coeff * H_psi
+```
 
 
 
-5. Confronter les résultats de l’algorithme, dans le cas `V0 = 0`, avec le programme `PaquetOndes.py`. La comparaison peut, dans un premier temps, se faire sans représenter les paquets d’ondes.
+
+### 5. Confronter les résultats de l’algorithme, dans le cas `V0 = 0`, avec le programme `PaquetOndes.py`. La comparaison peut, dans un premier temps, se faire sans représenter les paquets d’ondes.
