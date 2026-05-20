@@ -19,9 +19,12 @@ $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 import numpy as np
 
 def derivee_premiere(y, dx):
-    dy = np.zeros(len(y))
-    dy[:-1] = (y[1:] - y[:-1]) / dx 
-    dy[-1] = (y[-1] - y[-2]) / dx   
+    y = np.asarray(y)
+    dy = np.zeros_like(y, dtype=np.result_type(y, float))
+
+    dy[1:-1] = (y[2:] - y[:-2]) / (2 * dx)
+    dy[0] = (-3 * y[0] + 4 * y[1] - y[2]) / (2 * dx)
+    dy[-1] = (3 * y[-1] - 4 * y[-2] + y[-3]) / (2 * dx)
     return dy
 
 ```
@@ -53,10 +56,13 @@ Algorithme : On utilise le schéma des différences finies centrées, plus préc
 ```python
 import numpy as np
 
-def calculer_derivee_seconde(y, dx):
-    d2y = np.zeros(len(y))
-    d2y[1:-1] = (y[:-2] - 2*y[1:-1] + y[2:])
-    dx**2
+def derivee_seconde(y, dx):
+    y = np.asarray(y)
+    d2y = np.zeros_like(y, dtype=np.result_type(y, float))
+
+    d2y[1:-1] = (y[:-2] - 2 * y[1:-1] + y[2:]) / dx**2
+    d2y[0] = (2 * y[0] - 5 * y[1] + 4 * y[2] - y[3]) / dx**2
+    d2y[-1] = (2 * y[-1] - 5 * y[-2] + 4 * y[-3] - y[-4]) / dx**2
     return d2y
 ```
 Comparaison : La dérivée seconde de $x²$
@@ -102,7 +108,7 @@ L’équation de Schrödinger décrit l’évolution de la fonction d’onde dan
    import numpy as np
 
    psi = np.zeros((nt, nx), dtype=complex)
-   psi[0, :] = GaussWP(k0, a, x, 0)
+   psi[0, :] = gauss_wp(k0, a, x, 0)
    ```
 
    Si l’on veut suivre strictement l’idée de l’énoncé, on peut dire que la première ligne contient le paquet d’ondes gaussien initial et que toutes les autres cases sont initialisées à zéro en attendant le calcul de l’évolution temporelle.
@@ -129,25 +135,70 @@ L’équation de Schrödinger décrit l’évolution de la fonction d’onde dan
 
 ### 4. Écrire un algorithme combinant les dérivées première par rapport au temps et seconde par rapport à l’espace pour décrire l’évolution de la fonction d’ondes initiale (paquet d’ondes dans notre cas) selon l’équation de Schrödinger.
 
-**Réponse :** 
-En isolant la dérivée temporelle et en utilisant un schéma d'Euler explicite (analogue à celui de l'équation de la chaleur
-) :
-```python
-# Pré-calcul de la constante pour optimiser l'itération
-coeff = dt / (1j * hbar)
+**Réponse :**
 
-for n in range(0, nt - 1):
-    # Calcul de la dérivée seconde spatiale à l'instant n (points intérieurs)
-    d2psi_dx2 = (psi[:-2, n] - 2*psi[1:-1, n] + psi[2:, n]) / dx**2
-    
-    # Action de l'opérateur Hamiltonien sur la fonction d'onde
-    H_psi = -(hbar**2 / (2*m)) * d2psi_dx2 + V0 * psi[1:-1, n]
-    
-    # Mise à jour de la fonction d'onde à l'instant n+1
-    psi[1:-1, n+1] = psi[1:-1, n] + coeff * H_psi
+Une discrétisation directe de l’équation de Schrödinger peut se faire avec des différences finies, mais un schéma d’Euler explicite devient vite instable. Dans le code, on utilise donc un schéma de **Crank-Nicolson**, plus adapté, car il conserve beaucoup mieux la norme de la fonction d’onde.
+
+On part de
+
+$$
+i\hbar \frac{\partial \Psi}{\partial t}
+=
+-\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2}
++ V_0 \Psi.
+$$
+
+La dérivée seconde spatiale est approchée par une différence centrée, et l’évolution temporelle est écrite à mi-chemin entre les instants `t_j` et `t_{j+1}`. Cela conduit à un système linéaire tridiagonal à résoudre à chaque pas de temps.
+
+Sous forme algorithmique :
+
+```python
+psi = np.zeros((nt, nx), dtype=complex)
+psi[0, :] = GaussWP(k0, a, x, 0.0)
+
+for j in range(nt - 1):
+    # Construction du membre de droite
+    second_membre = ...
+
+    # Resolution du systeme tridiagonal
+    psi[j + 1, 1:-1] = resoudre_tridiagonal(a_mat, b_mat, c_mat, second_membre)
+
+    # Conditions aux bords
+    psi[j + 1, 0] = 0.0
+    psi[j + 1, -1] = 0.0
 ```
+
+L’idée importante est la suivante :
+
+- on connaît `psi[j, :]` à l’instant `t_j` ;
+- on calcule `psi[j+1, :]` à l’instant suivant ;
+- la dérivée seconde en espace contrôle l’étalement du paquet ;
+- le potentiel `V0` ajoute une phase et modifie l’évolution.
 
 
 
 
 ### 5. Confronter les résultats de l’algorithme, dans le cas `V0 = 0`, avec le programme `PaquetOndes.py`. La comparaison peut, dans un premier temps, se faire sans représenter les paquets d’ondes.
+
+**Réponse :**
+
+Dans le cas libre `V0 = 0`, la solution numérique doit rester proche du paquet d’ondes gaussien théorique obtenu dans la partie 2.
+
+La comparaison peut se faire sur plusieurs points :
+
+- la norme `\int |\Psi|^2 dx` doit rester proche de `1` ;
+- le paquet doit se déplacer dans le bon sens avec une vitesse cohérente avec `v_g = \hbar k_0 / m` ;
+- le paquet doit s’étaler progressivement ;
+- l’écart entre la solution numérique et la solution théorique doit rester faible.
+
+Dans le script, cette comparaison est faite en calculant :
+
+```python
+psi_th_0 = GaussWP(k0, a, x, t[0])
+psi_th_f = GaussWP(k0, a, x, t[-1])
+
+erreur_initiale = np.max(np.abs(psi_num[0, :] - psi_th_0))
+erreur_finale = np.max(np.abs(psi_num[-1, :] - psi_th_f))
+```
+
+Avec le schéma retenu, on obtient une norme initiale et finale pratiquement égales à `1`, ce qui montre que l’algorithme est cohérent numériquement. L’erreur finale reste non nulle, car la solution numérique est une approximation discrète, mais elle reste suffisamment faible pour valider le comportement général du paquet d’ondes libre.
