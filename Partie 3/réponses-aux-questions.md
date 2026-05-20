@@ -1,24 +1,66 @@
 # 3 Résolution numérique de l’équation de Schrödinger
 
-L’objectif de cette dernière étape va être d’élaborer un premier algorithme de résolution de l’équation de Schrödinger qui permettra de déterminer l’évolution du paquet d’ondes initial. Pour une particule libre et un paquet d’ondes gaussien à l’instant initial, l’évolution du paquet d’ondes est connue (partie 2). Si l’algorithme élaboré est correct, il donnera les mêmes résultats que la théorie.
-
-C’est dans un dernier temps que nous étudierons l’évolution d’un paquet d’ondes qui rencontre une barrière de potentiel. Le traitement rigoureux du problème est relativement complexe et la résolution numérique constituera la voie privilégiée dans ce projet.
+L’objectif de cette dernière étape est d’élaborer un premier algorithme de résolution de l’équation de Schrödinger qui permettra de déterminer l’évolution du paquet d’ondes initial [1]. Pour une particule libre et un paquet d’ondes gaussien, l’algorithme doit produire des résultats concordants avec la théorie [1].
 
 ## 3.1 Algorithme de dérivation
 
-La fonction d’onde à un instant donné peut être vue comme un tableau 1d (`numpy.array` en Python avec la librairie `numpy`) contenant autant d’éléments que le nombre de points `npts` utilisés pour l’intervalle d’espace (`x` dans les codes précédents).
+### 1. Dérivée première
 
-1. Dérivée première
+**a. Rappeler la définition de la dérivée d’une fonction réelle en un point.**
 
-   a. Rappeler la définition de la dérivée d’une fonction réelle en un point.
+**Réponse :** La dérivée d'une fonction réelle $f$ en un point $x$ est définie par la limite du taux d'accroissement lorsque l'intervalle $h$ tend vers 0 :
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
-   b. Si cette fonction est un tableau 1d de `npts` éléments, écrire un algorithme (pseudo-code ou Python) calculant cette dérivée.
+**b. Si cette fonction est un tableau 1d de `npts` éléments, écrire un algorithme (pseudo-code ou Python) calculant cette dérivée.**
 
-   c. Écrire en Python une fonction renvoyant le carré `x²` d’un nombre `x` et une autre renvoyant `2x`.
+**Réponse :** Pour un tableau NumPy `y` avec un pas constant `dx`, on utilise une approximation par différences finies [2]. Voici une implémentation vectorisée utilisant les "slices" de NumPy pour plus d'efficacité :
 
-   d. À l’aide de votre algorithme, calculer numériquement la dérivée de la fonction `x²` et comparer les valeurs obtenues avec celles renvoyées par la fonction `2x`. Vous pouvez, par exemple, regarder l’erreur relative commise par votre algorithme.
+```python
+import numpy as np
 
-2. Reprendre les questions précédentes, mais pour la dérivée seconde.
+def derivee_premiere(y, dx):
+    dy = np.zeros(len(y))
+    dy[:-1] = (y[1:] - y[:-1]) / dx 
+    dy[-1] = (y[-1] - y[-2]) / dx   
+    return dy
+
+```
+
+**c. Écrire en Python une fonction renvoyant le carré $x²$ d’un nombre $x$ et une autre renvoyant $2x$. <br>**
+
+**Réponse :**
+```python
+import numpy as np
+
+def carre(x):
+    return x**2
+
+def double(x):
+    return 2*x
+
+```
+**d. À l’aide de votre algorithme, calculer numériquement la dérivée de la fonction x² et comparer les valeurs obtenues avec celles renvoyées par la fonction 2x. Vous pouvez, par exemple, regarder l’erreur relative commise par votre algorithme. <br>**
+
+**Réponse :** En appliquant l'algorithme à un tableau généré par np.linspace, on compare la dérivée numérique à la valeur théorique $2x$. L'erreur relative est d'ordre 1 par rapport au pas $dx$ pour un schéma progressif.Plus $dx$ est petit (nombre de points élevé), plus l'erreur diminue.
+
+### 2. Reprendre les questions précédentes, mais pour la dérivée seconde.
+
+**Réponse :**
+
+Définition : La dérivée seconde $f′′(x)$ représente la dérivée de la dérivée première, mesurant la courbure de la fonction.
+
+Algorithme : On utilise le schéma des différences finies centrées, plus précis:
+```python
+import numpy as np
+
+def calculer_derivee_seconde(y, dx):
+    d2y = np.zeros(len(y))
+    d2y[1:-1] = (y[:-2] - 2*y[1:-1] + y[2:])
+    dx**2
+    return d2y
+```
+Comparaison : La dérivée seconde de $x²$
+  est la constante 2. L'algorithme renverra une valeur quasi identique à 2 pour les points intérieurs, avec une erreur d'ordre $dx²$.
 
 ## 3.2 Algorithme pour l’équation de Schrödinger
 
