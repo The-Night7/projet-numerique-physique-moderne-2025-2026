@@ -56,7 +56,7 @@ L'insertion de $g(k)$ dans l'expression de $\Psi(x,t)$ donne une intégrale gaus
 **$$\Psi(x,t) = \left(\frac{2a}{\pi}\right)^{1/4} \frac{1}{\sqrt{2\alpha(t)}} \exp\left[ -\frac{(x - v_g t)^2}{4\alpha(t)} \right] \exp\left[ i\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$$**
 Où :
 *   $v_g = \frac{\hbar k_0}{m}$ est la vitesse de groupe (vitesse classique de la particule).
-*   $\alpha(t) = a + i\frac{\hbar t}{2m}$ est un paramètre complexe traduisant l'étalement temporel du paquet d'ondes.
+*   $\alpha(t) = \frac{a²}{4} + i\frac{\hbar t}{2m}$ est un paramètre complexe traduisant l'étalement temporel du paquet d'ondes.
 
 d. Vérifier que ce paquet d'ondes est normalisé. <br>
 
