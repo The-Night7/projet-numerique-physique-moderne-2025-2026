@@ -26,10 +26,61 @@ L’équation de Schrödinger décrit l’évolution de la fonction d’onde dan
 
 1. Rappeler l’équation de Schrödinger à une dimension d’espace pour une particule dans un potentiel constant `V0`.
 
+   Pour une particule de masse `m` se déplaçant selon l’axe `(Ox)` dans un potentiel constant `V0`, l’équation de Schrödinger s’écrit :
+
+   $$
+   i\hbar \frac{\partial \Psi(x,t)}{\partial t}
+   =
+   -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi(x,t)}{\partial x^2}
+   + V_0 \Psi(x,t).
+   $$
+
+   Dans le cas particulier d’une particule libre, on a `V0 = 0`, donc :
+
+   $$
+   i\hbar \frac{\partial \Psi(x,t)}{\partial t}
+   =
+   -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi(x,t)}{\partial x^2}.
+   $$
+
 2. Définir une fonction d’onde (tableau 2d) contenant `nx` lignes et `nt` colonnes. La première ligne doit contenir un paquet d’ondes gaussien à instant donné et le reste du tableau doit contenir des zéros (ou mieux, des nombres aléatoires `empty`).
+
+   En pratique, il est plus cohérent de stocker la fonction d’onde sous la forme `psi[j, i] = psi(t_j, x_i)`, donc dans un tableau de taille `(nt, nx)` :
+
+   - chaque **ligne** correspond à un instant ;
+   - chaque **colonne** correspond à une position.
+
+   Ainsi, la première ligne `psi[0, :]` contient naturellement l’état initial à `t = 0`.
+
+   ```python
+   import numpy as np
+
+   psi = np.zeros((nt, nx), dtype=complex)
+   psi[0, :] = GaussWP(k0, a, x, 0)
+   ```
+
+   Si l’on veut suivre strictement l’idée de l’énoncé, on peut dire que la première ligne contient le paquet d’ondes gaussien initial et que toutes les autres cases sont initialisées à zéro en attendant le calcul de l’évolution temporelle.
 
 3. Définir (`numpy.linspace`) des tableaux 1d pour les intervalles d’espace `x` et de temps `t`.
 
+   On définit un intervalle spatial `[xmin, xmax]` discrétisé en `nx` points, et un intervalle temporel `[tmin, tmax]` discrétisé en `nt` points :
+
+   ```python
+   x = np.linspace(xmin, xmax, nx)
+   t = np.linspace(tmin, tmax, nt)
+   ```
+
+   Les pas associés sont :
+
+   ```python
+   dx = x[1] - x[0]
+   dt = t[1] - t[0]
+   ```
+
+   Ces deux pas `dx` et `dt` sont essentiels pour écrire les dérivées numériques.
+
 4. Écrire un algorithme combinant les dérivées première par rapport au temps et seconde par rapport à l’espace pour décrire l’évolution de la fonction d’ondes initiale (paquet d’ondes dans notre cas) selon l’équation de Schrödinger.
+
+
 
 5. Confronter les résultats de l’algorithme, dans le cas `V0 = 0`, avec le programme `PaquetOndes.py`. La comparaison peut, dans un premier temps, se faire sans représenter les paquets d’ondes.
