@@ -33,6 +33,12 @@ Cette section modélise un paquet d'ondes gaussien en 1D, qui constitue une repr
 - Introduction du facteur d'étalement du paquet d'ondes au cours du temps et calcul de la vitesse de groupe.
 - Tracé des parties réelle et imaginaire de la fonction d'onde quantique à un instant donné.
 
+### Partie 2 : Paquets d'Ondes Gaussiens
+
+**Dossier :** [`Partie 3/`](./Partie%203)  <br>
+**Script Python :** [`uncertainnom.py`](./Partie%203/uncertainnom.py) <br>
+**Réponses aux questions :** : [`réponses-aux-questions.md`](./Partie%203/réponses-aux-questions.md)
+
 ---
 
 ## Concepts Abordés
