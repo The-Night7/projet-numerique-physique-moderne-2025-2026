@@ -12,6 +12,7 @@ Le projet est divisé en plusieurs parties correspondant aux étapes d'apprentis
 
 **Dossier :** [`Partie 1/`](./Partie%201)  <br>
 **Script Python :** [`OndePlane1d2A.py`](./Partie%201/OndePlane1d2A.py)<br>
+**Explication complète du code python :** [`Explication.md`](./Partie%201/explication.md) <br>
 **Réponses aux questions :** : [`réponses-aux-questions.md`](./Partie%201/réponses-aux-questions.md)
 
 
@@ -25,6 +26,7 @@ Cette partie vise à modéliser et visualiser une onde plane à une dimension (1
 
 **Dossier :** [`Partie 2/`](./Partie%202)  <br>
 **Script Python :** [`PaquetOndeGauss1d2A.py`](./Partie%202/PaquetOndeGauss1d2A.py) <br>
+**Explication complète du code python :** [`Explication.md`](./Partie%202/explication.md) <br>
 **Réponses aux questions :** : [`réponses-aux-questions.md`](./Partie%202/réponses-aux-questions.md)
 
 Cette section modélise un paquet d'ondes gaussien en 1D, qui constitue une représentation mathématique classique d'une particule en mécanique quantique (ex. un électron libre).
@@ -36,7 +38,8 @@ Cette section modélise un paquet d'ondes gaussien en 1D, qui constitue une repr
 ### Partie 2 : Paquets d'Ondes Gaussiens
 
 **Dossier :** [`Partie 3/`](./Partie%203)  <br>
-**Script Python :** [`uncertainnom.py`](./Partie%203/uncertainnom.py) <br>
+**Script Python :** [`EquaSchro1d2A.py`](./Partie%203/EquaSchro1d2A.py) <br>
+**Explication complète du code python :** [`Explication.md`](./Partie%203/explication.md) <br>
 **Réponses aux questions :** : [`réponses-aux-questions.md`](./Partie%203/réponses-aux-questions.md)
 
 ---
