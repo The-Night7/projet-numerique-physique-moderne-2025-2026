@@ -201,4 +201,22 @@ erreur_initiale = np.max(np.abs(psi_num[0, :] - psi_th_0))
 erreur_finale = np.max(np.abs(psi_num[-1, :] - psi_th_f))
 ```
 
-Avec le schéma retenu, on obtient une norme initiale et finale pratiquement égales à `1`, ce qui montre que l’algorithme est cohérent numériquement. L’erreur finale reste non nulle, car la solution numérique est une approximation discrète, mais elle reste suffisamment faible pour valider le comportement général du paquet d’ondes libre.
+**Résultats numériques obtenus** (avec `nx=1200`, `nt=800`, `k0=5.0`, `a=0.5`, `tmax=1.0`) :
+
+```
+Verification des derivees sur x^2
+erreur max derivee premiere : 4.810e-12
+erreur max derivee seconde  : 7.595e-10
+
+Comparaison paquet d’ondes
+norme initiale numerique : 1.000000
+norme finale numerique   : 1.000000
+erreur max a t=0         : 0.000e+00
+erreur max a t=t_final   : 2.375e-02
+```
+
+**Interprétation :**
+
+- Les erreurs sur les dérivées ($\sim 10^{-12}$ et $\sim 10^{-10}$) sont proches de la précision machine, ce qui valide complètement l’algorithme de dérivation.
+- La norme se conserve à $10^{-6}$ près entre $t=0$ et $t=t_{\rm final}$ : le schéma de Crank-Nicolson préserve bien la norme (propriété essentielle pour une équation quantique).
+- L’erreur finale de $2.4 \times 10^{-2}$ représente l’écart maximum entre la solution numérique et le paquet gaussien théorique à $t=1.0$. Cet écart est dû à la discrétisation spatiale et temporelle, mais reste petit devant les amplitudes en jeu ($\sim 1$), ce qui valide le comportement général de l’algorithme.
