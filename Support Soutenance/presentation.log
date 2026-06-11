@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.9)  11 JUN 2026 10:44
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.9)  11 JUN 2026 11:00
  restricted system commands enabled.
 **presentation.tex
 (./presentation.tex
@@ -807,357 +807,416 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count366
 \@thisrulewidth=\dimen323
 )
-(/usr/share/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
-(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
-(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty)
-(/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty)
-(/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty))
-(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemeseahorse.sty)
+(/usr/share/texmf-dist/tex/latex/fira/FiraSans.sty
+Package: FiraSans 2022/09/17 (Bob Tennent and autoinst) Style file for Fira San
+s fonts.
+
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks50
+\XKV@tempa@toks=\toks51
+\XKV@tempb@toks=\toks52
+)
+\XKV@depth=\count367
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count367
-Inserting `l3color' in `luaotfload.parse_color'.)
-(./presentation.aux)
-\openout1 = presentation.aux
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: luatex
-*geometry* verbose mode - [ preamble ] result:
-* driver: luatex
-* paper: custom
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: includehead includefoot 
-* h-part:(L,W,R)=(10.0pt, 435.24408pt, 10.0pt)
-* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
-* \paperwidth=455.24408pt
-* \paperheight=256.0748pt
-* \textwidth=435.24408pt
-* \textheight=227.62207pt
-* \oddsidemargin=-62.26999pt
-* \evensidemargin=-62.26999pt
-* \topmargin=-72.26999pt
-* \headheight=14.22636pt
-* \headsep=0.0pt
-* \topskip=10.0pt
-* \footskip=14.22636pt
-* \marginparwidth=3.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count368
-\scratchdimen=\dimen324
-\scratchbox=\box78
-\nofMPsegments=\count369
-\nofMParguments=\count370
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count371
-\MPscratchDim=\dimen325
-\MPnumerator=\count372
-\makeMPintoPDFobject=\count373
-\everyMPtoPDFconversion=\toks51
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-Package hyperref Info: Link coloring OFF on input line 33.
-
-(./presentation.out) (./presentation.out)
-\@outlinefile=\write5
-
-\openout5 = presentation.out
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 33.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 33.
-\symnumbers=\mathgroup6
-\sympureletters=\mathgroup7
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/lmr/m/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/lmss/b/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/lmss/b/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/lmss/m/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/lmss/m/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/lmss/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/lmss/m/it on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/lmtt/m/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/lmtt/m/n on input line 33.
-LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 33.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/lmr/b/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 33.
-
-(/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
-.dict
-Dictionary: translator-basic-dictionary, Language: English 
+\l__color_backend_stack_int=\count368
+Inserting `l3color' in `luaotfload.parse_color'.))
+Package: xparse 2025-10-09 L3 Experimental document command parser
 )
-(/usr/share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-
-English.dict
-Dictionary: translator-bibliography-dictionary, Language: English 
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count369
+\l__fontspec_language_int=\count370
+\l__fontspec_strnum_int=\count371
+\l__fontspec_tmp_int=\count372
+\l__fontspec_tmpa_int=\count373
+\l__fontspec_tmpb_int=\count374
+\l__fontspec_tmpc_int=\count375
+\l__fontspec_em_int=\count376
+\l__fontspec_emdef_int=\count377
+\l__fontspec_strong_int=\count378
+\l__fontspec_strongdef_int=\count379
+\l__fontspec_tmpa_dim=\dimen324
+\l__fontspec_tmpb_dim=\dimen325
+\l__fontspec_tmpc_dim=\dimen326
+
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
-(/usr/share/texmf-dist/tex/latex/translator/translator-environment-dictionary-E
-nglish.dict
-Dictionary: translator-environment-dictionary, Language: English 
-)
-(/usr/share/texmf-dist/tex/latex/translator/translator-months-dictionary-Englis
-h.dict
-Dictionary: translator-months-dictionary, Language: English 
-)
-(/usr/share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Engli
-sh.dict
-Dictionary: translator-numbers-dictionary, Language: English 
-)
-(/usr/share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Engli
-sh.dict
-Dictionary: translator-theorem-dictionary, Language: English 
-) (./presentation.nav)
-Missing character: There is no — (U+2014) in font ec-lmss8!
-Missing character: There is no — (U+2014) in font ec-lmss8!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-[1
+(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-Missing character: There is no — (U+2014) in font ec-lmss8!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 61.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
-
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
 
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 61.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 61.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 61
-.
-
-(/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2
-
-]
-<figures/Figure_0_paquet_re_im.png, id=63, 722.7pt x 361.35pt>
-File: figures/Figure_0_paquet_re_im.png Graphic file (type png)
-<use figures/Figure_0_paquet_re_im.png>
-Package luatex.def Info: figures/Figure_0_paquet_re_im.png  used on input line 
-89.
-(luatex.def)             Requested size: 208.9153pt x 104.458pt.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 89.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 89.
- [3
-
-<./figures/Figure_0_paquet_re_im.png>]
-Missing character: There is no — (U+2014) in font ec-lmss10!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-[4
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
 
 
-Missing character: There is no — (U+2014) in font ec-lmss10!
-] [5
-
-]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 182.
- [6
-
-]
-<figures/Figure_1_evolution.png, id=106, 1084.05pt x 289.08pt>
-File: figures/Figure_1_evolution.png Graphic file (type png)
-<use figures/Figure_1_evolution.png>
-Package luatex.def Info: figures/Figure_1_evolution.png  used on input line 194
-.
-(luatex.def)             Requested size: 435.24408pt x 116.06664pt.
- [7
-
-<./figures/Figure_1_evolution.png>]
-<figures/Figure_2_normes.png, id=113, 650.43pt x 289.08pt>
-File: figures/Figure_2_normes.png Graphic file (type png)
-<use figures/Figure_2_normes.png>
-Package luatex.def Info: figures/Figure_2_normes.png  used on input line 209.
-(luatex.def)             Requested size: 339.48984pt x 150.88707pt.
- [8
-
-<./figures/Figure_2_normes.png>] [9
-
-]
-<figures/Figure_3_influence_a.png, id=137, 867.24pt x 289.08pt>
-File: figures/Figure_3_influence_a.png Graphic file (type png)
-<use figures/Figure_3_influence_a.png>
-Package luatex.def Info: figures/Figure_3_influence_a.png  used on input line 2
-50.
-(luatex.def)             Requested size: 356.90332pt x 118.96907pt.
-
-Missing character: There is no — (U+2014) in font ec-lmss10!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-[10
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
 
 
-Missing character: There is no — (U+2014) in font ec-lmss10!
-<./figures/Figure_3_influence_a.png>]
-<figures/Figure_4_influence_V0.png, id=145, 867.24pt x 289.08pt>
-File: figures/Figure_4_influence_V0.png Graphic file (type png)
-<use figures/Figure_4_influence_V0.png>
-Package luatex.def Info: figures/Figure_4_influence_V0.png  used on input line 
-264.
-(luatex.def)             Requested size: 356.90332pt x 118.96907pt.
- [11
-
-<./figures/Figure_4_influence_V0.png>]
-<figures/Figure_5_influence_k0.png, id=153, 867.24pt x 289.08pt>
-File: figures/Figure_5_influence_k0.png Graphic file (type png)
-<use figures/Figure_5_influence_k0.png>
-Package luatex.def Info: figures/Figure_5_influence_k0.png  used on input line 
-280.
-(luatex.def)             Requested size: 356.90332pt x 118.96907pt.
-Missing character: There is no — (U+2014) in font ec-lmss10!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-[12
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
 
 
-Missing character: There is no — (U+2014) in font ec-lmss10!
-<./figures/Figure_5_influence_k0.png>]
-<figures/Figure_6_influence_awp.png, id=160, 867.24pt x 289.08pt>
-File: figures/Figure_6_influence_awp.png Graphic file (type png)
-<use figures/Figure_6_influence_awp.png>
-Package luatex.def Info: figures/Figure_6_influence_awp.png  used on input line
- 297.
-(luatex.def)             Requested size: 356.90332pt x 118.96907pt.
-
-Missing character: There is no — (U+2014) in font ec-lmss10!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-[13
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
 
 
-Missing character: There is no — (U+2014) in font ec-lmss10!
-<./figures/Figure_6_influence_awp.png>]
-Missing character: There is no — (U+2014) in font ec-lmss10!
-Missing character: There is no — (U+2014) in font ec-lmss10!
-[14
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
 
 
-Missing character: There is no — (U+2014) in font ec-lmss10!
-]
-\tf@nav=\write6
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
 
-\openout6 = presentation.nav
-\tf@toc=\write7
 
-\openout7 = presentation.toc
-\tf@snm=\write8
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
 
-\openout8 = presentation.snm
- (./presentation.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
- ***********
-Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-)
 
-Here is how much of LuaTeX's memory you used:
- 24605 strings out of 476076
- 100000,953878 words of node,token memory allocated
- 13271 words of node memory still in use:
-   64 hlist, 10 vlist, 9 rule, 77 disc, 9 local_par, 12 math, 373 glue, 42 kern,
- 43 penalty, 778 glyph, 951 attribute, 127 glue_spec, 192 attribute_list, 4 writ
-e, 36 pdf_colorstack nodes
-   avail lists: 2:2017,3:510,4:214,5:214,6:41,7:2168,8:72,9:581,10:22,11:154
- 46219 multiletter control sequences out of 65536+600000
- 75 fonts using 4991207 bytes
- 128i,11n,116p,386b,690s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
-f-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/
-lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/share/
-texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/lm/lmss8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></u
-sr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss
-o8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on presentation.pdf (14 pages, 659472 bytes).
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
 
-PDF statistics: 242 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 1048576)
- 276 words of extra memory for PDF output out of 10000 (max. 100000000)
 
+Package fontspec Info: 
+(fontspec)             Font family 'FiraSans(0)' created for font 'FiraSans'
+(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
+(fontspec)             .otf,Ligatures=TeX,Numbers =
+(fontspec)             {Proportional,OldStyle},UprightFont =
+(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
+(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+pnum;+onum;+smcp;"
+
+LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 138.
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FiraSans(1)' created for font 'FiraSans'
+(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
+(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
+(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
+(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+pnum;+onum;+smcp;"
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FiraSans(2)' created for font 'FiraSans'
+(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
+(fontspec)             .otf,Numbers = {Proportional,Lining},UprightFont =
+(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
+(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+pnum;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+pnum;+lnum;+smcp;"
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-LightItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FiraSans(3)' created for font 'FiraSans'
+(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
+(fontspec)             .otf,Numbers = {Monospaced,OldStyle},UprightFont =
+(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
+(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+tnum;+onum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
+uage=dflt;+tlig;+tnum;+onum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+tnum;+onum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+tnum;+onum;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+tnum;+onum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
+n;language=dflt;+tlig;+tnum;+onum;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+tnum;+onum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
+;language=dflt;+tlig;+tnum;+onum;+smcp;"
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Light scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Thin scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Thin scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Thin scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-Bold scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-ThinItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-ThinItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             FiraSans-BoldItalic scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FiraSans(4)' created for font 'FiraSans'
+(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
+(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
+(fontspec)             *-Thin,ItalicFont = *-ThinItalic,BoldFont =
+(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Thin.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Thin.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
+age=dflt;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[Fira

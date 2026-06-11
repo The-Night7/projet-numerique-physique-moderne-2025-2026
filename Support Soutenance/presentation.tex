@@ -11,13 +11,70 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage{newtxsf}
 
 \graphicspath{{figures/}}
 
-\usetheme{Madrid}
-\usecolortheme{seahorse}
+% ----- Style fait main : sobre, papier ivoire, accent bordeaux -----
+\definecolor{encre}{HTML}{2B2B2B}      % texte principal
+\definecolor{bordeaux}{HTML}{7D1D21}   % accent
+\definecolor{papier}{HTML}{FBFAF7}     % fond
+\definecolor{grisdoux}{HTML}{8A8680}   % éléments secondaires
+\definecolor{filet}{HTML}{D8D3CA}      % règles fines, fonds de bloc
+
+\setbeamercolor{background canvas}{bg=papier}
+\setbeamercolor{normal text}{fg=encre}
+\setbeamercolor{structure}{fg=bordeaux}
+\setbeamercolor{alerted text}{fg=bordeaux}
+
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}[frame number]
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamercolor{frametitle}{fg=encre}
+
+% Titre de diapo : texte sombre + filet bordeaux court
+\setbeamertemplate{frametitle}{%
+  \vspace{0.9em}%
+  {\usebeamerfont{frametitle}\insertframetitle\par}%
+  \vspace{0.25em}%
+  {\color{bordeaux}\rule{2.2em}{1.6pt}}\par
+  \vspace{0.2em}%
+}
+
+% Pied de page : discret, en bas à droite
+\setbeamertemplate{footline}{%
+  \hfill{\color{grisdoux}\scriptsize\insertshorttitle\ \textperiodcentered\
+  \insertframenumber/\inserttotalframenumber}\hspace{1.2em}\vspace{0.6em}%
+}
+
+% Puces : tirets, sous-puces : petits traits
+\setbeamertemplate{itemize item}{\color{bordeaux}\textbf{--}}
+\setbeamertemplate{itemize subitem}{\color{grisdoux}\textbf{--}}
+\setbeamertemplate{enumerate item}{\color{bordeaux}\insertenumlabel.}
+\setbeamercolor{itemize item}{fg=bordeaux}
+
+% Blocs : plats, fond discret, titre bordeaux sans barre colorée
+\setbeamertemplate{blocks}[default]
+\setbeamercolor{block title}{fg=bordeaux,bg=filet!35}
+\setbeamercolor{block body}{fg=encre,bg=filet!35}
+\setbeamerfont{block title}{series=\bfseries,size=\normalsize}
+
+% Page de titre minimaliste
+\setbeamertemplate{title page}{%
+  \vfill
+  {\color{grisdoux}\small\insertinstitute\par}
+  \vspace{0.4em}
+  {\color{bordeaux}\rule{3em}{1.6pt}}\par
+  \vspace{0.9em}
+  {\LARGE\bfseries\inserttitle\par}
+  \vspace{0.5em}
+  {\large\color{encre}\insertsubtitle\par}
+  \vspace{2.2em}
+  {\normalsize\insertauthor\par}
+  \vspace{0.3em}
+  {\small\color{grisdoux}\insertdate\par}
+  \vfill
+}
 
 % Raccourcis
 \newcommand{\hb}{\hbar}
@@ -226,11 +283,9 @@
     \]
   \end{block}
   \textbf{Résultat} ($k_0=5$, $a=1$, $V_0=15$) :
-  \[
-    \tau_t^{\rm num} = 0.112 \;<\; \tau_t^{\rm th} = 0.168 \;<\; \tau_0 = 0.200
-  \]
-  Le paquet tunnel sort \emph{plus tôt} que le paquet libre : c'est
-  l'\textbf{effet Hartman}.
+  $\;\tau_t^{\rm num} = 0.112 \;<\; \tau_t^{\rm th} = 0.168 \;<\; \tau_0 = 0.200$
+  — le paquet tunnel sort \emph{plus tôt} que le paquet libre :
+  c'est l'\textbf{effet Hartman}.
 \end{frame}
 
 % ------------------------------------------------------------
@@ -266,23 +321,22 @@
 % ------------------------------------------------------------
 \begin{frame}{Influence du paquet : impulsion moyenne $k_0$}
   \begin{center}
-    \includegraphics[width=0.82\textwidth]{Figure_5_influence_k0.png}
+    \includegraphics[width=0.76\textwidth]{Figure_5_influence_k0.png}
   \end{center}
   \begin{itemize}
     \item $|T|^2$ gagne deux ordres de grandeur quand $E = k_0^2/2$ se
           rapproche de $V_0$ ; $\tau_t^{\rm th}$ varie peu (0.13--0.21).
     \item Pour $k_0 \lesssim 4.5$, $\tau_t^{\rm num}$ devient \textbf{négatif} :
           le pic transmis sort avant que le pic incident n'entre !
-    \item Pas de violation de causalité : la barrière ne transmet que
-          l'avant-garde rapide du spectre — le « pic » transmis est reconstruit
-          à partir de composantes déjà en avance.
+    \item Pas de violation de causalité : seule l'avant-garde rapide du spectre
+          est transmise — le « pic » est reconstruit de composantes déjà en avance.
   \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------
 \begin{frame}{Influence du paquet : largeur initiale $a_{\rm wp}$}
   \begin{center}
-    \includegraphics[width=0.82\textwidth]{Figure_6_influence_awp.png}
+    \includegraphics[width=0.76\textwidth]{Figure_6_influence_awp.png}
   \end{center}
   \begin{itemize}
     \item Le temps de Hartman (calculé pour la seule composante $k_0$)
@@ -290,9 +344,9 @@
           spectrale $\Delta k = 1/(2\sqrt{a_{\rm wp}})$.
     \item Paquet large ($\Delta k \to 0$) : $\tau_t^{\rm num} \to \tau_t^{\rm th}$
           et $P_{\rm trans} \to |T(k_0)|^2$ — limite quasi monochromatique.
-    \item Paquet étroit : la barrière transmet préférentiellement les
-          composantes rapides $\Rightarrow$ sortie plus précoce et transmission
-          jusqu'à $8$ fois supérieure à la prédiction onde plane.
+    \item Paquet étroit : les composantes rapides sont favorisées
+          $\Rightarrow$ sortie précoce, transmission jusqu'à $8$ fois
+          au-dessus de la prédiction onde plane.
   \end{itemize}
 \end{frame}
 
