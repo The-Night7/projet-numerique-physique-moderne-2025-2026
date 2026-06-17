@@ -341,78 +341,6 @@ def main():
             f"τ_t_th={tt:.4f}  |T|²={T2:.2e}"
         )
 
-    # --------------------------------------------------------
-    # 4.1.f - Influence du vecteur d'onde moyen k0 du paquet
-    # --------------------------------------------------------
-    # E = k0²/2 doit rester < V0, donc k0 < sqrt(2·V0) ≈ 5.48.
-    # Pour chaque k0 on refait une simulation libre afin de mesurer
-    # t_entree (le paquet ne va plus à la même vitesse).
-    print("\n--- 4.1.f : influence de k0 (impulsion du paquet) ---")
-    k0_valeurs = [3.5, 4.0, 4.5, 5.0, 5.3]
-    tau_0_k0_list = []
-    tau_t_num_k0_list = []
-    tau_t_th_k0_list = []
-    T2_k0_list = []
-
-    for k0_val in k0_valeurs:
-        tau_0_k0_list.append(tau_libre(k0_val, a_b))
-        tau_t_th_k0_list.append(tau_tunnel(k0_val, a_b, V0))
-        T2_k0_list.append(coeff_transmission(k0_val, a_b, V0))
-
-        _, _, psi_lib_tmp, _ = evolution_schrodinger(
-            nx, nt, xmin, xmax, tmin, tmax, k0_val, a_wp, x0, x_b, a_b, 0.0
-        )
-        t_in = temps_pic_en(psi_lib_tmp, t, idx_entree)
-
-        _, _, psi_tmp, _ = evolution_schrodinger(
-            nx, nt, xmin, xmax, tmin, tmax, k0_val, a_wp, x0, x_b, a_b, V0
-        )
-        t_out = temps_pic_en(psi_tmp, t, idx_sortie)
-        tau_t_num_k0_list.append(t_out - t_in)
-
-        E_val = hbar**2 * k0_val**2 / (2 * m)
-        print(
-            f"  k0={k0_val:.1f} (E={E_val:.2f}) : τ_0={tau_0_k0_list[-1]:.3f}  "
-            f"τ_t_num={tau_t_num_k0_list[-1]:.3f}  "
-            f"τ_t_th={tau_t_th_k0_list[-1]:.3f}  "
-            f"|T|²={T2_k0_list[-1]:.2e}"
-        )
-
-    # --------------------------------------------------------
-    # 4.1.g - Influence de la largeur initiale a_wp du paquet
-    # --------------------------------------------------------
-    # Le temps de Hartman (phase stationnaire) ne dépend pas de a_wp :
-    # tout écart numérique vient de la largeur spectrale Δk = 1/(2√a_wp).
-    # Un paquet étroit en x est large en k : la barrière filtre les
-    # composantes rapides, le pic transmis est biaisé vers les grands k.
-    print("\n--- 4.1.g : influence de la largeur a_wp du paquet ---")
-    a_wp_valeurs = [0.25, 0.5, 1.0, 2.0, 4.0]
-    tau_t_num_awp_list = []
-    norme_trans_awp_list = []
-    tau_t_th_ref = tau_tunnel(k0, a_b, V0)
-    T2_ref = coeff_transmission(k0, a_b, V0)
-
-    for a_wp_val in a_wp_valeurs:
-        _, _, psi_lib_tmp, _ = evolution_schrodinger(
-            nx, nt, xmin, xmax, tmin, tmax, k0, a_wp_val, x0, x_b, a_b, 0.0
-        )
-        t_in = temps_pic_en(psi_lib_tmp, t, idx_entree)
-
-        _, _, psi_tmp, _ = evolution_schrodinger(
-            nx, nt, xmin, xmax, tmin, tmax, k0, a_wp_val, x0, x_b, a_b, V0
-        )
-        t_out = temps_pic_en(psi_tmp, t, idx_sortie)
-        tau_t_num_awp_list.append(t_out - t_in)
-        norme_trans_awp_list.append(norme(psi_tmp[-1, mask_trans], dx))
-
-        dk_spec = 1.0 / (2.0 * np.sqrt(a_wp_val))
-        print(
-            f"  a_wp={a_wp_val:.2f} (Δk={dk_spec:.3f}) : "
-            f"τ_t_num={tau_t_num_awp_list[-1]:.3f}  "
-            f"(τ_t_th={tau_t_th_ref:.3f})  "
-            f"P_trans={norme_trans_awp_list[-1]:.2e}  (|T|²={T2_ref:.2e})"
-        )
-
     # ========================================================
     # Figures
     # ========================================================
@@ -519,58 +447,6 @@ def main():
 
         plt.tight_layout()
         plt.savefig("Figure_4_influence_V0.png", dpi=100)
-
-    # --- Figure 5 : influence de k0 ---
-    fig5, axes5 = plt.subplots(1, 2, figsize=(12, 4))
-
-    axes5[0].plot(k0_valeurs, tau_0_k0_list, "o-", color="royalblue",
-                  label="τ₀ = a/v_g  (libre)")
-    axes5[0].plot(k0_valeurs, tau_t_num_k0_list, "s-", color="tomato",
-                  label="τₜ  (tunnel, numérique)")
-    axes5[0].plot(k0_valeurs, tau_t_th_k0_list, "^--", color="darkorange",
-                  label="τₜ  (Hartman, analytique)")
-    axes5[0].set_xlabel("Vecteur d'onde moyen k0")
-    axes5[0].set_ylabel("Temps de traversée")
-    axes5[0].set_title("Influence de k0 (E = k0²/2) sur le temps tunnel")
-    axes5[0].legend(fontsize=9)
-    axes5[0].grid(True, linestyle=":")
-
-    axes5[1].semilogy(k0_valeurs, T2_k0_list, "o-", color="purple")
-    axes5[1].set_xlabel("Vecteur d'onde moyen k0")
-    axes5[1].set_ylabel("|T|²  (échelle log)")
-    axes5[1].set_title("Probabilité de transmission vs k0")
-    axes5[1].grid(True, linestyle=":")
-
-    plt.tight_layout()
-    plt.savefig("Figure_5_influence_k0.png", dpi=100)
-
-    # --- Figure 6 : influence de a_wp ---
-    fig6, axes6 = plt.subplots(1, 2, figsize=(12, 4))
-
-    axes6[0].plot(a_wp_valeurs, tau_t_num_awp_list, "s-", color="tomato",
-                  label="τₜ  (tunnel, numérique)")
-    axes6[0].axhline(tau_t_th_ref, color="darkorange", linestyle="--",
-                     label=f"τₜ (Hartman) = {tau_t_th_ref:.3f}, indép. de a_wp")
-    axes6[0].axhline(tau_0_th, color="royalblue", linestyle=":",
-                     label=f"τ₀ = {tau_0_th:.3f}")
-    axes6[0].set_xlabel("Largeur initiale du paquet a_wp")
-    axes6[0].set_ylabel("Temps de traversée τₜ")
-    axes6[0].set_title("Influence de la largeur du paquet sur le temps tunnel")
-    axes6[0].legend(fontsize=9)
-    axes6[0].grid(True, linestyle=":")
-
-    axes6[1].semilogy(a_wp_valeurs, norme_trans_awp_list, "s-", color="green",
-                      label="P_trans numérique")
-    axes6[1].axhline(T2_ref, color="purple", linestyle="--",
-                     label=f"|T|²(k0) onde plane = {T2_ref:.2e}")
-    axes6[1].set_xlabel("Largeur initiale du paquet a_wp")
-    axes6[1].set_ylabel("Probabilité transmise  (échelle log)")
-    axes6[1].set_title("Transmission vs a_wp : filtrage spectral")
-    axes6[1].legend(fontsize=9)
-    axes6[1].grid(True, linestyle=":")
-
-    plt.tight_layout()
-    plt.savefig("Figure_6_influence_awp.png", dpi=100)
 
     if plt.get_backend().lower() != "agg":
         plt.show()

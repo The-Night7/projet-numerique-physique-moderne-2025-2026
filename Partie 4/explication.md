@@ -145,39 +145,6 @@ Six simulations supplémentaires pour `a` allant de 0.5 à 3.0. Les résultats a
 
 Résultats analytiques pour $V_0$ croissant : plus la barrière est haute, plus le temps apparent diminue (et plus $|T|^2$ chute).
 
-#### Étude de l'influence de $k_0$ (4.1.f) — caractéristique du paquet
-
-On fait varier le vecteur d'onde moyen $k_0$ de 3.5 à 5.3 (soit $E = k_0^2/2$ de 6.1 à 14.0, toujours sous $V_0 = 15$). Comme la vitesse de groupe change avec $k_0$, chaque valeur nécessite **deux** simulations : une libre (pour mesurer $t_{\rm entrée}$) et une avec barrière (pour $t_{\rm sortie}$).
-
-Résultats obtenus :
-- $\tau_0 = a/v_g$ décroît en $1/k_0$ (le paquet va plus vite).
-- $\kappa = \sqrt{2m(V_0 - E)}/\hbar$ diminue quand $k_0$ augmente : la barrière devient moins opaque, $|T|^2$ croît fortement (de $8\times10^{-4}$ à $6\times10^{-2}$ entre $k_0=3.5$ et $5.3$).
-- $\tau_{t,\rm th}$ varie peu (0.13 à 0.21) : dans le régime opaque le temps tunnel dépend faiblement de l'énergie incidente.
-- $\tau_{t,\rm num}$ devient **négatif** pour $k_0 \lesssim 4.5$ : le pic transmis sort de la barrière *avant* que le pic incident n'y entre. Ce n'est ni un bug ni une violation de causalité : à $\Delta k = 0.5$ fixé, plus $k_0$ est petit, plus $|T(k)|^2$ varie violemment sur la largeur du spectre (il croît de plusieurs ordres de grandeur entre $k_0 - \Delta k$ et $k_0 + \Delta k$). La barrière ne transmet que l'avant-garde rapide du paquet, et le « pic » transmis est reconstruit à partir de composantes qui étaient déjà en avance. La mesure du temps de traversée par le pic perd alors son sens : c'est exactement la critique classique des temps tunnel définis par le suivi du maximum (cf. discussions autour de l'effet Hartman et de la superluminalité apparente).
-
-#### Étude de l'influence de $a_{\rm wp}$ (4.1.g) — largeur du paquet
-
-On fait varier la largeur initiale $a_{\rm wp}$ de 0.25 à 4.0 à $k_0 = 5$ fixé. La largeur spectrale du paquet gaussien est $\Delta k = 1/(2\sqrt{a_{\rm wp}})$ : un paquet étroit en espace est **large en impulsion**.
-
-Le temps de Hartman analytique (phase stationnaire) est calculé pour la seule composante $k_0$ : il ne dépend pas de $a_{\rm wp}$. Tout écart numérique s'interprète donc comme un effet de **filtrage spectral** :
-- $|T(k)|^2$ croît très vite avec $k$, donc la barrière transmet préférentiellement les composantes rapides du paquet ;
-- pour un paquet étroit ($\Delta k$ grand), le paquet transmis est reconstruit autour d'un $k_{\rm eff} > k_0$ : il sort plus tôt et la probabilité transmise mesurée dépasse $|T(k_0)|^2$ de l'onde plane ;
-- pour un paquet large ($\Delta k \to 0$), on retrouve la limite quasi-monochromatique : $\tau_{t,\rm num} \to \tau_{t,\rm th}$ et $P_{\rm trans} \to |T(k_0)|^2$.
-
-Résultats obtenus (à $k_0 = 5$, $a = 1$, $V_0 = 15$) :
-
-| $a_{\rm wp}$ | $\Delta k$ | $\tau_{t,\rm num}$ | $P_{\rm trans}$ |
-|---|---|---|---|
-| 0.25 | 1.000 | 0.034 | $2.0\times10^{-1}$ |
-| 0.50 | 0.707 | 0.078 | $1.4\times10^{-1}$ |
-| 1.00 | 0.500 | 0.112 | $8.1\times10^{-2}$ |
-| 2.00 | 0.354 | 0.130 | $4.8\times10^{-2}$ |
-| 4.00 | 0.250 | 0.136 | $3.4\times10^{-2}$ |
-
-La convergence monotone vers $\tau_{t,\rm th} = 0.168$ et $|T(k_0)|^2 = 2.5\times10^{-2}$ quand $a_{\rm wp}$ croît confirme l'interprétation par filtrage spectral.
-
-C'est un point de discussion important pour la soutenance : la notion de « temps de traversée » mesurée sur le pic n'a de sens que si le paquet reste quasi-monochromatique.
-
 #### Figures produites
 
 **Figure 1** (`Figure_1_evolution.png`) : trois instantanés de $|\psi|^2$ à $t=0$, mi-simulation, et $t_{\rm final}$, comparant le cas libre et le cas tunnel. On voit la séparation du paquet en une partie réfléchie et une partie transmise (petite).
@@ -187,7 +154,3 @@ C'est un point de discussion important pour la soutenance : la notion de « temp
 **Figure 3** (`Figure_3_influence_a.png`) : à gauche, $\tau_0$, $\tau_{t,\rm num}$ et $\tau_{t,\rm th}$ en fonction de $a$ — illustration de la saturation (effet Hartman). À droite, $|T|^2$ en échelle logarithmique vs $a$ — décroissance exponentielle.
 
 **Figure 4** (`Figure_4_influence_V0.png`) : temps tunnel et $|T|^2$ en fonction de $V_0$.
-
-**Figure 5** (`Figure_5_influence_k0.png`) : à gauche, $\tau_0$, $\tau_{t,\rm num}$ et $\tau_{t,\rm th}$ en fonction de $k_0$. À droite, $|T|^2$ en échelle logarithmique vs $k_0$ — la transmission gagne plusieurs ordres de grandeur quand $E$ se rapproche de $V_0$.
-
-**Figure 6** (`Figure_6_influence_awp.png`) : à gauche, $\tau_{t,\rm num}$ en fonction de $a_{\rm wp}$, comparé au temps de Hartman (indépendant de $a_{\rm wp}$) — convergence vers la prédiction quasi-monochromatique pour les paquets larges. À droite, probabilité transmise numérique vs $|T(k_0)|^2$ de l'onde plane — l'excès de transmission des paquets étroits illustre le filtrage spectral.
