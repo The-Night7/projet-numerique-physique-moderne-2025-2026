@@ -35,12 +35,19 @@ Cette section modélise un paquet d'ondes gaussien en 1D, qui constitue une repr
 - Introduction du facteur d'étalement du paquet d'ondes au cours du temps et calcul de la vitesse de groupe.
 - Tracé des parties réelle et imaginaire de la fonction d'onde quantique à un instant donné.
 
-### Partie 2 : Paquets d'Ondes Gaussiens
+### Partie 3 : Résolution numérique de l'équation de Schrödinger
 
 **Dossier :** [`Partie 3/`](./Partie%203)  <br>
 **Script Python :** [`EquaSchro1d2A.py`](./Partie%203/EquaSchro1d2A.py) <br>
 **Explication complète du code python :** [`Explication.md`](./Partie%203/explication.md) <br>
 **Réponses aux questions :** : [`réponses-aux-questions.md`](./Partie%203/réponses-aux-questions.md)
+
+### Partie 4 : Projet (me regardez pas c'est le titre... bon ok !) Effet Tunnel
+
+**Dossier :** [`Partie 4/`](./Partie%204)  <br>
+**Script Python :** [`EffetTunneld2A.py`](./Partie%204/EffetTunnel1d2A.py) <br>
+**Explication complète du code python :** [`Explication.md`](./Partie%204/explication.md) <br>
+**Réponses aux questions :** : [`réponses-aux-questions.md`](./Partie%204/réponses-aux-questions.md)
 
 ---
 
