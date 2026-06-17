@@ -15,7 +15,7 @@
     \begin{column}{0.56\textwidth}
       \begin{block}{Temps de traversée théorique}
         \[
-          \tikzmarknode{eqtaut}{\color{bordeaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+          \tikzmarknode{eqtaut}{\color{bordeaux}\tau_t^{\text{th}} = \tau_0 + \tau_g}
         \]
         {\scriptsize avec $\varphi_T(k) = -ka
           - \arctan\!\left[\tfrac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]$}
@@ -32,10 +32,17 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
   \end{columns}
   \vspace{-0.3em}
   \textbf{Résultat} ($k_0=5$, $a=1$, $V_0=15$) :
-  $\;\tau_t^{\rm num} = 0.112 \;<\; \tau_t^{\rm th} = 0.168 \;<\; \tau_0 = 0.200$
+  $\;\tau_t^{\text{num}} = 0.112 \;<\; \tau_t^{\text{th}} = 0.168 \;<\; \tau_0 = 0.200$
   — le paquet tunnel sort \emph{plus tôt} que le paquet libre :
   c'est l'\textbf{effet Hartman}.
+  % codetaut ne couvre que "tau0 + tau_g", pas le mot-clé "return" qui le
+  % précède sur la même ligne : on entre donc par le bas (.south) plutôt
+  % que par la gauche, pour ne pas traverser "return" horizontalement.
+  % Trajet en équerre (pas une courbe bézier) pour rester maître du
+  % passage : on sort à droite de la formule, on descend dans la marge
+  % vide sous les deux colonnes (entre le bloc, la boîte de code et la
+  % ligne "Résultat"), puis on remonte pile sous "tau0 + tau_g".
   \begin{tikzpicture}[remember picture, overlay]
-    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
-      (eqtaut.east) to[out=0,in=180] (codetaut.west);
+  	\draw[-{Triangle[length=2mm]}, thick, bordeaux]
+  	(eqtaut.east) to[out=0, in=-160, looseness=1.5] (codetaut.south);
   \end{tikzpicture}

@@ -13,6 +13,14 @@
 \usepackage{booktabs}
 \usepackage[sfdefault,light]{FiraSans}
 \usepackage{newtxsf}
+
+% --- Ajouts pour les extraits de code "façon éditeur sombre" ---
+% But : sur quelques diapos clés, montrer la ligne de code qui calcule
+% une grandeur juste à côté de sa formule, et tracer une flèche entre les
+% deux (cf. les exemples de diaporamas du dossier). tikzmark sert à poser
+% des repères invisibles dans le texte/le code pour que tikz puisse
+% ensuite y accrocher une flèche ; tcolorbox + listings fabriquent la
+% boîte sombre avec coloration syntaxique.
 \usepackage{tikz}
 \usetikzlibrary{tikzmark,arrows.meta}
 \usepackage[many]{tcolorbox}
@@ -31,7 +39,13 @@
 \definecolor{codekw}{HTML}{C586C0}     % mots-clés Python (def, return, if...)
 \definecolor{codeaccent}{HTML}{E06C75} % terme lié à la formule (lisible sur fond sombre)
 
-% Extrait de code façon éditeur sombre, avec ses trois pastilles
+% Extrait de code façon éditeur sombre, avec ses trois pastilles.
+% La taille du code est un \newcommand exprès (et pas codée en dur dans
+% basicstyle) : sur la diapo Crank--Nicolson on a dû caser une 4e ligne
+% (l'appel à la méthode de Thomas) sans déborder, donc on rétrécit juste
+% là avec un \renewcommand local (voir plus bas) au lieu de dupliquer
+% tout le style « codebox » pour gagner un demi-point de corps.
+\newcommand{\codetaille}{\small}
 \tcbset{
   codebox/.style={
     enhanced, breakable,
@@ -41,10 +55,13 @@
     listing only,
     listing options={
       language=Python,
-      basicstyle=\ttfamily\small\color{codefg},
+      basicstyle=\ttfamily\codetaille\color{codefg},
       keywordstyle=\color{codekw}\bfseries,
       showstringspaces=false,
       breaklines=false,
+      % escapeinside ouvre une fenêtre "vraie LaTeX" dans le code, entre
+      % (* et *) : c'est ce qui permet de poser un \tikzmarknode au beau
+      % milieu d'une ligne de code Python sans casser la coloration.
       escapeinside={(*}{*)},
     },
     overlay={
@@ -144,8 +161,7 @@
           (schéma de Crank--Nicolson) ;
     \item Mesurer le temps de traversée et le comparer à la prédiction
           théorique (temps de groupe de Hartman) ;
-    \item Étudier l'influence de la barrière ($a$, $V_0$) \emph{et} du paquet
-          ($k_0$, $a_{\rm wp}$) sur ce temps.
+    \item Étudier l'influence de la barrière ($a$, $V_0$) sur ce temps.
   \end{enumerate}
   \vspace{0.5em}
   Unités adimensionnées : $\hb = m = 1$.
@@ -180,6 +196,12 @@
 \end{frame}
 
 % ------------------------------------------------------------
+% Diapo "indispensable" : |T|^2 ici est aussi codé dans
+% coeff_transmission() (Partie 4), on aurait donc pu y ajouter un lien
+% formule/code comme sur les 4 autres diapos. On ne le fait pas exprès :
+% c'est la diapo où le jury attend qu'on sache refaire le raccordement
+% à la main (cf. script de Myriam), donc montrer du code ici brouillerait
+% le message "ça se calcule au tableau", pas "ça se calcule en Python".
 \begin{frame}{États stationnaires de la barrière rectangulaire}
   Solutions $\psi(x)\,\eg^{-iEt/\hb}$ pour $V(x) = V_0$ sur $[0,a]$, avec $E < V_0$ :
   \[
@@ -210,6 +232,10 @@
 \end{frame}
 
 % ------------------------------------------------------------
+% [fragile] est obligatoire sur toute diapo contenant un tcblisting (ou
+% n'importe quel \verb/lstlisting) : sans lui, Beamer essaie de capturer
+% le contenu de la diapo pour gérer les overlays et casse la coloration
+% syntaxique. Les 4 diapos suivantes avec un extrait de code l'utilisent.
 \begin{frame}[fragile]{Méthode numérique : schéma de Crank--Nicolson}
   \vspace{-0.2em}
   Équation de Schrödinger discrétisée en moyennant les instants $t_j$ et $t_{j+1}$ :
@@ -220,7 +246,7 @@
   \vspace{-0.6em}
   \[
     r = \frac{i\hb\,\Delta t}{4m\,\Delta x^2}, \qquad
-    \tikzmarknode{eqsi}{\color{bordeaux}$s_i$} = \frac{i\,V(x_i)\,\Delta t}{2\hb}
+    \tikzmarknode{eqsi}{\color{bordeaux}s_i} = \frac{i\,V(x_i)\,\Delta t}{2\hb}
   \]
   \vspace{-0.5em}
   \begin{columns}[T]
@@ -230,26 +256,41 @@
         \item \textbf{unitaire} : la norme $\int |\psi|^2 dx$ est conservée
               à $10^{-6}$ près sur toute la simulation ;
         \item inconditionnellement stable, précis à l'ordre 2 en temps et en espace ;
-        \item système tridiagonal résolu par la méthode de Thomas en $O(n_x)$
+        \item système tridiagonal résolu par la
+              \tikzmarknode{eqthomas}{\color{bordeaux}méthode de Thomas} en $O(n_x)$
               à chaque pas de temps.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
+      % On repasse en footnotesize juste pour cette boîte (4 lignes au
+      % lieu de 3 ailleurs) : \codetaille est redéfini localement, dans
+      % un groupe ouvert par begingroup/endgroup pour ne pas gêner
+      % le parsing verbatim de tcblisting.
+      \begingroup
+      \renewcommand{\codetaille}{\footnotesize}
       \begin{tcblisting}{codebox}
-r = 1j*hbar*dt/(4*m*dx**2)
 (*\tikzmarknode{codesi}{\color{codeaccent}\bfseries s\_int}*) = 1j*V_int*dt/(2*hbar)
 b_mat = (1 + 2*r) + s_int
+psi[1:-1] = (*\tikzmarknode{codethomas}{\color{codeaccent}\bfseries thomas}*)(
+    a_mat, b_mat, c_mat, rhs)
       \end{tcblisting}
-      \codesource{evolution\_schrodinger() --- Partie 4}
+      \endgroup
+      \codesource{evolution\_schrodinger() et resoudre\_tridiagonal() --- Partie 4}
     \end{column}
   \end{columns}
-  \vspace{0.1em}
+  \vspace{-0.05em}
   {\scriptsize\textbf{Paramètres :}
    grille $n_x{=}1500$, $n_t{=}3000$, $x{\in}[-30,30]$, $t{\in}[0,6]$ ~~
    paquet $k_0{=}5$ ($E{=}12.5$), $a_{\rm wp}{=}1$, $x_0{=}-10$ ~~
    barrière $a{=}1$, $V_0{=}15{>}E$.}
+  % Une seule flèche sur cette diapo : s_i -> sa ligne de code. Pour
+  % "méthode de Thomas" -> thomas(...), une flèche propre devrait traverser
+  % la fin de la 3e puce ("en O(nx) à chaque pas de temps") quel que soit
+  % l'angle testé, vu que les deux colonnes sont denses en texte ; on garde
+  % donc seulement le lien par couleur (bordeaux/corail partagé), sans
+  % tracer de flèche par-dessus le texte.
   \begin{tikzpicture}[remember picture, overlay]
-    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
+    \draw[-{Triangle[length=2mm]}, thick, bordeaux, looseness=0.8]
       (eqsi.south) to[out=-90,in=90] (codesi.north);
   \end{tikzpicture}
 \end{frame}
@@ -258,10 +299,13 @@ b_mat = (1 + 2*r) + s_int
 \begin{frame}[fragile]{Validation : particule libre ($V_0 = 0$)}
   Mesure des temps par suivi du \textbf{pic} de $|\psi(x,t)|^2$ aux bords de la
   zone $[0, a]$ :
+  % La formule de tau_0^num (en bordeaux) est reliée à la fonction qui
+  % mesure t_sortie et t_entrée : c'est elle qui fait tourner la simu et
+  % repère où |psi|^2 est maximal, donc elle "contient" les deux temps.
   \[
-    \tikzmarknode{eqtau}{\color{bordeaux}$\tau_0^{\rm num} = t_{\rm sortie} - t_{\rm entrée}$}
+    \tikzmarknode{eqtau}{\color{bordeaux}\tau_0^{\text{num}} = t_{\text{sortie}} - t_{\text{entrée}}}
     \qquad\text{à comparer à}\qquad
-    \tau_0^{\rm th} = \frac{a}{v_g} = \frac{m\,a}{\hb\,k_0}
+    \tau_0^{\text{th}} = \frac{a}{v_g} = \frac{m\,a}{\hb\,k_0}
   \]
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
@@ -270,9 +314,9 @@ b_mat = (1 + 2*r) + s_int
           \toprule
           & numérique & théorique \\
           \midrule
-          $t_{\rm entrée}$ (pic en $x=0$)   & 1.9987 & 2.0000 \\
-          $t_{\rm sortie}$ (pic en $x=a$)   & 2.1907 & 2.2000 \\
-          $\tau_0$                          & 0.192  & 0.200  \\
+          $t_{\text{entrée}}$ (pic en $x=0$)   & 1.9987 & 2.0000 \\
+          $t_{\text{sortie}}$ (pic en $x=a$)   & 2.1907 & 2.2000 \\
+          $\tau_0$                             & 0.192  & 0.200  \\
           \bottomrule
         \end{tabular}
       \end{center}
@@ -313,6 +357,10 @@ def (*\tikzmarknode{codefn}{\color{codeaccent}\bfseries temps\_pic\_en}*)(psi, t
 
 % ------------------------------------------------------------
 \begin{frame}[fragile]{Probabilités de réflexion et de transmission}
+  % La flèche part du code (en haut) vers le chiffre qu'il produit (en
+  % bas, dans les puces) : c'est le seul des 4 cas où la flèche descend,
+  % parce que le résultat numérique est commenté après coup, pas affiché
+  % dans une formule au-dessus du code.
   \begin{columns}[T]
     \begin{column}{0.50\textwidth}
       \includegraphics[width=\textwidth]{Figure_2_normes.png}
@@ -321,7 +369,7 @@ def (*\tikzmarknode{codefn}{\color{codeaccent}\bfseries temps\_pic\_en}*)(psi, t
       \begin{tcblisting}{codebox}
 mask = x > x_b + a_b
 (*\tikzmarknode{codetrans}{\color{codeaccent}\bfseries norme\_trans}*) = norme(
-    psi[-1, mask], dx)
+    psi[-1, mask], dx)(*\tikzmarknode{codetransend}{}*)
       \end{tcblisting}
       \codesource{calcul de la transmission --- main(), Partie 4}
     \end{column}
@@ -331,16 +379,29 @@ mask = x > x_b + a_b
     \item Probabilité transmise mesurée : \tikzmarknode{eqtrans}{\color{bordeaux}$8.1\times10^{-2}$}, contre
           $|T(k_0)|^2 = 2.5\times10^{-2}$ pour l'onde plane.
     \item L'écart n'est pas une erreur numérique : le paquet n'est pas
-          monochromatique, et la barrière \textbf{filtre} son spectre
-          (nous y reviendrons).
+          monochromatique, et la barrière \textbf{filtre} son spectre —
+          elle favorise les composantes rapides, mieux transmises que
+          $k_0$ seul ne le laisserait penser.
   \end{itemize}
+  % La flèche part de la fin de la dernière ligne de code (codetransend,
+  % un repère invisible posé juste après "dx)"), pas de "norme_trans"
+  % directement : sinon elle retraverserait la ligne du dessous en
+  % redescendant. De là, tout le trajet vers la puce se fait dans la
+  % marge vide sous la boîte de code, sans repasser sur du texte.
   \begin{tikzpicture}[remember picture, overlay]
-    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
-      (codetrans.south) to[out=-90,in=90] (eqtrans.north);
+  	\draw[-{Triangle[length=2mm]}, thick, bordeaux, rounded corners=10pt]
+  	(codetransend.south) -- ++(0,-1.5cm) -- (eqtrans.north);
   \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------
+% Diapo dense (2 minutes, c'est LE résultat du projet) : on relie
+% uniquement tau_t^th = tau_0 + tau_g à la ligne "return tau0 + tau_g".
+% On aurait pu aussi relier la formule de phi_T(k) (juste en dessous, en
+% \scriptsize) à la fonction phase_transmission(), mais il n'y a plus de
+% place pour une 2e flèche propre sans traverser tout le bloc, et ça
+% aurait été facile à confondre avec le lien existant. Donc on s'arrête
+% au lien le plus utile et on laisse phi_T(k) comme simple rappel.
 \begin{frame}[fragile]{Quel temps de traversée ? Le temps de groupe de Hartman}
   \small
   Le paquet transmis s'écrit en pondérant chaque composante par $T(k)$ :
@@ -358,7 +419,7 @@ mask = x > x_b + a_b
     \begin{column}{0.56\textwidth}
       \begin{block}{Temps de traversée théorique}
         \[
-          \tikzmarknode{eqtaut}{\color{bordeaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+          \tikzmarknode{eqtaut}{\color{bordeaux}\tau_t^{\text{th}} = \tau_0 + \tau_g}
         \]
         {\scriptsize avec $\varphi_T(k) = -ka
           - \arctan\!\left[\tfrac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]$}
@@ -375,12 +436,19 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
   \end{columns}
   \vspace{-0.3em}
   \textbf{Résultat} ($k_0=5$, $a=1$, $V_0=15$) :
-  $\;\tau_t^{\rm num} = 0.112 \;<\; \tau_t^{\rm th} = 0.168 \;<\; \tau_0 = 0.200$
+  $\;\tau_t^{\text{num}} = 0.112 \;<\; \tau_t^{\text{th}} = 0.168 \;<\; \tau_0 = 0.200$
   — le paquet tunnel sort \emph{plus tôt} que le paquet libre :
   c'est l'\textbf{effet Hartman}.
+  % codetaut ne couvre que "tau0 + tau_g", pas le mot-clé "return" qui le
+  % précède sur la même ligne : on entre donc par le bas (.south) plutôt
+  % que par la gauche, pour ne pas traverser "return" horizontalement.
+  % Trajet en équerre (pas une courbe bézier) pour rester maître du
+  % passage : on sort à droite de la formule, on descend dans la marge
+  % vide sous les deux colonnes (entre le bloc, la boîte de code et la
+  % ligne "Résultat"), puis on remonte pile sous "tau0 + tau_g".
   \begin{tikzpicture}[remember picture, overlay]
-    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
-      (eqtaut.east) to[out=0,in=180] (codetaut.west);
+  	\draw[-{Triangle[length=2mm]}, thick, bordeaux]
+  	(eqtaut.east) to[out=0, in=-160, looseness=1.5] (codetaut.south);
   \end{tikzpicture}
 \end{frame}
 
@@ -390,7 +458,7 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
     \includegraphics[width=0.82\textwidth]{Figure_3_influence_a.png}
   \end{center}
   \begin{itemize}
-    \item $\tau_0 \propto a$ (libre) mais $\tau_t^{\rm th}$ \textbf{sature}
+    \item $\tau_0 \propto a$ (libre) mais $\tau_t^{\text{th}}$ \textbf{sature}
           vers $0.179$ dès $\kappa a \gtrsim 3$ : le temps tunnel devient
           indépendant de l'épaisseur (Hartman, 1962).
     \item $|T|^2$ chute exponentiellement ($\sim \eg^{-2\kappa a}$),
@@ -415,38 +483,12 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
 \end{frame}
 
 % ------------------------------------------------------------
-\begin{frame}{Influence du paquet : impulsion moyenne $k_0$}
-  \begin{center}
-    \includegraphics[width=0.76\textwidth]{Figure_5_influence_k0.png}
-  \end{center}
-  \begin{itemize}
-    \item $|T|^2$ gagne deux ordres de grandeur quand $E = k_0^2/2$ se
-          rapproche de $V_0$ ; $\tau_t^{\rm th}$ varie peu (0.13--0.21).
-    \item Pour $k_0 \lesssim 4.5$, $\tau_t^{\rm num}$ devient \textbf{négatif} :
-          le pic transmis sort avant que le pic incident n'entre !
-    \item Pas de violation de causalité : seule l'avant-garde rapide du spectre
-          est transmise — le « pic » est reconstruit de composantes déjà en avance.
-  \end{itemize}
-\end{frame}
-
-% ------------------------------------------------------------
-\begin{frame}{Influence du paquet : largeur initiale $a_{\rm wp}$}
-  \begin{center}
-    \includegraphics[width=0.76\textwidth]{Figure_6_influence_awp.png}
-  \end{center}
-  \begin{itemize}
-    \item Le temps de Hartman (calculé pour la seule composante $k_0$)
-          ne dépend pas de $a_{\rm wp}$ : tout l'écart vient de la largeur
-          spectrale $\Delta k = 1/(2\sqrt{a_{\rm wp}})$.
-    \item Paquet large ($\Delta k \to 0$) : $\tau_t^{\rm num} \to \tau_t^{\rm th}$
-          et $P_{\rm trans} \to |T(k_0)|^2$ — limite quasi monochromatique.
-    \item Paquet étroit : les composantes rapides sont favorisées
-          $\Rightarrow$ sortie précoce, transmission jusqu'à $8$ fois
-          au-dessus de la prédiction onde plane.
-  \end{itemize}
-\end{frame}
-
-% ------------------------------------------------------------
+% Les études "influence de k0" et "influence de a_wp" (paquet plutôt que
+% barrière) ont été retirées du périmètre du projet (cf. Partie 4 :
+% explication.md et EffetTunnel1d2A.py n'ont plus les sections 4.1.f/4.1.g,
+% Figure_5/6 supprimées) : trop de matière pour le temps imparti. L'idée
+% qu'elles portaient (filtrage spectral) reste mentionnée en perspective
+% dans la conclusion ci-dessous, sans le détail chiffré.
 \begin{frame}{Conclusion}
   \textbf{Ce que nous avons montré :}
   \begin{itemize}
@@ -457,17 +499,19 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
           la décroissance exponentielle de la transmission est vérifiée
           numériquement.
     \item Le temps de traversée mesuré confirme l'\textbf{effet Hartman} :
-          $\tau_t < \tau_0$, et $\tau_t^{\rm th}$ sature avec la largeur de la
-          barrière.
-    \item Les caractéristiques du paquet comptent : la notion de temps de
-          traversée par suivi du pic n'a de sens que dans la limite
-          \textbf{quasi monochromatique} ($\Delta k$ petit) — sinon le filtrage
-          spectral domine, jusqu'à des temps apparents négatifs.
+          $\tau_t < \tau_0$.
+    \item L'effet est robuste aux caractéristiques de la \textbf{barrière} :
+          $\tau_t^{\text{th}}$ sature avec $a$ et \textbf{diminue} avec $V_0$ —
+          une barrière plus infranchissable se traverse (rarement) mais
+          plus vite.
   \end{itemize}
   \vspace{0.5em}
-  \textbf{Perspectives :} autres définitions du temps tunnel (temps de séjour,
-  horloge de Larmor), double barrière, comparaison aux expériences
-  d'attophysique.
+  \textbf{Perspectives :} influence des caractéristiques du \emph{paquet}
+  lui-même ($k_0$, $a_{\rm wp}$) sur ce temps — piste explorée puis écartée
+  du périmètre final par souci de temps, mais déjà entrevue à la diapo 8
+  (le filtrage spectral de la barrière) ; autres définitions du temps
+  tunnel (temps de séjour, horloge de Larmor) ; double barrière ;
+  comparaison aux expériences d'attophysique.
   \vspace{0.8em}
   \begin{center}
     \emph{Merci de votre attention !}
