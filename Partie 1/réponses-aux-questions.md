@@ -6,7 +6,7 @@ Réponse : $\Psi(\vec{r},t)=\Psi_0 \exp(i(\vec{k} \cdot \vec{r} - \omega t))$
 $\vec{k}$ : direction de la propagation d'onde. Sa dimension physique est $L⁻¹$ et son unité s'exprime en $m⁻¹$.
 $\omega$ : Elle caractérise la période temporelle de l'onde. Sa dimension physique est $T⁻¹$ et son unité s'exprime en $s⁻¹$.
 #### b. En déduire son expression à une dimension d’espace et déterminer sa partie réelle et sa partie imaginaire. Nous travaillerons désormais à une dimension d’espace uniquement.
-Réponse : Sur un seul axe, le produit scalaire $k \bullet r$ devient simplement $kx$. <br>
+Réponse : Sur un seul axe, le produit scalaire $k \cdot r$ devient simplement $kx$. <br>
 L'expression se simplifie en : $\Psi(x,t)=\Psi_0 \exp(i(kx - \omega t))$ <br>
 En utilisant la formule d'Euler ($e^{i\theta} = cos(\theta) + i\sin(\theta)$), on détermine : <br>
 ∙ Partie réelle : $\Psi_0\cos(kx - \omega t)$ <br>
