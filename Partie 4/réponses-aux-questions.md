@@ -1,6 +1,6 @@
 # 4 Projet – Effet tunnel et temps de traversée
 
-## 4.1 Objectif
+## 4.1.1 Objectif
 
 Le but est de déterminer le temps nécessaire à une particule pour franchir une barrière rectangulaire de potentiel de hauteur $V_0 > 0$ par effet tunnel.
 
@@ -18,7 +18,7 @@ L'état initial est un paquet d'ondes gaussien de vecteur d'onde moyen $k_0$, ce
 
 ## Aspects numériques
 
-### 4.1.a – Programme de résolution avec barrière
+### 4.1.1.a – Programme de résolution avec barrière
 
 Le programme `EffetTunnel1d2A.py` adapte le schéma de Crank-Nicolson de la partie 3 à un **potentiel spatialement variable**.
 
@@ -35,7 +35,7 @@ La simulation produit trois régimes visibles :
 
 La norme totale est conservée à $10^{-5}$ près (propriété du schéma de Crank-Nicolson).
 
-### 4.1.b – Temps de traversée libre $\tau_{0,\rm num}$
+### 4.1.1.b – Temps de traversée libre $\tau_{0,\rm num}$
 
 Pour $V_0 = 0$, le paquet se propage librement. On mesure le temps que met le pic de $|\psi(x,t)|^2$ pour aller de $x_b$ à $x_b + a$ :
 
@@ -48,7 +48,7 @@ $$\tau_{0,\rm th} = \frac{a}{v_g} = \frac{a\,m}{\hbar\,k_0} = \frac{1}{5} = 0.20
 
 La simulation confirme $\tau_{0,\rm num} \approx 0.200$.
 
-### 4.1.c – Temps de traversée tunnel $\tau_{t,\rm num}$
+### 4.1.1.c – Temps de traversée tunnel $\tau_{t,\rm num}$
 
 Pour $V_0 = 15 > E = 12.5$, on mesure l'instant où le pic de la **partie transmise** de $|\psi|^2$ passe en $x = x_b + a$ :
 
@@ -76,14 +76,14 @@ La probabilité de transmission est $|T|^2 \approx 2.5 \times 10^{-2}$, donc env
 
 **Remarque :** Pour les grandes valeurs de $a$ ($|T|^2 \lesssim 10^{-4}$), la détection numérique du pic transmis est limitée par la faiblesse du signal ; les valeurs analytiques (effet Hartman) restent les plus fiables.
 
-### 4.1.d – Influence de la largeur $a$
+### 4.1.1.d – Influence de la largeur $a$
 
 | $a$ | $\kappa\cdot a$ | $\tau_0 = a/v_g$ | $\tau_{t,\rm th}$ | $\tau_{t,\rm th}/\tau_0$ | $\|T\|^2$ |
 |-----|----------|-----------|------------|-------------|----------|
 | 0.5 | 1.12     | 0.100     | 0.125      | 1.25        | 2.3×10⁻¹ |
 | 1.0 | 2.24     | 0.200     | 0.168      | 0.84        | 2.5×10⁻² |
 | 1.5 | 3.35     | 0.300     | 0.177      | 0.59        | 2.7×10⁻³ |
-| 2.0 | 4.47     | 0.400     | 0.179      | 0.45        | 2.9×10⁻⁴ |
+| 2.0 | 4.1.47     | 0.400     | 0.179      | 0.45        | 2.9×10⁻⁴ |
 | 2.5 | 5.59     | 0.500     | 0.179      | 0.36        | 3.1×10⁻⁵ |
 | 3.0 | 6.71     | 0.600     | 0.179      | 0.30        | 3.3×10⁻⁶ |
 
@@ -93,12 +93,12 @@ La probabilité de transmission est $|T|^2 \approx 2.5 \times 10^{-2}$, donc env
 - Dans le régime opaque ($\kappa a \gg 1$), $\tau_{t,\rm th}$ devient **indépendant de $a$** : c'est l'**effet Hartman**. Cela signifie que la barrière est traversée en un temps qui ne dépend pas de son épaisseur, si celle-ci est suffisamment grande.
 - Simultanément, $|T|^2$ décroît exponentiellement avec $a$ : $|T|^2 \approx 16(E/V_0)(1-E/V_0)\,e^{-2\kappa a}$ pour $\kappa a \gg 1$.
 
-### 4.1.e – Influence de $V_0$
+### 4.1.1.e – Influence de $V_0$
 
 | $V_0$ | $\kappa\cdot a$ | $\tau_{t,\rm th}$ | $\|T\|^2$ |
 |--------|---------|------------|----------|
 | 13.5   | 1.41    | 0.218      | 6.8×10⁻² |
-| 14.0   | 1.73    | 0.198      | 4.9×10⁻² |
+| 14.1.0   | 1.73    | 0.198      | 4.1.9×10⁻² |
 | 15.0   | 2.24    | 0.168      | 2.5×10⁻² |
 | 17.0   | 3.00    | 0.132      | 7.7×10⁻³ |
 | 20.0   | 3.87    | 0.103      | 1.6×10⁻³ |
@@ -111,7 +111,7 @@ La probabilité de transmission est $|T|^2 \approx 2.5 \times 10^{-2}$, donc env
 
 ---
 
-## 4.2 – Comparaison avec le cas classique
+## 4.1.2 – Comparaison avec le cas classique
 
 **Cas classique $E > V_0$ :**
 La particule passe au-dessus de la barrière avec une vitesse réduite :
@@ -138,7 +138,7 @@ La particule peut traverser la barrière par **effet tunnel** avec une probabili
 
 ## Aspects analytiques
 
-### 4.3.a – États stationnaires et coefficients de transmission/réflexion
+### 4.1.3.a – États stationnaires et coefficients de transmission/réflexion
 
 On cherche les solutions stationnaires $\psi(x) e^{-iEt/\hbar}$ pour une barrière rectangulaire :
 
@@ -163,7 +163,7 @@ $$|T|^2 \approx \frac{16k^2\kappa^2}{(k^2 + \kappa^2)^2}\,e^{-2\kappa a}$$
 
 La transmission décroît **exponentiellement** avec la largeur $a$ et avec $\sqrt{V_0 - E}$.
 
-### 4.3.b – Vitesse de phase et de groupe du paquet gaussien
+### 4.1.3.b – Vitesse de phase et de groupe du paquet gaussien
 
 Pour une particule libre de relation de dispersion $\omega(k) = \hbar k^2 / (2m)$ :
 
@@ -175,20 +175,20 @@ $$v_g = \frac{\hbar k_0}{m}$$
 
 C'est la vitesse de déplacement du centre du paquet. Avec nos paramètres ($k_0 = 5$, $\hbar = m = 1$) : $v_g = 5$.
 
-### 4.3.c – Temps de traversée libre $\tau_{0,\rm th}$
+### 4.1.3.c – Temps de traversée libre $\tau_{0,\rm th}$
 
 Pour une particule libre (état gaussien) qui parcourt une distance $a$ :
 $$\tau_{0,\rm th} = \frac{a}{v_g} = \frac{m\,a}{\hbar\,k_0}$$
 
 Avec nos paramètres : $\tau_{0,\rm th} = 1/5 = 0.200$.
 
-### 4.3.d – Influence de $a$ sur $\tau_{0,\rm th}$
+### 4.1.3.d – Influence de $a$ sur $\tau_{0,\rm th}$
 
 $$\tau_{0,\rm th} \propto a$$
 
 Le temps de traversée libre est **linéaire** en $a$. Doubler la largeur de la barrière double le temps de traversée libre.
 
-### 4.3.e – Expression du paquet d'ondes transmis
+### 4.1.3.e – Expression du paquet d'ondes transmis
 
 Le paquet transmis est obtenu en pondérant chaque composante de Fourier $g(k)$ par le coefficient $T(k)$ :
 
@@ -204,7 +204,7 @@ $$\psi_{\rm transmis}(x, t) \approx |T(k_0)|\,e^{i\varphi_T(k_0)}\;\psi_{\rm lib
 
 Le paquet transmis ressemble au paquet libre **décalé spatialement** de $\varphi'_T(k_0)$, qui est positif (avance) dans le régime tunnel profond. Ce décalage correspond à un avancement temporel $\Delta t = \varphi'_T(k_0)/v_g$.
 
-### 4.3.f – Temps de traversée tunnel $\tau_{t,\rm th}$
+### 4.1.3.f – Temps de traversée tunnel $\tau_{t,\rm th}$
 
 La phase de $T(k)$ vaut :
 $$\varphi_T(k) = -ka - \arctan\!\left[\frac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]$$
@@ -234,7 +234,7 @@ Ce résultat est **indépendant de $a$** ! C'est l'**effet Hartman** : pour une 
 
 **Valeur numérique de saturation :** $\tau_{t,\rm th}(a \to \infty) \approx 0.179$ pour $k_0 = 5$, $V_0 = 15$.
 
-### 4.3.g – Influence de $a$ sur $\tau_{t,\rm th}$
+### 4.1.3.g – Influence de $a$ sur $\tau_{t,\rm th}$
 
 | $a$ | $\tau_0 = a/v_g$ | $\tau_{t,\rm th}$ |
 |-----|-----------|------------|
