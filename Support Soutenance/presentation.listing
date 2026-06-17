@@ -1,0 +1,3 @@
+tau_g = dphi_dk / vg
+tau0 = tau_libre(k0, a)
+return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)

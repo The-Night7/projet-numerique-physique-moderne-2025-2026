@@ -13,6 +13,10 @@
 \usepackage{booktabs}
 \usepackage[sfdefault,light]{FiraSans}
 \usepackage{newtxsf}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark,arrows.meta}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings,skins}
 
 \graphicspath{{figures/}}
 
@@ -22,6 +26,36 @@
 \definecolor{papier}{HTML}{FBFAF7}     % fond
 \definecolor{grisdoux}{HTML}{8A8680}   % éléments secondaires
 \definecolor{filet}{HTML}{D8D3CA}      % règles fines, fonds de bloc
+\definecolor{codebg}{HTML}{1E1E1E}     % fond des extraits de code
+\definecolor{codefg}{HTML}{D4D4D4}     % texte du code
+\definecolor{codekw}{HTML}{C586C0}     % mots-clés Python (def, return, if...)
+\definecolor{codeaccent}{HTML}{E06C75} % terme lié à la formule (lisible sur fond sombre)
+
+% Extrait de code façon éditeur sombre, avec ses trois pastilles
+\tcbset{
+  codebox/.style={
+    enhanced, breakable,
+    colback=codebg, colframe=codebg,
+    boxrule=0pt, arc=2.2mm,
+    top=6mm, left=3.5mm, right=3.5mm, bottom=2.5mm,
+    listing only,
+    listing options={
+      language=Python,
+      basicstyle=\ttfamily\small\color{codefg},
+      keywordstyle=\color{codekw}\bfseries,
+      showstringspaces=false,
+      breaklines=false,
+      escapeinside={(*}{*)},
+    },
+    overlay={
+      \fill[red!70!black]     ([xshift=3.5mm,yshift=-3mm]frame.north west) circle (1mm);
+      \fill[yellow!85!orange] ([xshift=6.3mm,yshift=-3mm]frame.north west) circle (1mm);
+      \fill[green!50!black]   ([xshift=9.1mm,yshift=-3mm]frame.north west) circle (1mm);
+    }
+  }
+}
+% Légende discrète sous une boîte de code, pour ancrer sa provenance
+\newcommand{\codesource}[1]{{\tiny\color{grisdoux}\textit{#1}}}
 
 \setbeamercolor{background canvas}{bg=papier}
 \setbeamercolor{normal text}{fg=encre}
@@ -176,21 +210,23 @@
 \end{frame}
 
 % ------------------------------------------------------------
-\begin{frame}{Méthode numérique : schéma de Crank--Nicolson}
+\begin{frame}[fragile]{Méthode numérique : schéma de Crank--Nicolson}
+  \vspace{-0.2em}
   Équation de Schrödinger discrétisée en moyennant les instants $t_j$ et $t_{j+1}$ :
   \[
     -r\,\psi_{i-1}^{j+1} + (1 + 2r + s_i)\,\psi_i^{j+1} - r\,\psi_{i+1}^{j+1}
     = r\,\psi_{i-1}^{j} + (1 - 2r - s_i)\,\psi_i^{j} + r\,\psi_{i+1}^{j}
   \]
+  \vspace{-0.6em}
   \[
     r = \frac{i\hb\,\Delta t}{4m\,\Delta x^2}, \qquad
-    s_i = \frac{i\,V(x_i)\,\Delta t}{2\hb}
-    \quad \text{(diagonale variable : } V(x) \text{ non uniforme)}
+    \tikzmarknode{eqsi}{\color{bordeaux}$s_i$} = \frac{i\,V(x_i)\,\Delta t}{2\hb}
   \]
+  \vspace{-0.5em}
   \begin{columns}[T]
-    \begin{column}{0.55\textwidth}
-      \textbf{Pourquoi ce schéma ?}
-      \begin{itemize}
+    \begin{column}{0.48\textwidth}
+      \footnotesize\textbf{Pourquoi ce schéma ?}
+      \begin{itemize}\footnotesize\setlength{\itemsep}{0pt}
         \item \textbf{unitaire} : la norme $\int |\psi|^2 dx$ est conservée
               à $10^{-6}$ près sur toute la simulation ;
         \item inconditionnellement stable, précis à l'ordre 2 en temps et en espace ;
@@ -198,44 +234,69 @@
               à chaque pas de temps.
       \end{itemize}
     \end{column}
-    \begin{column}{0.41\textwidth}
-      \textbf{Paramètres de référence :}
-      \begin{itemize}
-        \item grille : $n_x = 1500$, $n_t = 3000$, $x \in [-30, 30]$, $t \in [0, 6]$ ;
-        \item paquet : $k_0 = 5$ ($E = 12.5$), $a_{\rm wp} = 1$, $x_0 = -10$ ;
-        \item barrière : $a = 1$, $V_0 = 15 > E$.
-      \end{itemize}
+    \begin{column}{0.48\textwidth}
+      \begin{tcblisting}{codebox}
+r = 1j*hbar*dt/(4*m*dx**2)
+(*\tikzmarknode{codesi}{\color{codeaccent}\bfseries s\_int}*) = 1j*V_int*dt/(2*hbar)
+b_mat = (1 + 2*r) + s_int
+      \end{tcblisting}
+      \codesource{evolution\_schrodinger() --- Partie 4}
     \end{column}
   \end{columns}
+  \vspace{0.1em}
+  {\scriptsize\textbf{Paramètres :}
+   grille $n_x{=}1500$, $n_t{=}3000$, $x{\in}[-30,30]$, $t{\in}[0,6]$ ~~
+   paquet $k_0{=}5$ ($E{=}12.5$), $a_{\rm wp}{=}1$, $x_0{=}-10$ ~~
+   barrière $a{=}1$, $V_0{=}15{>}E$.}
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
+      (eqsi.south) to[out=-90,in=90] (codesi.north);
+  \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------
-\begin{frame}{Validation : particule libre ($V_0 = 0$)}
+\begin{frame}[fragile]{Validation : particule libre ($V_0 = 0$)}
   Mesure des temps par suivi du \textbf{pic} de $|\psi(x,t)|^2$ aux bords de la
   zone $[0, a]$ :
   \[
-    \tau_0^{\rm num} = t_{\rm sortie} - t_{\rm entrée}
+    \tikzmarknode{eqtau}{\color{bordeaux}$\tau_0^{\rm num} = t_{\rm sortie} - t_{\rm entrée}$}
     \qquad\text{à comparer à}\qquad
     \tau_0^{\rm th} = \frac{a}{v_g} = \frac{m\,a}{\hb\,k_0}
   \]
-  \begin{center}
-    \begin{tabular}{lcc}
-      \toprule
-      & numérique & théorique \\
-      \midrule
-      $t_{\rm entrée}$ (pic en $x=0$)   & 1.9987 & 2.0000 \\
-      $t_{\rm sortie}$ (pic en $x=a$)   & 2.1907 & 2.2000 \\
-      $\tau_0$                          & 0.192  & 0.200  \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-  \vspace{0.5em}
-  \begin{itemize}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \begin{tabular}{lcc}
+          \toprule
+          & numérique & théorique \\
+          \midrule
+          $t_{\rm entrée}$ (pic en $x=0$)   & 1.9987 & 2.0000 \\
+          $t_{\rm sortie}$ (pic en $x=a$)   & 2.1907 & 2.2000 \\
+          $\tau_0$                          & 0.192  & 0.200  \\
+          \bottomrule
+        \end{tabular}
+      \end{center}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{tcblisting}{codebox}
+def (*\tikzmarknode{codefn}{\color{codeaccent}\bfseries temps\_pic\_en}*)(psi, t, idx):
+    amp = abs(psi[:, idx])**2
+    return t[argmax(amp)]
+      \end{tcblisting}
+      \codesource{temps\_pic\_en() --- Partie 4}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \begin{itemize}\footnotesize\setlength{\itemsep}{1pt}
     \item Écart de 4\,\% sur $\tau_0$ : résolution temporelle de la grille
           ($\Delta t = 2\times10^{-3}$) et étalement du paquet.
     \item Norme conservée : $0.999999 \to 1.000000$ sur 3000 pas.
   \end{itemize}
   $\Rightarrow$ le solveur est validé, on peut allumer la barrière.
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
+      (eqtau.south) to[out=-90,in=90] (codefn.north);
+  \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------
@@ -251,41 +312,76 @@
 \end{frame}
 
 % ------------------------------------------------------------
-\begin{frame}{Probabilités de réflexion et de transmission}
-  \begin{center}
-    \includegraphics[width=0.78\textwidth]{Figure_2_normes.png}
-  \end{center}
-  \begin{itemize}
+\begin{frame}[fragile]{Probabilités de réflexion et de transmission}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \includegraphics[width=\textwidth]{Figure_2_normes.png}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{tcblisting}{codebox}
+mask = x > x_b + a_b
+(*\tikzmarknode{codetrans}{\color{codeaccent}\bfseries norme\_trans}*) = norme(
+    psi[-1, mask], dx)
+      \end{tcblisting}
+      \codesource{calcul de la transmission --- main(), Partie 4}
+    \end{column}
+  \end{columns}
+  \begin{itemize}\footnotesize\setlength{\itemsep}{1pt}
     \item Norme totale constante (Crank--Nicolson unitaire).
-    \item Probabilité transmise mesurée : $8.1\times10^{-2}$, contre
+    \item Probabilité transmise mesurée : \tikzmarknode{eqtrans}{\color{bordeaux}$8.1\times10^{-2}$}, contre
           $|T(k_0)|^2 = 2.5\times10^{-2}$ pour l'onde plane.
     \item L'écart n'est pas une erreur numérique : le paquet n'est pas
           monochromatique, et la barrière \textbf{filtre} son spectre
           (nous y reviendrons).
   \end{itemize}
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
+      (codetrans.south) to[out=-90,in=90] (eqtrans.north);
+  \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------
-\begin{frame}{Quel temps de traversée ? Le temps de groupe de Hartman}
+\begin{frame}[fragile]{Quel temps de traversée ? Le temps de groupe de Hartman}
+  \small
   Le paquet transmis s'écrit en pondérant chaque composante par $T(k)$ :
+  \vspace{-0.2em}
   \[
     \psi_{\rm trans}(x,t) = \frac{1}{\sqrt{2\pi}}\int g(k)\,T(k)\,
     \eg^{i(kx-\omega t)}\,dk
     \qquad \text{avec } T = |T|\,\eg^{i\varphi_T}
   \]
+  \vspace{-0.3em}
   Phase stationnaire autour de $k_0$ $\Rightarrow$ le pic transmis est décalé de
   $\tau_g = \dfrac{1}{v_g}\dfrac{d\varphi_T}{dk}\Big|_{k_0}$ \;($< 0$ en régime tunnel) :
-  \begin{block}{Temps de traversée théorique}
-    \[
-      \tau_t^{\rm th} = \tau_0 + \tau_g
-      \qquad \text{avec } \varphi_T(k) = -ka
-      - \arctan\!\left[\frac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]
-    \]
-  \end{block}
+  \vspace{-0.2em}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{block}{Temps de traversée théorique}
+        \[
+          \tikzmarknode{eqtaut}{\color{bordeaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+        \]
+        {\scriptsize avec $\varphi_T(k) = -ka
+          - \arctan\!\left[\tfrac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]$}
+      \end{block}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{tcblisting}{codebox}
+tau_g = dphi_dk / vg
+tau0 = tau_libre(k0, a)
+return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
+      \end{tcblisting}
+      \codesource{tau\_tunnel() --- Partie 4}
+    \end{column}
+  \end{columns}
+  \vspace{-0.3em}
   \textbf{Résultat} ($k_0=5$, $a=1$, $V_0=15$) :
   $\;\tau_t^{\rm num} = 0.112 \;<\; \tau_t^{\rm th} = 0.168 \;<\; \tau_0 = 0.200$
   — le paquet tunnel sort \emph{plus tôt} que le paquet libre :
   c'est l'\textbf{effet Hartman}.
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
+      (eqtaut.east) to[out=0,in=180] (codetaut.west);
+  \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------

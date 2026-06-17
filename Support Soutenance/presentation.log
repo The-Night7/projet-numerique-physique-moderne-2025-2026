@@ -1,83 +1,49 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.9)  11 JUN 2026 11:05
- restricted system commands enabled.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.9)  17 JUN 2026 14:08
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **presentation.tex
 (./presentation.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
-Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended 
-collection.
-luaotfload | conf : Root cache directory is "/home/bsd_myriam/.texlive/texmf-var
-/luatex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
-olved path "/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2023-12-28.lu
-a".
-Lua-only attribute luaotfload@noligature = 1
-luaotfload | init : Context OpenType loader version 3.134
-Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' in `hpack_filter'.
-Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
-Inserting `luaotfload.define_font' in `define_font'.
-Lua-only attribute luaotfload_color_attribute = 2
-luaotfload | conf : Root cache directory is "/home/bsd_myriam/.texlive/texmf-var
-/luatex-cache/generic/names".
-Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
-Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
-Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
-Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
-Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
-Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
-Inserting `luaotfload.cleanup_files' in `wrapup_run'.
-Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
-Inserting `luaotfload.glyphinfo' in `glyph_info'.
-Lua-only attribute luaotfload.letterspace_done = 3
-Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
-Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
-Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
-Inserting `tracingstacklevels' in `input_level_string'. (/usr/share/texmf-dist/
-tex/latex/beamer/beamer.cls
+(/usr/share/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count273
+\etb@tempcnta=\count275
 )
 \beamer@tempbox=\box53
-\beamer@tempcount=\count274
-\c@beamerpauses=\count275
+\beamer@tempcount=\count276
+\c@beamerpauses=\count277
 
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
-\beamer@slideinframe=\count276
-\beamer@minimum=\count277
+\beamer@slideinframe=\count278
+\beamer@minimum=\count279
 \beamer@decode@box=\box54
 )
 \beamer@commentbox=\box55
-\beamer@modecount=\count278
+\beamer@modecount=\count280
 )
 (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
-\headdp=\dimen147
-\footheight=\dimen148
-\sidebarheight=\dimen149
-\beamer@tempdim=\dimen150
-\beamer@finalheight=\dimen151
-\beamer@animht=\dimen152
-\beamer@animdp=\dimen153
-\beamer@animwd=\dimen154
-\beamer@leftmargin=\dimen155
-\beamer@rightmargin=\dimen156
-\beamer@leftsidebar=\dimen157
-\beamer@rightsidebar=\dimen158
-\beamer@boxsize=\dimen159
-\beamer@vboxoffset=\dimen160
-\beamer@descdefault=\dimen161
-\beamer@descriptionwidth=\dimen162
+\headdp=\dimen148
+\footheight=\dimen149
+\sidebarheight=\dimen150
+\beamer@tempdim=\dimen151
+\beamer@finalheight=\dimen152
+\beamer@animht=\dimen153
+\beamer@animdp=\dimen154
+\beamer@animwd=\dimen155
+\beamer@leftmargin=\dimen156
+\beamer@rightmargin=\dimen157
+\beamer@leftsidebar=\dimen158
+\beamer@rightsidebar=\dimen159
+\beamer@boxsize=\dimen160
+\beamer@vboxoffset=\dimen161
+\beamer@descdefault=\dimen162
+\beamer@descriptionwidth=\dimen163
 \beamer@lastskip=\skip49
 \beamer@areabox=\box56
 \beamer@animcurrent=\box57
@@ -85,26 +51,26 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \beamer@sectionbox=\box59
 \beamer@logobox=\box60
 \beamer@linebox=\box61
-\beamer@sectioncount=\count279
-\beamer@subsubsectionmax=\count280
-\beamer@subsectionmax=\count281
-\beamer@sectionmax=\count282
-\beamer@totalheads=\count283
-\beamer@headcounter=\count284
-\beamer@partstartpage=\count285
-\beamer@sectionstartpage=\count286
-\beamer@subsectionstartpage=\count287
-\beamer@animationtempa=\count288
-\beamer@animationtempb=\count289
-\beamer@xpos=\count290
-\beamer@ypos=\count291
-\beamer@ypos@offset=\count292
-\beamer@showpartnumber=\count293
-\beamer@currentsubsection=\count294
-\beamer@coveringdepth=\count295
-\beamer@sectionadjust=\count296
-\beamer@toclastsection=\count297
-\beamer@tocsectionnumber=\count298
+\beamer@sectioncount=\count281
+\beamer@subsubsectionmax=\count282
+\beamer@subsectionmax=\count283
+\beamer@sectionmax=\count284
+\beamer@totalheads=\count285
+\beamer@headcounter=\count286
+\beamer@partstartpage=\count287
+\beamer@sectionstartpage=\count288
+\beamer@subsectionstartpage=\count289
+\beamer@animationtempa=\count290
+\beamer@animationtempb=\count291
+\beamer@xpos=\count292
+\beamer@ypos=\count293
+\beamer@ypos@offset=\count294
+\beamer@showpartnumber=\count295
+\beamer@currentsubsection=\count296
+\beamer@coveringdepth=\count297
+\beamer@sectionadjust=\count298
+\beamer@toclastsection=\count299
+\beamer@tocsectionnumber=\count300
 
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
 (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
@@ -120,25 +86,25 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count299
-\Gm@cntv=\count300
-\c@Gm@tempcnt=\count301
-\Gm@bindingoffset=\dimen163
-\Gm@wd@mp=\dimen164
-\Gm@odd@mp=\dimen165
-\Gm@even@mp=\dimen166
-\Gm@layoutwidth=\dimen167
-\Gm@layoutheight=\dimen168
-\Gm@layouthoffset=\dimen169
-\Gm@layoutvoffset=\dimen170
+\Gm@cnth=\count301
+\Gm@cntv=\count302
+\c@Gm@tempcnt=\count303
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
 \Gm@dimlist=\toks18
 )
 (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks19
-\pgfutil@tempdima=\dimen171
-\pgfutil@tempdimb=\dimen172
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
 )
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box62
@@ -157,22 +123,22 @@ x
 \pgfkeys@tmptoks=\toks22
 ))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
-\pgf@x=\dimen173
-\pgf@xa=\dimen174
-\pgf@xb=\dimen175
-\pgf@xc=\dimen176
-\pgf@y=\dimen177
-\pgf@ya=\dimen178
-\pgf@yb=\dimen179
-\pgf@yc=\dimen180
-\c@pgf@counta=\count302
-\c@pgf@countb=\count303
-\c@pgf@countc=\count304
-\c@pgf@countd=\count305
+\pgf@x=\dimen174
+\pgf@xa=\dimen175
+\pgf@xb=\dimen176
+\pgf@xc=\dimen177
+\pgf@y=\dimen178
+\pgf@ya=\dimen179
+\pgf@yb=\dimen180
+\pgf@yc=\dimen181
+\c@pgf@counta=\count304
+\c@pgf@countb=\count305
+\c@pgf@countc=\count306
+\c@pgf@countd=\count307
 )
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen181
-\pgfmath@count=\count306
+\pgfmath@dimen=\dimen182
+\pgfmath@count=\count308
 \pgfmath@box=\box63
 \pgfmath@toks=\toks23
 \pgfmath@stack@operand=\toks24
@@ -190,12 +156,11 @@ x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
 .code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count307
+\c@pgfmathroundto@lastzeros=\count309
 )))
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /home/bsd_myriam/.texlive/texm
-f-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
+)
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
@@ -209,53 +174,53 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 106.
+Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen182
-\Gin@req@width=\dimen183
+\Gin@req@height=\dimen183
+\Gin@req@width=\dimen184
 )
 (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@x=\dimen184
-\pgf@y=\dimen185
-\pgf@xa=\dimen186
-\pgf@ya=\dimen187
-\pgf@xb=\dimen188
-\pgf@yb=\dimen189
-\pgf@xc=\dimen190
-\pgf@yc=\dimen191
-\pgf@xd=\dimen192
-\pgf@yd=\dimen193
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
+\pgf@xd=\dimen193
+\pgf@yd=\dimen194
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count308
-\c@pgf@countb=\count309
-\c@pgf@countc=\count310
-\c@pgf@countd=\count311
+\c@pgf@counta=\count310
+\c@pgf@countb=\count311
+\c@pgf@countc=\count312
+\c@pgf@countd=\count313
 \t@pgf@toka=\toks26
 \t@pgf@tokb=\toks27
 \t@pgf@tokc=\toks28
-\pgf@sys@id@count=\count312
+\pgf@sys@id@count=\count314
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
-Driver file for pgf: pgfsys-luatex.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
-File: pgfsys-luatex.def 2025-08-29 v3.1.11a (3.1.11a)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count313
-\pgfsyssoftpath@bigbuffer@items=\count314
+\pgfsyssoftpath@smallbuffer@items=\count315
+\pgfsyssoftpath@bigbuffer@items=\count316
 )
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -266,7 +231,7 @@ Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: luatex.def on input line 274.
+Package xcolor Info: Driver file: pdftex.def on input line 274.
 
 (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
@@ -285,47 +250,47 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen194
-\pgf@picmaxx=\dimen195
-\pgf@picminy=\dimen196
-\pgf@picmaxy=\dimen197
-\pgf@pathminx=\dimen198
-\pgf@pathmaxx=\dimen199
-\pgf@pathminy=\dimen256
-\pgf@pathmaxy=\dimen257
-\pgf@xx=\dimen258
-\pgf@xy=\dimen259
-\pgf@yx=\dimen260
-\pgf@yy=\dimen261
-\pgf@zx=\dimen262
-\pgf@zy=\dimen263
+\pgf@picminx=\dimen195
+\pgf@picmaxx=\dimen196
+\pgf@picminy=\dimen197
+\pgf@picmaxy=\dimen198
+\pgf@pathminx=\dimen199
+\pgf@pathmaxx=\dimen256
+\pgf@pathminy=\dimen257
+\pgf@pathmaxy=\dimen258
+\pgf@xx=\dimen259
+\pgf@xy=\dimen260
+\pgf@yx=\dimen261
+\pgf@yy=\dimen262
+\pgf@zx=\dimen263
+\pgf@zy=\dimen264
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen264
-\pgf@path@lasty=\dimen265
+\pgf@path@lastx=\dimen265
+\pgf@path@lasty=\dimen266
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen266
-\pgf@shorten@start@additional=\dimen267
+\pgf@shorten@end@additional=\dimen267
+\pgf@shorten@start@additional=\dimen268
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box64
 \pgf@hbox=\box65
 \pgf@layerbox@main=\box66
-\pgf@picture@serial@count=\count315
+\pgf@picture@serial@count=\count317
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen268
+\pgflinewidth=\dimen269
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
 ex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen269
-\pgf@pt@y=\dimen270
-\pgf@pt@temp=\dimen271
+\pgf@pt@x=\dimen270
+\pgf@pt@y=\dimen271
+\pgf@pt@temp=\dimen272
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -337,13 +302,13 @@ x
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen272
+\pgfarrowsep=\dimen273
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen273
-\pgf@sys@shading@range@num=\count316
-\pgf@shadingcount=\count317
+\pgf@max=\dimen274
+\pgf@sys@shading@range@num=\count318
+\pgf@shadingcount=\count319
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -365,8 +330,8 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
 Package: xxcolor 2003/10/24 ver 0.1
-\XC@nummixins=\count318
-\XC@countmixins=\count319
+\XC@nummixins=\count320
+\XC@countmixins=\count321
 )
 (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
@@ -397,7 +362,6 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks29
 ))
 (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
@@ -414,26 +378,30 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count320
+\c@section@level=\count322
 )
 (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen274
-\Hy@linkcounter=\count321
-\Hy@pagecounter=\count322
+\@linkdim=\dimen275
+\Hy@linkcounter=\count323
+\Hy@pagecounter=\count324
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
 (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count323
+\Hy@SavedSpaceFactor=\count325
 
 (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4072.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4072.
@@ -445,14 +413,14 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count324
+\c@Hy@tempcnt=\count326
 
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen275
+\XeTeXLinkMargin=\dimen276
 
 (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -461,9 +429,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count325
-\Field@Width=\dimen276
-\Fld@charsize=\dimen277
+\Fld@menulength=\count327
+\Field@Width=\dimen277
+\Fld@charsize=\dimen278
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -471,17 +439,17 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring OFF on input line 6104.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count326
+\Hy@abspage=\count328
 
 
 Package hyperref Message: Stopped early.
 
 )
-Package hyperref Info: Driver (autodetected): hluatex.
- (/usr/share/texmf-dist/tex/latex/hyperref/hluatex.def
-File: hluatex.def 2026-01-29 v7.01p Hyperref driver for luaTeX
-\Fld@listcount=\count327
-\c@bookmark@seq@number=\count328
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count329
+\c@bookmark@seq@number=\count330
 
 (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
@@ -500,7 +468,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks30
+\@emptytoks=\toks29
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -527,43 +495,43 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
-\beamer@argscount=\count329
+\beamer@argscount=\count331
 \beamer@lastskipcover=\skip52
-\beamer@trivlistdepth=\count330
+\beamer@trivlistdepth=\count332
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasesection.sty
-\c@lecture=\count331
-\c@part=\count332
-\c@section=\count333
-\c@subsection=\count334
-\c@subsubsection=\count335
+\c@lecture=\count333
+\c@part=\count334
+\c@section=\count335
+\c@subsection=\count336
+\c@subsubsection=\count337
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
 \beamer@framebox=\box68
 \beamer@frametitlebox=\box69
 \beamer@zoombox=\box70
-\beamer@zoomcount=\count336
-\beamer@zoomframecount=\count337
-\beamer@frametextheight=\dimen278
-\c@subsectionslide=\count338
+\beamer@zoomcount=\count338
+\beamer@zoomframecount=\count339
+\beamer@frametextheight=\dimen279
+\c@subsectionslide=\count340
 \beamer@frametopskip=\skip53
 \beamer@framebottomskip=\skip54
 \beamer@frametopskipautobreak=\skip55
 \beamer@framebottomskipautobreak=\skip56
-\beamer@envbody=\toks31
-\framewidth=\dimen279
-\c@framenumber=\count339
+\beamer@envbody=\toks30
+\framewidth=\dimen280
+\c@framenumber=\count341
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 \beamer@verbatimfileout=\write4
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
 \beamer@splitbox=\box71
-\beamer@autobreakcount=\count340
-\beamer@autobreaklastheight=\dimen280
-\beamer@frametitletoks=\toks32
-\beamer@framesubtitletoks=\toks33
+\beamer@autobreakcount=\count342
+\beamer@autobreaklastheight=\dimen281
+\beamer@frametitletoks=\toks31
+\beamer@framesubtitletoks=\toks32
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
 \beamer@colheight=\skip57
@@ -575,36 +543,36 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
-\beamer@sbttoks=\toks34
+\beamer@sbttoks=\toks33
 
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
 \bmb@box=\box74
 \bmb@colorbox=\box75
-\bmb@boxwidth=\dimen281
-\bmb@boxheight=\dimen282
-\bmb@prevheight=\dimen283
-\bmb@temp=\dimen284
-\bmb@dima=\dimen285
-\bmb@dimb=\dimen286
-\bmb@prevheight=\dimen287
+\bmb@boxwidth=\dimen282
+\bmb@boxheight=\dimen283
+\bmb@prevheight=\dimen284
+\bmb@temp=\dimen285
+\bmb@dima=\dimen286
+\bmb@dimb=\dimen287
+\bmb@prevheight=\dimen288
 )
-\beamer@blockheadheight=\dimen288
+\beamer@blockheadheight=\dimen289
 ))
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
 (/usr/share/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
-\@enLab=\toks35
+\@enLab=\toks34
 )
 \beamer@bibiconwidth=\skip58
-\c@figure=\count341
-\c@table=\count342
+\c@figure=\count343
+\c@table=\count344
 \abovecaptionskip=\skip59
 \belowcaptionskip=\skip60
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbols.tex)
-\beamer@section@min@dim=\dimen289
+\beamer@section@min@dim=\dimen290
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -617,24 +585,24 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks36
-\ex@=\dimen290
+\@emptytoks=\toks35
+\ex@=\dimen291
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen291
+\pmbraise@=\dimen292
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count343
-LaTeX Info: Redefining \frac on input line 235.
-\uproot@=\count344
-\leftroot@=\count345
+\inf@bad=\count345
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count346
+\leftroot@=\count347
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count346
-\DOTSCASE@=\count347
+\classnum@=\count348
+\DOTSCASE@=\count349
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -644,91 +612,72 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen292
+\big@size=\dimen293
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count348
+\macc@depth=\count350
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count349
+\c@MaxMatrixCols=\count351
 \dotsspace@=\muskip18
-\c@parentequation=\count350
-\dspbrk@lvl=\count351
-\tag@help=\toks37
-\row@=\count352
-\column@=\count353
-\maxfields@=\count354
-\andhelp@=\toks38
-\eqnshift@=\dimen293
-\alignsep@=\dimen294
-\tagshift@=\dimen295
-\tagwidth@=\dimen296
-\totwidth@=\dimen297
-\lineht@=\dimen298
-\@envbody=\toks39
+\c@parentequation=\count352
+\dspbrk@lvl=\count353
+\tag@help=\toks36
+\row@=\count354
+\column@=\count355
+\maxfields@=\count356
+\andhelp@=\toks37
+\eqnshift@=\dimen294
+\alignsep@=\dimen295
+\tagshift@=\dimen296
+\tagwidth@=\dimen297
+\totwidth@=\dimen298
+\lineht@=\dimen299
+\@envbody=\toks38
 \multlinegap=\skip62
 \multlinetaggap=\skip63
-\mathdisplay@stack=\toks40
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
 (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks41
-\thm@bodyfont=\toks42
-\thm@headfont=\toks43
-\thm@notefont=\toks44
-\thm@headpunct=\toks45
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
 \thm@preskip=\skip64
 \thm@postskip=\skip65
 \thm@headsep=\skip66
-\dth@everypar=\toks46
+\dth@everypar=\toks45
 )
-\c@theorem=\count355
+\c@theorem=\count357
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
 (/usr/share/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
 (/usr/share/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
-\beamer@dima=\dimen299
-\beamer@dimb=\dimen300
+\beamer@dima=\dimen300
+\beamer@dimb=\dimen301
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks47
-\inpenc@posthook=\toks48
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
+)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-16.
-
-(/usr/share/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
+)
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaT
 eX and XeLaTeX
-
-(/usr/share/texmf-dist/tex/generic/babel/luababel.def
-\bbl@readstream=\read3
-\l@dumylang=\language2
-Package babel Info: Non-standard hyphenation setup on input line 118.
-\l@nohyphenation=\language3
-\l@basque=\language4
-\l@french=\language5
-\babelcatcodetablenum=\catcodetable14
-\bbl@pattcodes=\catcodetable15
-)
-\babel@savecnt=\count356
+\babel@savecnt=\count358
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
 ne 2078.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
@@ -743,13 +692,13 @@ LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?)
 on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2111.
-\U@D=\dimen301
-\l@unhyphenated=\language6
+\U@D=\dimen302
+\l@unhyphenated=\language5
 
-(/usr/share/texmf-dist/tex/generic/babel/luababel.def
-\bbl@attr@locale=\attribute4
-)
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
 LaTeX Info: Redefining \textlatin on input line 3974.
+\bbl@dirlevel=\count359
 
 (/usr/share/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex)
 Package babel Info: Importing font and identification data for french
@@ -757,55 +706,54 @@ Package babel Info: Importing font and identification data for french
 
 (/usr/share/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2025-08-15 v4.0e French support from the babel system
-\FB@spacing=\attribute5
-\FB@addDPspace=\attribute6
-\FB@ucsNBSP=\attribute7
-\FBguill@level=\count357
-\FBold@everypar=\toks49
-\FB@Mht=\dimen302
-\mc@charclass=\count358
-\mc@charfam=\count359
-\mc@charslot=\count360
-\std@mcc=\count361
-\dec@mcc=\count362
-Inserting `frenchb.french_punctuation' in `kerning'.
-Inserting `frenchb.euphonic_t' in `pre_linebreak_filter'.
-\FB@pardim=\dimen303
-\listindentFB=\dimen304
-\descindentFB=\dimen305
-\labelindentFB=\dimen306
-\labelwidthFB=\dimen307
-\leftmarginFB=\dimen308
-\parindentFFN=\dimen309
-\FBfnindent=\dimen310
 
-(/usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-fr.tex
-UTF-8 French hyphenation patterns
-(/usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-fr.tex)
-(/usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/quote/hyph-quote-fr.tex)))
-) (/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-Package french.ldf Info: No list customisation for the beamer class,
-(french.ldf)             reported on input line 11.
+(/usr/share/texmf-dist/tex/generic/babel-french/french3.ldf
+Language: french 2025-08-15 v3.7e French support from the babel system
+\FB@stdchar=\count360
+Package babel Info: Making : an active character on input line 273.
+Package babel Info: Making ; an active character on input line 274.
+Package babel Info: Making ! an active character on input line 275.
+Package babel Info: Making ? an active character on input line 276.
+\FBguill@level=\count361
+\FBold@everypar=\toks48
+\FB@Mht=\dimen303
+\mc@charclass=\count362
+\mc@charfam=\count363
+\mc@charslot=\count364
+\std@mcc=\count365
+\dec@mcc=\count366
+\FB@pardim=\dimen304
+\listindentFB=\dimen305
+\descindentFB=\dimen306
+\labelindentFB=\dimen307
+\labelwidthFB=\dimen308
+\leftmarginFB=\dimen309
+\parindentFFN=\dimen310
+\FBfnindent=\dimen311
+)))
+(/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+Package french3.ldf Info: No list customisation for the beamer class,
+(french3.ldf)             reported on input line 11.
 
 (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen311
-\lightrulewidth=\dimen312
-\cmidrulewidth=\dimen313
-\belowrulesep=\dimen314
-\belowbottomsep=\dimen315
-\aboverulesep=\dimen316
-\abovetopsep=\dimen317
-\cmidrulesep=\dimen318
-\cmidrulekern=\dimen319
-\defaultaddspace=\dimen320
-\@cmidla=\count363
-\@cmidlb=\count364
-\@aboverulesep=\dimen321
-\@belowrulesep=\dimen322
-\@thisruleclass=\count365
-\@lastruleclass=\count366
-\@thisrulewidth=\dimen323
+\heavyrulewidth=\dimen312
+\lightrulewidth=\dimen313
+\cmidrulewidth=\dimen314
+\belowrulesep=\dimen315
+\belowbottomsep=\dimen316
+\aboverulesep=\dimen317
+\abovetopsep=\dimen318
+\cmidrulesep=\dimen319
+\cmidrulekern=\dimen320
+\defaultaddspace=\dimen321
+\@cmidla=\count367
+\@cmidlb=\count368
+\@aboverulesep=\dimen322
+\@belowrulesep=\dimen323
+\@thisruleclass=\count369
+\@lastruleclass=\count370
+\@thisrulewidth=\dimen324
 )
 (/usr/share/texmf-dist/tex/latex/fira/FiraSans.sty
 Package: FiraSans 2022/09/17 (Bob Tennent and autoinst) Style file for Fira San
@@ -822,885 +770,74 @@ Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
 
 (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks50
-\XKV@tempa@toks=\toks51
-\XKV@tempb@toks=\toks52
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
+\XKV@tempb@toks=\toks51
 )
-\XKV@depth=\count367
+\XKV@depth=\count371
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
-(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
-(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2026-01-19 L3 programming layer (loader) 
+(/usr/share/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2026-01-02 v2.0.2 Font selection axes (deprecated)
+Applying: [2024-11-01] Use figureversions if present on input line 74.
 
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count368
-Inserting `l3color' in `luaotfload.parse_color'.))
-Package: xparse 2025-10-09 L3 Experimental document command parser
+(/usr/share/texmf-dist/tex/latex/figureversions/figureversions.sty
+Package: figureversions 2025-04-29 v1.0.1 Figure versions
 )
-Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
-(/usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
-Package: fontspec-luatex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaT
-eX
-\l__fontspec_script_int=\count369
-\l__fontspec_language_int=\count370
-\l__fontspec_strnum_int=\count371
-\l__fontspec_tmp_int=\count372
-\l__fontspec_tmpa_int=\count373
-\l__fontspec_tmpb_int=\count374
-\l__fontspec_tmpc_int=\count375
-\l__fontspec_em_int=\count376
-\l__fontspec_emdef_int=\count377
-\l__fontspec_strong_int=\count378
-\l__fontspec_strongdef_int=\count379
-\l__fontspec_tmpa_dim=\dimen324
-\l__fontspec_tmpb_dim=\dimen325
-\l__fontspec_tmpc_dim=\dimen326
-
-(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(0)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Ligatures=TeX,Numbers =
-(fontspec)             {Proportional,OldStyle},UprightFont =
-(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 138.
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(1)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(2)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,Lining},UprightFont =
-(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-LightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(3)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Monospaced,OldStyle},UprightFont =
-(fontspec)             *-Light,ItalicFont = *-LightItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Light.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+tnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+tnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-LightItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+tnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+tnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Thin scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Thin scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Thin scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ThinItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ThinItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(4)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-Thin,ItalicFont = *-ThinItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Thin.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Thin.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ThinItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ThinItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Light scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraLight scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraLight scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraLight scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraLightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraLightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(5)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-ExtraLight,ItalicFont = *-ExtraLightItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraLight.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraLight.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraLightItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraLightItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-UltraLight scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-UltraLight scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-UltraLight scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-UltraLightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-UltraLightItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(6)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-UltraLight,ItalicFont = *-UltraLightItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-UltraLight.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-UltraLight.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-UltraLightItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-UltraLightItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Medium scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Medium scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Medium scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-MediumItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-MediumItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(7)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-Medium,ItalicFont = *-MediumItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Medium.otf]:mode=node;script=latn;lan
-guage=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Medium.otf]:mode=node;script=latn;lan
-guage=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-MediumItalic.otf]:mode=node;script=la
-tn;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-MediumItalic.otf]:mode=node;script=la
-tn;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Book scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Book scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Book scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Bold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BookItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BookItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-BoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(8)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-Book,ItalicFont = *-BookItalic,BoldFont =
-(fontspec)             *-Bold,BoldItalicFont = *-BoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Book.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Book.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Bold.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BookItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BookItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-BoldItalic.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-SemiBold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-SemiBold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-SemiBold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-SemiBoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-SemiBoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(9)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-SemiBold,ItalicFont = *-SemiBoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-SemiBold.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-SemiBold.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-SemiBoldItalic.otf]:mode=node;script=
-latn;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-SemiBoldItalic.otf]:mode=node;script=
-latn;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraBold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraBold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraBold scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraBoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-ExtraBoldItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(10)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-ExtraBold,ItalicFont = *-ExtraBoldItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraBold.otf]:mode=node;script=latn;
-language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraBold.otf]:mode=node;script=latn;
-language=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraBoldItalic.otf]:mode=node;script
-=latn;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-ExtraBoldItalic.otf]:mode=node;script
-=latn;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Heavy scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Heavy scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-Heavy scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-HeavyItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             FiraSans-HeavyItalic scale = 1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FiraSans(11)' created for font 'FiraSans'
-(fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
-(fontspec)             .otf,Numbers = {Proportional,OldStyle},UprightFont =
-(fontspec)             *-Heavy,ItalicFont = *-HeavyItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Heavy.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-Heavy.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-HeavyItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"[FiraSans-HeavyItalic.otf]:mode=node;script=lat
-n;language=dflt;+tlig;+pnum;+onum;+smcp;"
-
-)
+Already applied: [0000-00-00] Fall back to v1 on input line 76.
+))
 (/usr/share/texmf-dist/tex/latex/newtxsf/newtxsf.sty
 Package: newtxsf 2024/01/25 v1.056
 
 `newtxsf' v1.056, 2024/01/25 Math macros based on STIX sans serif and txfonts (
 msharpe) (/usr/share/texmf-dist/tex/generic/kastrup/binhex.tex)
-\tx@Isdigit=\count380
+\tx@Isdigit=\count372
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/FiraSans(0)/m/n on input line 58.
+(Font)                  OT1/cmr/m/n --> OT1/FiraSans-OsF/m/n on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/FiraSans(0)/m/n on input line 58.
+(Font)                  OT1/cmr/bx/n --> OT1/FiraSans-OsF/m/n on input line 58.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/FiraSans(0)/m/n --> OT1/FiraSans(0)/b/n on input li
-ne 59.
+(Font)                  OT1/FiraSans-OsF/m/n --> OT1/FiraSans-OsF/b/n on input 
+line 59.
 LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/FiraSans(0)/m/n on input line 65.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/FiraSans(0)/m/n on input line 65.
+(Font)                  OT1/cmss/m/n --> OT1/FiraSans-OsF/m/n on input line 65.
 
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/FiraSans-OsF/m/n on input line 65
+.
 LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/FiraSans(0)/m/it on input line 66.
-
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/FiraSans(0)/m/it on input line 66
+(Font)                  OT1/cmr/m/it --> OT1/FiraSans-OsF/m/it on input line 66
 .
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/FiraSans-OsF/m/it on input line 6
+6.
 LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 67.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 67.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 67.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 69.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/FiraSans(0)/b/n on input line 69.
+(Font)                  OT1/cmr/bx/n --> OT1/FiraSans-OsF/b/n on input line 69.
+
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/FiraSans(0)/b/n on input line 69.
+(Font)                  OT1/cmr/bx/n --> OT1/FiraSans-OsF/b/n on input line 69.
+
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/FiraSans(0)/m/it --> OT1/FiraSans(0)/b/it on input 
-line 70.
+(Font)                  OT1/FiraSans-OsF/m/it --> OT1/FiraSans-OsF/b/it on inpu
+t line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/FiraSans(0)/m/n --> OT1/FiraSans(0)/b/n on input li
-ne 71.
+(Font)                  OT1/FiraSans-OsF/m/n --> OT1/FiraSans-OsF/b/n on input 
+line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 72.
 LaTeX Font Info:    Redeclaring symbol font `letters' on input line 77.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
 (Font)                  OML/cmm/m/it --> OML/ntxsfmi/m/it on input line 77.
@@ -1713,6 +850,8 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
 (Font)                  U/ntxsfmia/m/it --> U/ntxsfmia/b/it on input line 85.
 LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 87.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
 LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 95.
 LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
 (Font)              `symbols' in the math version `normal' on input line 95.
@@ -1730,6 +869,8 @@ LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
 \symsymbolsC=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
 (Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 137.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 150.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
@@ -1773,56 +914,274 @@ LaTeX Info: Redefining \not on input line 1786.
 LaTeX Info: Redefining \textsquare on input line 1807.
 LaTeX Info: Redefining \openbox on input line 1809.
 )
-(./presentation.aux)
-\openout1 = presentation.aux
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 
-LaTeX Font Info:    Checking defaults for OML/ntxsfmi/m/it on input line 90.
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box78
+)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen325
+\pgf@nodesepend=\dimen326
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen327
+\pgffor@skip=\dimen328
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count373
+\pgfplotmarksize=\dimen329
+)
+\tikz@lastx=\dimen330
+\tikz@lasty=\dimen331
+\tikz@lastxsaved=\dimen332
+\tikz@lastysaved=\dimen333
+\tikz@lastmovetox=\dimen334
+\tikz@lastmovetoy=\dimen335
+\tikzleveldistance=\dimen336
+\tikzsiblingdistance=\dimen337
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count374
+\tikznumberofchildren=\count375
+\tikznumberofcurrentchild=\count376
+\tikz@fig@count=\count377
+ (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count378
+\pgfmatrixcurrentcolumn=\count379
+\pgf@matrix@numberofcolumns=\count380
+)
+\tikz@expandcount=\count381
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/usr/share/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking po
+sitions in a document
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count382
+))
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+\l__sn_x_dim=\dimen338
+\l__sn_y_dim=\dimen339
+\l__sn_xa_dim=\dimen340
+\l__sn_ya_dim=\dimen341
+)
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen342
+\pgfarrowlength=\dimen343
+\pgfarrowwidth=\dimen344
+\pgfarrowlinewidth=\dimen345
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks54
+\verbatim@line=\toks55
+\verbatim@in@stream=\read4
+)
+(/usr/share/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box83
+\tcb@upperbox=\box84
+\tcb@lowerbox=\box85
+\tcb@phantombox=\box86
+\c@tcbbreakpart=\count383
+\c@tcblayer=\count384
+\c@tcolorbox@number=\count385
+\l__tcobox_tmpa_box=\box87
+\l__tcobox_tmpa_dim=\dimen346
+\tcb@temp=\box88
+\tcb@temp=\box89
+\tcb@temp=\box90
+\tcb@temp=\box91
+
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
+\c@tcbrastercolumn=\count386
+\c@tcbrasterrow=\count387
+\c@tcbrasternum=\count388
+\c@tcbraster=\count389
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+
+(/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+)
+(/usr/share/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box92
+))
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+)
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box93
+\tcb@totalupperbox=\box94
+\tcb@totallowerbox=\box95
+)
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
+\tcbfitdim=\dimen347
+\tcb@lowerfitdim=\dimen348
+\tcb@upperfitdim=\dimen349
+\tcb@cur@hbadness=\count390
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count391
+\lst@gtempboxa=\box96
+\lst@token=\toks56
+\lst@length=\count392
+\lst@currlwidth=\dimen350
+\lst@column=\count393
+\lst@pos=\count394
+\lst@lostspace=\dimen351
+\lst@width=\dimen352
+\lst@newlines=\count395
+\lst@lineno=\count396
+\lst@maxwidth=\dimen353
+
+(/usr/share/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count397
+\lst@skipnumbers=\count398
+\lst@framebox=\box97
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
+)
+\c@tcblisting=\count399
+))
+LaTeX Font Info:    Trying to load font information for T1+FiraSans-OsF on inpu
+t line 124.
+ (/usr/share/texmf-dist/tex/latex/fira/T1FiraSans-OsF.fd
+File: T1FiraSans-OsF.fd 2019/10/10 (autoinst) Font definitions for T1/FiraSans-
+OsF.
+)
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <10> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 124.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 10.0pt on input line 124.
+
+(./presentation.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 11.
+)
+\openout1 = `presentation.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/ntxsfmi/m/it on input line 124.
 LaTeX Font Info:    Trying to load font information for OML+ntxsfmi on input li
-ne 90.
+ne 124.
  (/usr/share/texmf-dist/tex/latex/newtxsf/omlntxsfmi.fd
 File: omlntxsfmi.fd 2014/11/16 Fontinst v1.933 font definitions for OML/ntxsfmi
 .
 )
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 124.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-90.
+124.
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 124.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 90.
+ 124.
 
 (/usr/share/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: luatex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: luatex
+* driver: pdftex
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1855,17 +1214,17 @@ LaTeX Font Info:    ... okay on input line 90.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count381
-\scratchdimen=\dimen327
-\scratchbox=\box78
-\nofMPsegments=\count382
-\nofMParguments=\count383
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count384
-\MPscratchDim=\dimen328
-\MPnumerator=\count385
-\makeMPintoPDFobject=\count386
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count400
+\scratchdimen=\dimen354
+\scratchbox=\box98
+\nofMPsegments=\count401
+\nofMParguments=\count402
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count403
+\MPscratchDim=\dimen355
+\MPnumerator=\count404
+\makeMPintoPDFobject=\count405
+\everyMPtoPDFconversion=\toks58
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1875,65 +1234,67 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 90.
+Package hyperref Info: Link coloring OFF on input line 124.
 
 (./presentation.out) (./presentation.out)
 \@outlinefile=\write5
+\openout5 = `presentation.out'.
 
-\openout5 = presentation.out
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/FiraSans(0)/m/n --> OT1/cmss/m/n on input line 90.
+(Font)                  OT1/FiraSans-OsF/m/n --> OT1/cmss/m/n on input line 124
+.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/FiraSans(0)/b/n --> OT1/cmss/b/n on input line 90.
+(Font)                  OT1/FiraSans-OsF/b/n --> OT1/cmss/b/n on input line 124
+.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 90.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 124.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/FiraSans(0)/b/n --> TU/FiraSans(0)/b/n on input lin
-e 90.
+(Font)                  OT1/FiraSans-OsF/b/n --> T1/FiraSans-OsF/b/n on input l
+ine 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/FiraSans(0)/b/n --> TU/FiraSans(0)/b/n on input lin
-e 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 90.
+(Font)                  OT1/FiraSans-OsF/b/n --> T1/FiraSans-OsF/b/n on input l
+ine 124.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/FiraSans(0)/m/n --> TU/FiraSans(0)/m/n on input lin
-e 90.
+(Font)                  OT1/FiraSans-OsF/m/n --> T1/FiraSans-OsF/m/n on input l
+ine 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/FiraSans(0)/b/n --> TU/FiraSans(0)/m/n on input lin
-e 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 90.
+(Font)                  OT1/FiraSans-OsF/b/n --> T1/FiraSans-OsF/m/n on input l
+ine 124.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/FiraSans(0)/m/it --> TU/FiraSans(0)/m/it on input l
-ine 90.
+(Font)                  OT1/FiraSans-OsF/m/it --> T1/FiraSans-OsF/m/it on input
+ line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/FiraSans(0)/b/it --> TU/FiraSans(0)/m/it on input l
-ine 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 90.
+(Font)                  OT1/FiraSans-OsF/b/it --> T1/FiraSans-OsF/m/it on input
+ line 124.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 90.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/b/n --> TU/lmtt/m/n on input line 90.
+(Font)                  OT1/cmtt/b/n --> T1/cmtt/m/n on input line 124.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/b/n on input line
- 90.
+(Font)                  T1/FiraSans-OsF/m/n --> T1/FiraSans-OsF/b/n on input li
+ne 124.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/FiraSans(0)/m/it --> TU/FiraSans(0)/b/it on input li
-ne 90.
+(Font)                  T1/FiraSans-OsF/m/it --> T1/FiraSans-OsF/b/it on input 
+line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 90.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/FiraSans(0)/b/n --> TU/FiraSans(0)/b/n on input line
- 90.
+(Font)                  T1/FiraSans-OsF/b/n --> T1/FiraSans-OsF/b/n on input li
+ne 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/b/n on input line
- 90.
+(Font)                  T1/FiraSans-OsF/m/n --> T1/FiraSans-OsF/b/n on input li
+ne 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/FiraSans(0)/m/it --> TU/FiraSans(0)/b/it on input li
-ne 90.
+(Font)                  T1/FiraSans-OsF/m/it --> T1/FiraSans-OsF/b/it on input 
+line 124.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 90.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 124.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1959,268 +1320,723 @@ Dictionary: translator-numbers-dictionary, Language: English
 sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Command `\dddot' is already robust on input line 90.
-LaTeX Info: Command `\ddddot' is already robust on input line 90.
-
-Package fontspec Info: 
-(fontspec)             Adjusting the maths setup (use [no-math] to avoid
-(fontspec)             this).
-
-\symlegacymaths=\mathgroup12
-LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 90.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 90.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 90.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 90.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 90.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 90.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 90.
-LaTeX Font Info:    Redeclaring math accent \check on input line 90.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 90.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 90.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 90.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 90.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 90.
-LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 90.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 90.
-LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 90.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/m/n on input line 90.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/FiraSans(0)/m/it --> TU/lmr/m/it on input line 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/FiraSans(0)/b/n --> TU/lmr/b/n on input line 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  TU/FiraSans(0)/m/n --> TU/FiraSans(0)/m/n on input line
- 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/m/n on input line 90.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/FiraSans(0)/b/it --> TU/lmr/b/it on input line 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/FiraSans(0)/b/n --> TU/FiraSans(0)/b/n on input line
- 90.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/b/n --> TU/lmtt/b/n on input line 90.
+LaTeX Info: Command `\dddot' is already robust on input line 124.
+LaTeX Info: Command `\ddddot' is already robust on input line 124.
+LaTeX Info: Redefining \degres on input line 124.
+\c@mv@tabular=\count406
+\c@mv@boldtabular=\count407
+\c@lstlisting=\count408
  (./presentation.nav)
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 90.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 90.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 95.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 95.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 95.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 95.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 95.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <5> not available
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 124.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 5.0pt on input line 124.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <7> not available
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 124.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 7.0pt on input line 124.
+LaTeX Font Info:    Trying to load font information for TS1+FiraSans-OsF on inp
+ut line 124.
+
+(/usr/share/texmf-dist/tex/latex/fira/TS1FiraSans-OsF.fd
+File: TS1FiraSans-OsF.fd 2019/10/10 (autoinst) Font definitions for TS1/FiraSan
+s-OsF.
+)
+LaTeX Font Info:    Font shape `TS1/FiraSans-OsF/l/n' in size <7> not available
+
+(Font)              Font shape `TS1/FiraSans-OsF/light/n' tried instead on inpu
+t line 124.
+LaTeX Font Info:    Font shape `TS1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 7.0pt on input line 124.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <9> not available
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 9.0pt on input line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <17.28> not availa
+ble
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 17.28pt on input line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <17.28> not availa
+ble
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
+line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 17.28pt on input line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <12> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 12.0pt on input line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <4> not available
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 129.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 4.0pt on input line 129.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 118.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 118.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 118
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
+/enc/dvips/fira/fir_iln36p.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fira/fir_
+d67aat.enc}]
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <10> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
+line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/it' in size <10> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/light/it' tried instead on inpu
+t line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/it' will be
+(Font)              scaled to size 10.0pt on input line 152.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 152.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 152
 .
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 118
+LaTeX Font Info:    Trying to load font information for U+msb on input line 152
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsfmia on input lin
-e 118.
+e 152.
 
 (/usr/share/texmf-dist/tex/latex/newtxsf/untxsfmia.fd
 File: untxsfmia.fd 2014/11/16 Fontinst v1.933 font definitions for U/ntxsfmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-118.
+152.
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-118.
+152.
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 7.3pt on input line 118.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 5.5pt on input line 118.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 7.3pt on input line 118.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 5.5pt on input line 118.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <10> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 10.0pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <7.3> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 7.3pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <5.5> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 5.5pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <10> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 10.0pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <7.3> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 7.3pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <5.5> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 5.5pt on input line 152.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 118.
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 152.
 
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 118.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 118.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <14.4> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 14.4pt on input line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <14.4> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
+line 152.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 14.4pt on input line 152.
 
-Overfull \vbox (1.00854pt too high) detected at line 118
+Overfull \vbox (1.09148pt too high) detected at line 152
  []
 
 [2
 
-]
-<figures/Figure_0_paquet_re_im.png, id=42, 722.7pt x 361.35pt>
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+<figures/Figure_0_paquet_re_im.png, id=41, 722.7pt x 361.35pt>
 File: figures/Figure_0_paquet_re_im.png Graphic file (type png)
 <use figures/Figure_0_paquet_re_im.png>
-Package luatex.def Info: figures/Figure_0_paquet_re_im.png  used on input line 
-146.
-(luatex.def)             Requested size: 191.20082pt x 95.5974pt.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 146.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 6.2pt on input line 146.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 146.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 6.2pt on input line 146.
+Package pdftex.def Info: figures/Figure_0_paquet_re_im.png  used on input line 
+180.
+(pdftex.def)             Requested size: 191.20082pt x 95.5974pt.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <8> not available
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 8.0pt on input line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <8> not available
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 8.0pt on input line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <6.2> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 6.2pt on input line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <8> not available
 
-Overfull \vbox (1.61395pt too high) detected at line 146
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 8.0pt on input line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <6.2> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 180.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 6.2pt on input line 180.
+
+Overfull \vbox (0.64368pt too high) detected at line 180
  []
 
 [3
 
-<./figures/Figure_0_paquet_re_im.png>]
-Overfull \vbox (11.49753pt too high) detected at line 176
+ <./figures/Figure_0_paquet_re_im.png>]
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <7.3> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 210.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 7.3pt on input line 210.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/n' in size <5.5> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/light/n' tried instead on input
+ line 210.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/n' will be
+(Font)              scaled to size 5.5pt on input line 210.
+
+Overfull \vbox (11.11969pt too high) detected at line 210
  []
 
 [4
 
-] [5
+]
+\openout4 = `presentation.vrb'.
+
+ (./presentation.vrb
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...\tikzmarknode{eqsi}{\color{bordeaux}$s_i$}
+                                                   = \frac{i\,V(x_i)\,\Delta...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <8> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
+line 16.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+\g__tcobox_out_iow=\write6
+\openout6 = `presentation.listing'.
+
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (./presentation.listing
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
+)
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/it' in size <5> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/light/it' tried instead on inpu
+t line 31.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/it' will be
+(Font)              scaled to size 5.0pt on input line 31.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <7> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
+line 35.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 7.0pt on input line 35.
+)
+Overfull \vbox (1.687pt too high) detected at line 255
+ []
+
+[5
 
 ]
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 239.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 7.9pt on input line 239.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 14.4pt on input line 239.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 10.5pt on input line 239.
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 7.9pt on input line 239.
+\openout4 = `presentation.vrb'.
+
+ (./presentation.vrb
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 239.
+LaTeX Warning: Command \' invalid in math mode on input line 5.
+
+Missing character: There is no È in font cmss8!
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 5.
+
+Missing character: There is no È in font cmss8!
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 5.
+
+Missing character: There is no È in font cmss8!
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 5.
+
+Missing character: There is no È in font cmss8!
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...m num} = t_{\rm sortie} - t_{\rm entr√©e}$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 16.
+
+Missing character: There is no È in font cmss8!
+
+Overfull \hbox (22.0133pt too wide) in paragraph at lines 12--21
+ [] 
+ []
+
+\openout6 = `presentation.listing'.
+
+(./presentation.listing))
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 300.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 300.
+
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <14.4> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 14.4pt on input line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <10.5> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 10.5pt on input line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <7.9> not availabl
+e
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 7.9pt on input line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <14.4> not availa
+ble
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 14.4pt on input line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <10.5> not availa
+ble
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 10.5pt on input line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <7.9> not availab
+le
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 300.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 7.9pt on input line 300.
+
+Overfull \vbox (11.20573pt too high) detected at line 300
+ []
 
 [6
 
 ]
-<figures/Figure_1_evolution.png, id=82, 1084.05pt x 289.08pt>
+<figures/Figure_1_evolution.png, id=80, 1084.05pt x 289.08pt>
 File: figures/Figure_1_evolution.png Graphic file (type png)
 <use figures/Figure_1_evolution.png>
-Package luatex.def Info: figures/Figure_1_evolution.png  used on input line 251
+Package pdftex.def Info: figures/Figure_1_evolution.png  used on input line 312
 .
-(luatex.def)             Requested size: 398.3386pt x 106.22128pt.
+(pdftex.def)             Requested size: 398.3386pt x 106.22128pt.
  [7
 
-<./figures/Figure_1_evolution.png>]
-<figures/Figure_2_normes.png, id=92, 650.43pt x 289.08pt>
+ <./figures/Figure_1_evolution.png>]
+\openout4 = `presentation.vrb'.
+
+ (./presentation.vrb
+<figures/Figure_2_normes.png, id=91, 650.43pt x 289.08pt>
 File: figures/Figure_2_normes.png Graphic file (type png)
 <use figures/Figure_2_normes.png>
-Package luatex.def Info: figures/Figure_2_normes.png  used on input line 266.
-(luatex.def)             Requested size: 310.70361pt x 138.09517pt.
+Package pdftex.def Info: figures/Figure_2_normes.png  used on input line 4.
+(pdftex.def)             Requested size: 199.1693pt x 88.51994pt.
+\openout6 = `presentation.listing'.
 
-Overfull \vbox (26.06624pt too high) detected at line 266
+
+(./presentation.listing)) [8
+
+ <./figures/Figure_2_normes.png>]
+\openout4 = `presentation.vrb'.
+
+
+(./presentation.vrb
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <9> not available
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
+ut line 3.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 9.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <9> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
+put line 3.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 9.0pt on input line 3.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...deaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\openout6 = `presentation.listing'.
+
+(./presentation.listing)
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <9> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
+line 34.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 9.0pt on input line 34.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/l/it' in size <9> not available
+
+(Font)              Font shape `T1/FiraSans-OsF/light/it' tried instead on inpu
+t line 36.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/light/it' will be
+(Font)              scaled to size 9.0pt on input line 36.
+)
+Overfull \vbox (10.87277pt too high) detected at line 385
  []
 
-[8
-
-<./figures/Figure_2_normes.png>] [9
+[9
 
 ]
 <figures/Figure_3_influence_a.png, id=110, 867.24pt x 289.08pt>
 File: figures/Figure_3_influence_a.png Graphic file (type png)
 <use figures/Figure_3_influence_a.png>
-Package luatex.def Info: figures/Figure_3_influence_a.png  used on input line 3
-05.
-(luatex.def)             Requested size: 326.64055pt x 108.88112pt.
+Package pdftex.def Info: figures/Figure_3_influence_a.png  used on input line 4
+01.
+(pdftex.def)             Requested size: 326.64055pt x 108.88112pt.
  [10
 
-<./figures/Figure_3_influence_a.png>]
-<figures/Figure_4_influence_V0.png, id=121, 867.24pt x 289.08pt>
+ <./figures/Figure_3_influence_a.png>]
+<figures/Figure_4_influence_V0.png, id=120, 867.24pt x 289.08pt>
 File: figures/Figure_4_influence_V0.png Graphic file (type png)
 <use figures/Figure_4_influence_V0.png>
-Package luatex.def Info: figures/Figure_4_influence_V0.png  used on input line 
-319.
-(luatex.def)             Requested size: 326.64055pt x 108.88112pt.
-[11
+Package pdftex.def Info: figures/Figure_4_influence_V0.png  used on input line 
+415.
+(pdftex.def)             Requested size: 326.64055pt x 108.88112pt.
+ [11
 
-<./figures/Figure_4_influence_V0.png>]
-<figures/Figure_5_influence_k0.png, id=132, 867.24pt x 289.08pt>
+ <./figures/Figure_4_influence_V0.png>]
+<figures/Figure_5_influence_k0.png, id=129, 867.24pt x 289.08pt>
 File: figures/Figure_5_influence_k0.png Graphic file (type png)
 <use figures/Figure_5_influence_k0.png>
-Package luatex.def Info: figures/Figure_5_influence_k0.png  used on input line 
-334.
-(luatex.def)             Requested size: 302.73514pt x 100.91043pt.
+Package pdftex.def Info: figures/Figure_5_influence_k0.png  used on input line 
+430.
+(pdftex.def)             Requested size: 302.73514pt x 100.91043pt.
 
-Overfull \vbox (0.8815pt too high) detected at line 334
+Overfull \vbox (2.0698pt too high) detected at line 430
  []
 
 [12
 
-<./figures/Figure_5_influence_k0.png>]
-<figures/Figure_6_influence_awp.png, id=142, 867.24pt x 289.08pt>
+ <./figures/Figure_5_influence_k0.png>]
+<figures/Figure_6_influence_awp.png, id=138, 867.24pt x 289.08pt>
 File: figures/Figure_6_influence_awp.png Graphic file (type png)
 <use figures/Figure_6_influence_awp.png>
-Package luatex.def Info: figures/Figure_6_influence_awp.png  used on input line
- 351.
-(luatex.def)             Requested size: 302.73514pt x 100.91043pt.
+Package pdftex.def Info: figures/Figure_6_influence_awp.png  used on input line
+ 447.
+(pdftex.def)             Requested size: 302.73514pt x 100.91043pt.
 
-Overfull \vbox (0.8815pt too high) detected at line 351
+Overfull \vbox (0.97447pt too high) detected at line 447
  []
 
 [13
 
-<./figures/Figure_6_influence_awp.png>] [14
+ <./figures/Figure_6_influence_awp.png>] [14
 
 ]
-\tf@nav=\write6
+\tf@nav=\write7
+\openout7 = `presentation.nav'.
 
-\openout6 = presentation.nav
-\tf@toc=\write7
+\tf@toc=\write8
+\openout8 = `presentation.toc'.
 
-\openout7 = presentation.toc
-\tf@snm=\write8
+\tf@snm=\write9
+\openout9 = `presentation.snm'.
 
-\openout8 = presentation.snm
  (./presentation.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -2233,36 +2049,35 @@ LaTeX Font Warning: Size substitutions with differences
 
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-)
-
-Here is how much of LuaTeX's memory you used:
- 28401 strings out of 476076
- 100000,1144653 words of node,token memory allocated
- 13785 words of node memory still in use:
-   52 hlist, 8 vlist, 3 rule, 77 disc, 9 local_par, 12 math, 367 glue, 178 kern,
- 43 penalty, 790 glyph, 936 attribute, 127 glue_spec, 189 attribute_list, 4 writ
-e, 38 pdf_colorstack nodes
-   avail lists: 2:1069,3:258,4:215,5:415,6:38,7:2309,8:72,9:528,10:19,11:166
- 49803 multiletter control sequences out of 65536+600000
- 251 fonts using 41776991 bytes
- 128i,11n,116p,386b,688s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share
-/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dis
-t/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf-dist/fonts/ope
-ntype/public/fira/FiraSans-LightItalic.otf></usr/share/texmf-dist/fonts/opentype
-/public/fira/FiraSans-Bold.otf></usr/share/texmf-dist/fonts/opentype/public/fira
-/FiraSans-Light.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></u
-sr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fo
-nts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newtx
-/txsys.pfb></usr/share/texmf-dist/fonts/type1/public/newtxsf/zsfmi-reg.pfb>
-Output written on presentation.pdf (14 pages, 470363 bytes).
-
-PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 1048576)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+ ) 
+Here is how much of TeX's memory you used:
+ 36423 strings out of 469486
+ 738153 string characters out of 5469659
+ 1310738 words of memory out of 5000000
+ 64286 multiletter control sequences out of 15000+600000
+ 1237263 words of font info for 255 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 128i,14n,123p,387b,2184s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb></usr/share/
+texmf-dist/fonts/type1/public/fira/FiraSans-Italic.pfb></usr/share/texmf-dist/f
+onts/type1/public/fira/FiraSans-Light.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/fira/FiraSans-LightItalic.pfb></usr/share/texmf-dist/fonts/type1/public/fi
+ra/FiraSans-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
+/share/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf-dist/f
+onts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfr
+m0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr
+/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-di
+st/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/
+public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pf
+b></usr/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texmf-d
+ist/fonts/type1/public/newtxsf/zsfmi-reg.pfb></usr/share/texmf-dist/fonts/type1
+/public/newtxsf/zsfmia-reg.pfb>
+Output written on presentation.pdf (14 pages, 724289 bytes).
+PDF statistics:
+ 246 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

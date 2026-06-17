@@ -1,0 +1,41 @@
+\frametitle{Quel temps de traversée ? Le temps de groupe de Hartman}
+\small
+  Le paquet transmis s'écrit en pondérant chaque composante par $T(k)$ :
+  \vspace{-0.2em}
+  \[
+    \psi_{\rm trans}(x,t) = \frac{1}{\sqrt{2\pi}}\int g(k)\,T(k)\,
+    \eg^{i(kx-\omega t)}\,dk
+    \qquad \text{avec } T = |T|\,\eg^{i\varphi_T}
+  \]
+  \vspace{-0.3em}
+  Phase stationnaire autour de $k_0$ $\Rightarrow$ le pic transmis est décalé de
+  $\tau_g = \dfrac{1}{v_g}\dfrac{d\varphi_T}{dk}\Big|_{k_0}$ \;($< 0$ en régime tunnel) :
+  \vspace{-0.2em}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{block}{Temps de traversée théorique}
+        \[
+          \tikzmarknode{eqtaut}{\color{bordeaux}$\tau_t^{\rm th} = \tau_0 + \tau_g$}
+        \]
+        {\scriptsize avec $\varphi_T(k) = -ka
+          - \arctan\!\left[\tfrac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]$}
+      \end{block}
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{tcblisting}{codebox}
+tau_g = dphi_dk / vg
+tau0 = tau_libre(k0, a)
+return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
+      \end{tcblisting}
+      \codesource{tau\_tunnel() --- Partie 4}
+    \end{column}
+  \end{columns}
+  \vspace{-0.3em}
+  \textbf{Résultat} ($k_0=5$, $a=1$, $V_0=15$) :
+  $\;\tau_t^{\rm num} = 0.112 \;<\; \tau_t^{\rm th} = 0.168 \;<\; \tau_0 = 0.200$
+  — le paquet tunnel sort \emph{plus tôt} que le paquet libre :
+  c'est l'\textbf{effet Hartman}.
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[-{Triangle[length=2mm]}, thick, bordeaux]
+      (eqtaut.east) to[out=0,in=180] (codetaut.west);
+  \end{tikzpicture}
