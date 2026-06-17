@@ -186,8 +186,8 @@ Dans le cas libre `V0 = 0`, la solution numérique doit rester proche du paquet 
 
 La comparaison peut se faire sur plusieurs points :
 
-- la norme `\int |\Psi|^2 dx` doit rester proche de `1` ;
-- le paquet doit se déplacer dans le bon sens avec une vitesse cohérente avec `v_g = \hbar k_0 / m` ;
+- la norme $\int |\Psi|^2 dx$ doit rester proche de `1` ;
+- le paquet doit se déplacer dans le bon sens avec une vitesse cohérente avec $v_g = \hbar k_0 / m$ ;
 - le paquet doit s’étaler progressivement ;
 - l’écart entre la solution numérique et la solution théorique doit rester faible.
 
