@@ -1,0 +1,319 @@
+% ============================================================
+% Script de soutenance — Sheryne (diapos 5 à 8)
+% VERSION ADAPTÉE DYSLEXIE :
+%   - police OpenDyslexic (fichiers dans fonts/), corps 12 pt
+%   - interligne 1,6 et paragraphes espacés
+%   - lignes courtes (marges larges), texte non justifié
+%   - pas d'italique ; phrases courtes ; listes plutôt que pavés
+% Compilation : xelatex script_sheryne_dyslexie.tex
+% (xelatex obligatoire : la police est chargée via fontspec)
+% ============================================================
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[french]{babel}
+\usepackage[margin=3.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{fontspec}
+\setmainfont{OpenDyslexic}[
+  Path           = fonts/,
+  UprightFont    = OpenDyslexic-Regular.otf,
+  BoldFont       = OpenDyslexic-Bold.otf,
+  ItalicFont     = OpenDyslexic-Italic.otf,
+  BoldItalicFont = OpenDyslexic-BoldItalic.otf,
+]
+\usepackage{enumitem}
+
+\setstretch{1.6}
+\raggedright
+\setlength{\parskip}{0.9em}
+\setlist{itemsep=0.5em, topsep=0.5em}
+
+\newcommand{\diapo}[2]{\section*{Diapo #1 --- #2}}
+\newenvironment{comprendre}%
+  {\par\medskip\noindent\hrulefill\par\nopagebreak\textbf{Pour bien comprendre :}\par}%
+  {\par\nopagebreak\noindent\hrulefill\par\medskip}
+
+\title{\textbf{Script de soutenance --- Sheryne}\\
+\large Effet tunnel et temps de traversée d'une barrière\\
+\normalsize Diapos 5 à 8 --- environ 4,5 minutes}
+\author{}
+\date{Soutenance juin 2026 --- oraux du 22 au 26 juin}
+
+\begin{document}
+\maketitle
+
+\subsection*{Qui dit quoi}
+
+\begin{itemize}
+\item Myriam : diapos 1 à 4. Le problème, le paquet d'ondes, la barrière. Environ 5 min.
+\item \textbf{Sheryne : diapos 5 à 8. La méthode numérique et les premiers résultats. Environ 4,5 min.}
+\item Mattéo : diapos 9 à 12. L'effet Hartman et la conclusion. Environ 5,5 min.
+\end{itemize}
+
+Total : 15 minutes, puis 10 minutes de questions.
+
+Les phrases \textbf{en gras} sont les messages essentiels.
+Si le temps presse, on peut raccourcir le reste, mais jamais le gras.
+
+% ------------------------------------------------------------
+\clearpage
+\diapo{5}{La méthode numérique : Crank--Nicolson (1,5 minute)}
+
+\textbf{Texte à dire :}
+
+Merci Myriam.
+
+La théorie décrit un paquet libre, ou une onde plane face à la barrière.
+Mais un paquet complet face à une barrière : il n'y a pas de formule exacte.
+\textbf{Il faut donc résoudre l'équation de Schrödinger sur ordinateur.}
+
+Nous avons choisi le schéma de Crank--Nicolson.
+Son idée : \textbf{on prend la moyenne entre l'instant présent et l'instant suivant.}
+Cela donne l'équation à l'écran.
+Le coefficient $r$ contient les pas de temps et d'espace.
+Le coefficient $s_i$ contient le potentiel au point $x_i$.
+Le potentiel change selon la position, donc la diagonale du système change aussi.
+
+\textbf{Le code à droite fait exactement ça.}
+La ligne \texttt{s\_int} porte cette variation.
+C'est elle qui rend la diagonale du système différente à chaque point.
+
+Pourquoi ce schéma ? Trois raisons :
+
+\begin{itemize}
+\item \textbf{Il est unitaire.} La probabilité totale reste égale à 1.
+      Vérifié à $10^{-6}$ près sur toute la simulation.
+      Pour la mécanique quantique, c'est la propriété la plus importante.
+\item \textbf{Il est toujours stable}, quel que soit le pas de temps.
+      Et il est précis à l'ordre 2 en temps et en espace.
+\item \textbf{Il est rapide.} Le système est tridiagonal.
+      La méthode de Thomas le résout en un temps proportionnel au nombre de points.
+      Vous la voyez appelée tout en bas du code.
+\end{itemize}
+
+Nos paramètres :
+
+\begin{itemize}
+\item grille de 1500 points sur $[-30, 30]$, 3000 pas de temps jusqu'à $t = 6$ ;
+\item paquet : $k_0 = 5$, donc énergie $E = 12{,}5$, départ en $x_0 = -10$ ;
+\item barrière : largeur $a = 1$, hauteur $V_0 = 15$.
+\end{itemize}
+
+\textbf{La barrière est plus haute que l'énergie du paquet : on est en régime tunnel.}
+
+\begin{comprendre}
+« Unitaire » : le schéma conserve la norme, comme la vraie évolution quantique.
+
+Le schéma d'Euler explicite, lui, augmente la norme à chaque pas.
+La probabilité dépasse 1 et la simulation explose.
+C'est la réponse si le jury demande : « pourquoi pas Euler ? »
+
+« Tridiagonal » : chaque point n'est couplé qu'à ses deux voisins.
+Cela vient de la dérivée seconde discrétisée.
+\end{comprendre}
+
+% ------------------------------------------------------------
+\clearpage
+\diapo{6}{Validation : particule libre (1 minute)}
+
+\textbf{Texte à dire :}
+
+Avant d'allumer la barrière, on teste le solveur sur un cas connu :
+la particule libre, avec $V_0 = 0$.
+
+Notre définition du temps de traversée :
+\textbf{on suit le pic de $|\psi|^2$.}
+On note l'instant où il passe en $x = 0$.
+Puis l'instant où il passe en $x = a$.
+La différence donne le temps numérique $\tau_0$.
+
+\textbf{C'est ce que fait la fonction à l'écran, \texttt{temps\_pic\_en}.}
+Elle repère où l'amplitude est maximale.
+Et renvoie l'instant correspondant.
+On l'appelle une fois à l'entrée, une fois à la sortie.
+
+La théorie est simple : distance divisée par vitesse.
+Donc $a / v_g = 0{,}2$.
+
+Le tableau montre l'accord :
+
+\begin{itemize}
+\item entrée mesurée à $t = 1{,}9987$, attendu : $2$ ;
+\item sortie mesurée à $t = 2{,}1907$, attendu : $2{,}2$ ;
+\item \textbf{donc $\tau_0 = 0{,}192$ contre $0{,}200$ : un écart de 4\,\%.}
+\end{itemize}
+
+Cet écart vient de la résolution en temps de la grille,
+et de l'étalement du paquet pendant le vol.
+La norme reste égale à 1 sur les 3000 pas.
+
+\textbf{Le solveur est validé. On peut allumer la barrière.}
+
+\begin{comprendre}
+Cette validation fixe notre barre d'erreur : environ 4\,\%.
+Toutes les mesures suivantes ont au moins cette incertitude.
+Il faudra s'en souvenir quand Mattéo comparera les temps tunnel.
+\end{comprendre}
+
+% ------------------------------------------------------------
+\clearpage
+\diapo{7}{Évolution face à la barrière (1 minute)}
+
+\textbf{Texte à dire :}
+
+Voici le film de la simulation, en quatre instants.
+
+Le paquet arrive de la gauche.
+Il heurte la barrière, la zone grisée.
+Il se sépare en deux :
+
+\begin{itemize}
+\item \textbf{un paquet réfléchi, dominant, qui repart vers la gauche ;}
+\item \textbf{un petit paquet transmis, qui continue vers la droite.}
+\end{itemize}
+
+Ce petit paquet transmis, c'est l'effet tunnel en images.
+\textbf{Classiquement, avec $E < V_0$, la particule serait toujours réfléchie.}
+Il n'y aurait rien du tout à droite.
+
+En bleu : le paquet libre, pour comparaison.
+Il avance à la même vitesse de groupe.
+C'est cette comparaison qui servira à mesurer l'avance ou le retard
+du paquet transmis.
+
+\begin{comprendre}
+Pendant l'impact, des franges apparaissent devant la barrière.
+C'est l'interférence entre le paquet qui arrive et le paquet qui repart.
+Bon détail à donner si le jury demande de commenter la figure.
+\end{comprendre}
+
+% ------------------------------------------------------------
+\clearpage
+\diapo{8}{Probabilités de réflexion et de transmission (1 minute)}
+
+\textbf{Texte à dire :}
+
+Pour mesurer, on intègre $|\psi|^2$ de chaque côté de la barrière,
+au cours du temps. C'est le code à droite :
+un masque sélectionne la zone après la barrière,
+une ligne intègre la densité dessus.
+
+La courbe du haut le confirme : \textbf{la norme totale reste constante.}
+C'est l'unitarité de Crank--Nicolson.
+
+À la fin, la probabilité d'être passé à droite --- c'est exactement ce que
+calcule cette ligne --- vaut $8{,}1\times10^{-2}$.
+La théorie des états stationnaires prédit $|T(k_0)|^2 = 2{,}5\times10^{-2}$.
+\textbf{Trois fois plus que la théorie. Est-ce une erreur ? Non.}
+C'est un de nos résultats les plus intéressants.
+
+L'explication :
+
+\begin{itemize}
+\item notre paquet n'est pas une onde plane ;
+\item il contient toute une gamme de vitesses autour de $k_0$ ;
+\item et la transmission $|T|^2$ monte très vite avec $k$.
+\end{itemize}
+
+\textbf{La barrière laisse surtout passer les composantes rapides.
+Elle agit comme un filtre.}
+
+Ce filtrage est la clé de toute la suite.
+C'est lui qui explique l'écart entre le temps mesuré
+et la théorie de Hartman, que Mattéo va vous montrer.
+
+Mattéo, à toi.
+
+\begin{comprendre}
+Image simple : la barrière reçoit un mélange de composantes lentes
+et rapides, et ne laisse passer presque que les rapides.
+
+Le paquet transmis est donc plus rapide, en moyenne, que le paquet
+incident. Et la probabilité mesurée dépasse la prédiction faite
+avec la seule vitesse moyenne $k_0$.
+\end{comprendre}
+
+% ------------------------------------------------------------
+\clearpage
+\section*{Vue d'ensemble (pour répondre sur tout l'exposé)}
+
+Le fil rouge, en quatre points :
+
+\begin{enumerate}
+\item But : mesurer le temps qu'un paquet d'ondes met à traverser
+      une barrière par effet tunnel.
+\item Myriam donne les deux outils.
+      Le paquet gaussien : vitesse $v_g = k_0$, largeur spectrale $\Delta k$.
+      Et la transmission $T(k)$ : décroissance exponentielle, phase $\varphi_T$.
+\item Ma partie : le solveur est fiable, le paquet se sépare en
+      réfléchi (gros) et transmis (petit), et la transmission mesurée
+      dépasse la théorie onde plane à cause du filtrage spectral.
+\item Mattéo : le résultat principal.
+      \textbf{Le paquet tunnel sort plus tôt que le paquet libre :
+      $\tau_t < \tau_0$. C'est l'effet Hartman.}
+      Puis son comportement face à la barrière : saturation avec $a$,
+      diminution avec $V_0$. En perspective : l'influence du paquet
+      lui-même ($k_0$, $a_{\rm wp}$), étudiée mais pas montrée aujourd'hui.
+\end{enumerate}
+
+\textbf{Les nombres à connaître} (cas de référence : $k_0 = 5$, $E = 12{,}5$,
+$V_0 = 15$, $a = 1$, $a_{\rm wp} = 1$) :
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Grandeur & Numérique & Théorique \\
+\midrule
+Temps libre $\tau_0$ & 0{,}192 & 0{,}200 \\
+Temps tunnel $\tau_t$ & 0{,}112 & 0{,}168 (Hartman) \\
+Transmission & $8{,}1\times10^{-2}$ & $2{,}5\times10^{-2}$ \\
+Saturation de $\tau_t^{\rm th}$ & --- & $\approx 0{,}179$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ------------------------------------------------------------
+\clearpage
+\section*{Questions probables du jury --- réponses courtes}
+
+\textbf{Refaire le raccordement des états stationnaires au tableau.}
+Trois zones : ondes oscillantes dehors, onde évanescente dedans.
+Continuité de $\psi$ et de $\psi'$ en $x=0$ et $x=a$.
+Quatre équations, quatre inconnues : on en tire $T(k)$.
+C'est la partie de Myriam, mais il faut savoir le refaire.
+
+\textbf{Pourquoi Crank--Nicolson plutôt qu'Euler explicite ?}
+C'est MA question.
+Crank--Nicolson est unitaire : la norme est conservée par construction.
+Il est stable quel que soit le pas de temps.
+Euler explicite amplifie la norme et diverge.
+Et le coût reste faible grâce au système tridiagonal et à la méthode de Thomas.
+
+\textbf{Avez-vous étudié $k_0$ et $a_{\rm wp}$ ? Les temps négatifs
+violent-ils la causalité ?}
+Oui, nous l'avons fait, mais sans le garder dans le diaporama,
+par souci de temps (perspective de Mattéo).
+Non, pas de violation : le pic transmis n'est pas un objet qui se déplace.
+Il est reconstruit à partir des composantes rapides du spectre.
+Aucune information ne va trop vite.
+C'est un effet de filtrage spectral.
+
+\textbf{Pourquoi la transmission mesurée dépasse-t-elle $|T(k_0)|^2$ ?}
+C'est aussi MA question (diapo 8).
+Le paquet n'est pas monochromatique.
+La barrière transmet beaucoup mieux les composantes rapides.
+Quand le paquet devient quasi monochromatique ($a_{\rm wp}$ grand),
+la mesure devrait retomber sur $|T(k_0)|^2$ : une piste creusée
+mais pas gardée dans le diaporama.
+
+\textbf{Effet Hartman : que se passe-t-il pour $a \to \infty$ ?}
+Le temps théorique sature alors que la distance augmente.
+La vitesse apparente semblerait énorme.
+Mais la transmission s'effondre exponentiellement,
+et la mesure du pic perd son sens bien avant.
+Pas de transport d'information plus vite que la lumière.
+
+\end{document}

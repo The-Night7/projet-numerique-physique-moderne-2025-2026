@@ -1,0 +1,264 @@
+% ============================================================
+% Script de soutenance — Mattéo (diapos 9 à 12)
+% Compilation : pdflatex script_matteo.tex
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{parskip}
+
+\newcommand{\diapo}[2]{\section*{Diapo #1 --- #2}}
+\newenvironment{comprendre}%
+  {\par\medskip\noindent\hrulefill\par\nopagebreak\textbf{Pour bien comprendre :}\itshape\par}%
+  {\par\nopagebreak\noindent\hrulefill\par\medskip}
+
+\title{\textbf{Script de soutenance --- Mattéo}\\
+\large Effet tunnel et temps de traversée d'une barrière de potentiel\\
+\normalsize Diapos 9 à 12 --- environ 5,5 minutes}
+\author{}
+\date{Soutenance juin 2026 --- oraux du 22 au 26 juin}
+
+\begin{document}
+\maketitle
+
+\subsection*{Répartition des rôles}
+
+\begin{center}
+\begin{tabular}{llc}
+\toprule
+Qui & Diapos & Durée visée \\
+\midrule
+Myriam & 1--4 : problématique, paquet d'ondes, états stationnaires & $\approx$ 5 min \\
+Sheryne & 5--8 : méthode numérique, validation, premiers résultats & $\approx$ 4,5 min \\
+\textbf{Mattéo} & 9--12 : effet Hartman, influence de la barrière, conclusion & $\approx$ 5,5 min \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% Note pour Mattéo : les diapos 12-13 de l'ancienne version (influence de
+% k0 et de a_wp, c'est-à-dire les caractéristiques du paquet plutôt que
+% de la barrière) sont retirées du diaporama -- trop de matière pour le
+% temps imparti, cf. les sections 4.1.f/4.1.g supprimées de
+% Partie 4/explication.md. Le temps gagné est redonné à la diapo 9
+% (le résultat central, qui mérite d'être pris au calme) et à la
+% conclusion, qui referme maintenant explicitement le fil laissé ouvert
+% par Sheryne à la diapo 8.
+
+Total : 15 minutes, puis 10 minutes de questions. Le texte ci-dessous est à dire
+à l'oral ; les phrases \textbf{en gras} sont les messages essentiels, à ne jamais
+sauter même si le temps presse.
+
+% ------------------------------------------------------------
+\diapo{9}{Le temps de groupe de Hartman (2,5 minutes --- résultat central)}
+
+Merci Sheryne. Nous arrivons au c\oe ur du projet : quel temps de traversée la
+théorie prédit-elle, et que mesure-t-on ?
+
+L'idée théorique est la suivante. Le paquet transmis s'obtient en multipliant
+chaque composante d'onde plane du paquet incident par l'amplitude de transmission
+$T(k)$ que Myriam a calculée. Or $T$ est complexe : son module atténue chaque
+composante, mais \textbf{sa phase $\varphi_T$ décale chaque composante dans le
+temps}. La méthode de la phase stationnaire, appliquée autour de $k_0$, montre
+que le pic du paquet transmis est décalé d'un temps de groupe $\tau_g$,
+proportionnel à la dérivée de la phase par rapport à $k$. Le temps de traversée
+théorique est donc $\tau_t = \tau_0 + \tau_g$ --- et en régime tunnel, ce
+$\tau_g$ est \emph{négatif}. \textbf{Vous voyez ça dans le code à droite} : une
+ligne calcule ce décalage, et la dernière ligne additionne le temps libre et
+ce décalage pour donner $\tau_t^{\rm th}$.
+
+Voici le résultat pour notre cas de référence :
+\textbf{$\tau_t$ numérique $= 0{,}112$, $\tau_t$ théorique $= 0{,}168$, à
+comparer au temps libre $\tau_0 = 0{,}200$.} Les deux valeurs, mesurée et
+prédite, sont inférieures au temps libre :
+\textbf{le paquet qui traverse par effet tunnel ressort \emph{plus tôt} que s'il
+n'y avait pas eu de barrière. C'est l'effet Hartman}, prédit en 1962, et notre
+simulation le confirme directement.
+
+L'écart entre $0{,}112$ et $0{,}168$ n'est pas un échec : la théorie de Hartman
+suppose un paquet \textbf{quasi monochromatique}, et le nôtre a une largeur
+spectrale $\Delta k$ non négligeable. Concrètement, $|T(k)|^2$ croît très vite
+avec $k$ : la barrière favorise les composantes rapides du paquet, qui
+ressortent plus tôt que ne le prédit la seule composante $k_0$.
+\textbf{C'est exactement le même mécanisme que l'écart signalé par Sheryne à
+la diapo 8} entre $8{,}1\times10^{-2}$ et $2{,}5\times10^{-2}$ : un seul
+phénomène, le filtrage spectral de la barrière, explique les deux anomalies.
+
+\begin{comprendre}
+La phase stationnaire en une phrase : dans l'intégrale du paquet transmis, les
+contributions des différents $k$ s'annulent mutuellement partout, sauf là où la
+phase totale varie lentement avec $k$ ; la position de ce point d'équilibre
+définit le pic, et la dérivée $d\varphi_T/dk$ s'y ajoute comme un décalage
+temporel. C'est exactement le même raisonnement qui donne la vitesse de groupe
+$v_g = d\omega/dk$.
+\end{comprendre}
+
+% ------------------------------------------------------------
+\diapo{10}{Influence de la largeur $a$ de la barrière (1 minute)}
+
+Première étude paramétrique : on élargit la barrière, à $V_0$ fixé.
+
+Le temps libre $\tau_0$ croît proportionnellement à $a$, évidemment. Mais regardez
+la courbe du temps tunnel théorique : \textbf{dès que $\kappa a$ dépasse environ
+3, $\tau_t$ sature vers $0{,}179$ et ne dépend plus de l'épaisseur de la
+barrière.} C'est la forme forte de l'effet Hartman : doubler l'épaisseur ne
+rallonge pas la traversée.
+
+Pendant ce temps, la transmission $|T|^2$ chute exponentiellement, en
+$e^{-2\kappa a}$, exactement comme le prédisaient les états stationnaires de la
+diapo 4.
+
+Dernier point, important pour l'honnêteté scientifique : au-delà de
+$a \approx 1{,}5$, notre mesure numérique du pic décroche de la théorie.
+\textbf{Ce n'est pas un bug : c'est le filtrage spectral qui devient dominant},
+et qui marque la limite de validité de la définition du temps par suivi du pic.
+
+\begin{comprendre}
+Si le temps sature mais que la distance augmente, la vitesse apparente $a/\tau_t$
+peut dépasser n'importe quelle borne --- d'où les débats sur une « traversée
+superluminale ». La résolution du paradoxe : presque rien ne traverse
+($|T|^2 \to 0$), et le peu qui traverse n'est pas le paquet initial mais sa
+fraction la plus rapide. Aucun signal utilisable ne va plus vite que la lumière.
+\end{comprendre}
+
+% ------------------------------------------------------------
+\diapo{11}{Influence de la hauteur $V_0$ (45 secondes)}
+
+Deuxième étude : on monte la hauteur de la barrière, à largeur fixée.
+
+Plus $V_0$ est grand, plus $\kappa$ est grand, et plus la transmission
+s'effondre --- rien de surprenant. Mais le temps de traversée, lui,
+\textbf{diminue aussi : de $0{,}218$ à $0{,}080$ quand $V_0$ passe de $13{,}5$ à
+$25$.}
+
+\textbf{C'est le résultat le plus contre-intuitif de cette étude : plus la
+barrière est infranchissable, plus elle se traverse vite} --- rarement, mais
+vite. Là encore, mesure et théorie de Hartman évoluent de concert.
+
+\begin{comprendre}
+Intuition possible : plus $V_0$ est grand, plus l'onde évanescente s'amortit
+court, et plus la transmission est dominée par le voisinage immédiat des
+interfaces ; le déphasage accumulé, qui fixe le temps de groupe, en est réduit.
+À utiliser si le jury demande « comment comprendre ça physiquement ? », en
+précisant que l'interprétation du temps tunnel reste un sujet débattu.
+\end{comprendre}
+
+% ------------------------------------------------------------
+% Note : les anciennes diapos 12 et 13 (influence de k0, puis de a_wp ---
+% les caractéristiques du paquet plutôt que de la barrière) sont retirées.
+% Le paragraphe ci-dessous, avant la conclusion, referme à l'oral le fil
+% que ces deux diapos auraient fermé en images : pourquoi Sheryne a mesuré
+% plus de transmission que prévu à la diapo 8. Pas de nouvelle diapo, juste
+% une phrase de plus avant de conclure.
+
+Avant de conclure, un mot sur l'écart que Sheryne a signalé à la diapo 8 :
+$8{,}1\times10^{-2}$ mesuré contre $2{,}5\times10^{-2}$ prédit par l'onde
+plane. \textbf{C'est le même mécanisme qui explique le décalage de Hartman} :
+notre paquet a une largeur spectrale $\Delta k$ non nulle, et la barrière
+transmet préférentiellement ses composantes rapides. Nous avons d'ailleurs
+poussé cette idée plus loin dans nos calculs --- en faisant varier $k_0$ et
+la largeur initiale du paquet $a_{\rm wp}$ --- et trouvé quelque chose de
+frappant : à petite impulsion, le temps de traversée \emph{mesuré} peut
+devenir négatif, le pic transmis semblant sortir avant que le pic incident
+n'entre. \textbf{Aucune violation de causalité} : le pic n'est pas une
+particule qui voyage, il est reconstruit à partir de l'avant-garde rapide du
+spectre, déjà en avance sur le centre du paquet. Nous avons choisi de ne pas
+développer ce point aujourd'hui faute de temps, mais nous pouvons y revenir
+en détail si la question revient.
+
+% ------------------------------------------------------------
+\diapo{12}{Conclusion (1,5 minute)}
+
+Pour conclure, quatre acquis.
+
+Un : \textbf{un solveur Crank--Nicolson validé}, norme conservée et temps libre
+retrouvé à 4\,\% près. Deux : les états stationnaires vérifiés numériquement,
+avec la décroissance exponentielle de la transmission. Trois :
+\textbf{l'effet Hartman confirmé par notre simulation} : le temps tunnel est plus
+court que le temps libre. Quatre : \textbf{cet effet est robuste aux
+caractéristiques de la barrière} : $\tau_t^{\rm th}$ sature avec la largeur
+$a$, et diminue avec la hauteur $V_0$ --- une barrière plus infranchissable se
+traverse plus vite, rarement mais plus vite.
+
+En perspective : l'influence des caractéristiques du paquet lui-même ($k_0$,
+$a_{\rm wp}$) sur ce temps, piste que nous avons explorée --- avec, déjà, des
+temps apparents négatifs et un lien direct avec l'anomalie de transmission de
+la diapo 8 --- mais écartée du périmètre final par souci de temps ; d'autres
+définitions du temps tunnel --- temps de séjour, horloge de Larmor --- ; la
+double barrière ; et la comparaison aux expériences récentes d'attophysique,
+qui mesurent réellement ces temps à l'échelle de l'attoseconde.
+
+Merci de votre attention ; nous sommes prêts pour vos questions.
+
+% ------------------------------------------------------------
+\clearpage
+\section*{Vue d'ensemble de l'exposé (pour pouvoir répondre sur tout)}
+
+\textbf{Le fil rouge en quatre phrases.} Nous voulons mesurer le temps que met un
+paquet d'ondes à traverser une barrière par effet tunnel. Myriam introduit les
+deux outils : le paquet gaussien (vitesse de groupe $v_g = k_0$, largeur
+spectrale $\Delta k$) et la transmission $T(k)$ des états stationnaires, avec sa
+décroissance exponentielle et sa phase $\varphi_T$. Sheryne montre que le solveur
+Crank--Nicolson est fiable (norme conservée, $\tau_0$ à 4\,\% près) et que le
+paquet se scinde en une partie réfléchie dominante et une petite partie
+transmise, plus grosse que prévu (filtrage spectral). Ma partie démontre le
+résultat principal --- \textbf{$\tau_t < \tau_0$, l'effet Hartman} --- puis son
+comportement face à la barrière : saturation avec $a$, diminution avec $V_0$.
+Nous évoquons en perspective l'influence des caractéristiques du paquet
+lui-même ($k_0$, $a_{\rm wp}$, dont les temps apparents négatifs à petit
+$k_0$), explorée mais hors du périmètre final.
+
+\textbf{Les nombres à connaître par c\oe ur} (cas de référence $k_0 = 5$,
+$E = 12{,}5$, $V_0 = 15$, $a = 1$, $a_{\rm wp} = 1$) :
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Grandeur & Numérique & Théorique \\
+\midrule
+Temps libre $\tau_0$ & 0{,}192 & 0{,}200 \\
+Temps tunnel $\tau_t$ & 0{,}112 & 0{,}168 (Hartman) \\
+Transmission & $P_{\rm trans} = 8{,}1\times10^{-2}$ & $|T(k_0)|^2 = 2{,}5\times10^{-2}$ \\
+Saturation de $\tau_t^{\rm th}$ avec $a$ & --- & $\approx 0{,}179$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Questions probables du jury --- éléments de réponse}
+
+\textbf{Refaire le raccordement des états stationnaires au tableau.}
+Solutions par zone (oscillantes dehors, évanescentes dedans), continuité de
+$\psi$ et $\psi'$ en $0$ et $a$, système $4\times4$ qui donne $T(k)$. Partie de
+Myriam, mais à savoir refaire.
+
+\textbf{Pourquoi Crank--Nicolson plutôt qu'Euler explicite ?}
+Unitaire (norme conservée par construction, vérifiée à $10^{-6}$) et
+inconditionnellement stable ; Euler explicite amplifie la norme et diverge.
+Système tridiagonal résolu par la méthode de Thomas. Partie de Sheryne.
+
+\textbf{Avez-vous étudié l'influence de $k_0$ et $a_{\rm wp}$ (le paquet, pas la
+barrière) ? Les temps négatifs violent-ils la causalité ?}
+C'est MA question, évoquée en perspective de la conclusion : oui, nous l'avons
+fait, mais écarté du diaporama final par souci de temps. Le pic transmis est
+reconstruit à partir des composantes rapides du spectre que la barrière
+favorise ; aucun signal ne se propage trop vite. Le détail chiffré reste dans
+l'historique du dépôt (`Partie 4/explication.md`, anciennes sections 4.1.f/g).
+
+\textbf{Pourquoi la probabilité transmise mesurée dépasse-t-elle $|T(k_0)|^2$ ?}
+Paquet non monochromatique (diapo 8) : la moyenne de $|T(k)|^2$ sur le spectre
+est dominée par les grands $k$. Dans la limite d'un paquet large en espace
+($a_{\rm wp}$ grand, $\Delta k$ petit), la mesure convergerait vers
+$|T(k_0)|^2$ -- c'est ce que montrait l'étude sur $a_{\rm wp}$, écartée du
+diaporama mais réutilisable en réponse à cette question.
+
+\textbf{Effet Hartman et superluminalité apparente : que se passe-t-il pour
+$a \to \infty$ ?}
+C'est MA question (diapo 10) : $\tau_t^{\rm th}$ sature alors que la distance
+croît, mais $|T|^2$ s'effondre en $e^{-2\kappa a}$ et la mesure du pic perd son
+sens bien avant ; pas de transport d'information superluminal.
+
+\end{document}
