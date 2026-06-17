@@ -130,7 +130,7 @@ La particule peut traverser la barrière par **effet tunnel** avec une probabili
 
 | Cas | $E$ vs $V_0$ | Transmission | Temps de traversée |
 |-----|-------------|-------------|-------------------|
-| Classique (au-dessus) | $E > V_0$ | totale ($|T|=1$) | $> \tau_0$ (ralentissement) |
+| Classique (au-dessus) | $E > V_0$ | totale (|T|=1) | $> \tau_0$ (ralentissement) |
 | Classique (sous barrière) | $E < V_0$ | nulle | non défini |
 | Quantique (effet tunnel) | $E < V_0$ | partielle ($0 < \|T\|^2 \ll 1$) | $\tau_{t,\rm th} < \tau_0$ (apparent) |
 
