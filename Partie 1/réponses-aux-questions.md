@@ -2,15 +2,15 @@
 ## Généralités 
 ### 1. Notions physiques
 #### a. Rappeler l’expression d’une onde plane à trois dimensions l’espace ainsi que la signification, la dimension physique et l’unité de $\vec{k}$ et $\omega$.
-Réponse : $\Psi(r,t)=\Psi_0 \exp(\vec{k} \bullet r - \omega t)$
+Réponse : $\Psi(\vec{r},t)=\Psi_0 \exp(i(\vec{k} \cdot \vec{r} - \omega t))$
 $\vec{k}$ : direction de la propagation d'onde. Sa dimension physique est $L⁻¹$ et son unité s'exprime en $m⁻¹$.
 $\omega$ : Elle caractérise la période temporelle de l'onde. Sa dimension physique est $T⁻¹$ et son unité s'exprime en $s⁻¹$.
 #### b. En déduire son expression à une dimension d’espace et déterminer sa partie réelle et sa partie imaginaire. Nous travaillerons désormais à une dimension d’espace uniquement.
 Réponse : Sur un seul axe, le produit scalaire $k \bullet r$ devient simplement $kx$. <br>
-L'expression se simplifie en : $\Psi(x,t)=\Psi_0 \exp(kx - \omega t)$ <br>
+L'expression se simplifie en : $\Psi(x,t)=\Psi_0 \exp(i(kx - \omega t))$ <br>
 En utilisant la formule d'Euler ($e^{i\theta} = cos(\theta) + i\sin(\theta)$), on détermine : <br>
-∙ Partie réelle : $\Psi_0cos(\omega t)$ <br>
-∙ Partie imaginaire : $\Psi_0sin(\omega t)$ <br>
+∙ Partie réelle : $\Psi_0\cos(kx - \omega t)$ <br>
+∙ Partie imaginaire : $\Psi_0\sin(kx - \omega t)$ <br>
 #### c. On suppose que la fonction d’onde d’une particule est une onde plane. Quelle est la dimension et l’unité du terme « d’amplitude » devant l’exponentielle.
 Réponse  : Dans un espace à une dimension, l'interprétation probabiliste de Max Born impose que $|\Psi|²$ représente une densité de probabilité par unité de longueur ($|\Psi|²dx$ est une probabilité sans dimension). La fonction d'onde $\Psi$ a donc pour dimension physique $L^{-1/2}$. L'exponentielle étant un terme sans dimension, l'amplitude $\Psi_0$ a exactement la même dimension que la fonction d'onde, soit $L^{-1/2}$. Son unité dans le Système International est donc le $m^{-1/2}$
 
