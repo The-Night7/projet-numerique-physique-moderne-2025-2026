@@ -4,13 +4,13 @@ L’équation de Schrödinger étant linéaire, si deux fonctions d’ondes sont
 
 $$\Psi(\vec{r}, t) = [2\pi]^{-\frac{3}{2}} \iiint g(vec{k})e^{i\vec{r}\cdot\vec{k}-i\omega t}d³\vec{k}$$
 
-où $\vec{k}$ est le vecteur d'onde et \vec{r} le vecteur position (ou rayon vecteur). <br>
+où $\vec{k}$ est le vecteur d'onde et $\vec{r}$ le vecteur position (ou rayon vecteur). <br>
 
 Analysons cette expression : <br>
 * le pré-facteur $[2\pi]^{-\frac{3}{2}}$ est ajouté de manière à ce que $\psi$ soit normalisable
-* la fonction $vec{g}$ est une fonction de trois variables, à savoir les trois composantes $vec{k}$
+* la fonction $\vec{g}$ est une fonction de trois variables, à savoir les trois composantes $\vec{k}$
 * le terme en exponentiel correspond à l'onde plane
-* l'expression générale fait intervenir une intégrale triple sur les trois coordonnées du vecteur $vec{k}$
+* l'expression générale fait intervenir une intégrale triple sur les trois coordonnées du vecteur $\vec{k}$
 
 Dans une base cartésienne $(\vec{e}_x, \vec{e}_y, \vec{e}_z)$, où $\vec{r} = x\vec{e}_x + y\vec{e}_y + z\vec{e}_z$ et $\vec{k} = k_x\vec{e}_x + k_y\vec{e}_y + k_z\vec{e}_z$ ce paquet d'ondes peut s'écrire
 
