@@ -405,16 +405,31 @@ def main():
     # --- Figure 3 : influence de a ---
     fig3, axes3 = plt.subplots(1, 2, figsize=(12, 4))
 
+    # Filtrer tau_t_num pour les valeurs fiables (a <= 1.0)
+    idx_reliable = np.where(np.array(a_valeurs) <= 1.0)[0]
+    a_reliable = np.array(a_valeurs)[idx_reliable]
+    tau_t_num_reliable = np.array(tau_t_num_list)[idx_reliable]
+
     axes3[0].plot(a_valeurs, tau_0_list, "o-", color="royalblue",
                   label="τ₀ = a/v_g  (libre, linéaire)")
-    axes3[0].plot(a_valeurs, tau_t_num_list, "s-", color="tomato",
+    axes3[0].plot(a_valeurs, tau_t_num_list, "s-", color="tomato",)
+    axes3[0].plot(a_reliable, tau_t_num_reliable, "s-", color="tomato",
                   label="τₜ  (tunnel, numérique)")
     axes3[0].plot(a_valeurs, tau_t_th_list, "^--", color="darkorange",
                   label="τₜ  (Hartman, analytique)")
     axes3[0].set_xlabel("Largeur de la barrière a")
     axes3[0].set_ylabel("Temps de traversée")
     axes3[0].set_title("Effet Hartman : saturation de τₜ vs a")
+    axes3[0].set_title(r'Temps de traversée en fonction de la largeur de la barrière $a$')
     axes3[0].legend(fontsize=9)
+    # Ajouter une annotation pour les valeurs non fiables
+    if len(a_valeurs) > 0 and np.any(np.array(a_valeurs) > 1.0):
+        first_unreliable_idx = np.where(np.array(a_valeurs) > 1.0)[0][0]
+        x_annotate = a_valeurs[first_unreliable_idx]
+        y_annotate = tau_t_num_list[first_unreliable_idx]
+        axes3[0].annotate('Mesure numérique non fiable\nau-delà de $a \\approx 1.0$',
+                          xy=(x_annotate, y_annotate), xytext=(x_annotate + 0.2, y_annotate + 0.2),
+                          arrowprops=dict(facecolor='black', shrink=0.05), fontsize=9, color='red')
     axes3[0].grid(True, linestyle=":")
 
     axes3[1].semilogy(a_valeurs, T2_list, "o-", color="purple")
