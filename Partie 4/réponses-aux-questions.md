@@ -74,10 +74,8 @@ $\tau_{t,\rm num} = 0.112 < \tau_{0,\rm num} = 0.192$ : la particule semble trav
 
 La probabilité de transmission est $|T|^2 \approx 2.5 \times 10^{-2}$, donc environ 97.5 % du paquet est réfléchi. La norme est conservée à mieux que $10^{-5}$ près par le schéma de Crank-Nicolson.
 
-**Remarque :** Pour les grandes valeurs de $a$ ($|T|^2 \lesssim 10^{-4}$), la détection numérique du pic transmis est limitée par la faiblesse du signal ; les valeurs analytiques (effet Hartman) restent les plus fiables.
-
 **Explication de l'écart sur la probabilité de transmission :**
-La simulation indique une norme transmise d'environ $8.1 \times 10^{-2}$, alors que la probabilité de transmission analytique $|T(k_0)|^2$ pour une onde plane de nombre d'onde $k_0$ est de $2.5 \times 10^{-2}$. Cet écart n'est pas une erreur numérique, mais s'explique par le fait que le paquet d'ondes n'est pas monochromatique. Il est une superposition de différentes composantes de nombres d'onde $k$. La barrière agit comme un filtre spectral, favorisant la transmission des composantes de haute énergie (plus rapides). Ces composantes sont mieux transmises que la composante centrale $k_0$ seule ne le laisserait penser, ce qui conduit à une probabilité de transmission totale mesurée plus élevée que le $|T(k_0)|^2$ théorique.
+La simulation indique une norme transmise d'environ $8.1 \times 10^{-2}$, contre $|T(k_0)|^2 = 2.5 \times 10^{-2}$ pour l'onde plane théorique. Cet écart n'est pas une erreur numérique : le paquet n'est pas monochromatique, et la barrière **filtre** son spectre — elle favorise les composantes rapides, mieux transmises que $k_0$ seul ne le laisserait penser.
 
 ### 4.1.1.d – Influence de la largeur $a$
 
