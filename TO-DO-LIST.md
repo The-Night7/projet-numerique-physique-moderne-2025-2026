@@ -8,14 +8,14 @@
 
 **Partie 2**
 
-- [ ] `Partie 2/réponses-aux-questions.md` (question 2.2.1.b) : remplacer votre g(k) = (2a/π)^{1/4}exp[-a(k-k0)²] par la formule officielle déjà donnée dans le sujet (g(k) = √a(2π)^{-1/4}exp[-a²(k-k0)²/4]) et dérouler le calcul de (c) avec ce même a, pour éviter le changement de variable silencieux.
-- [ ] `Partie 2/réponses-aux-questions.md` (question 2.2.1.d) : remplacer l'affirmation « l'intégration donnera bien 1 » par le calcul explicite de l'intégrale gaussienne.
-- [ ] `Partie 2/PaquetOndeGauss1d2A.py` : soit passer le code en unités atomiques/nm-fs-eV comme indiqué dans votre propre réponse à la question (e), soit préciser dans le texte que le correctif n'est appliqué qu'à partir de la Partie 3.
+- [X] `Partie 2/réponses-aux-questions.md` (question 2.2.1.b) : remplacer votre g(k) = (2a/π)^{1/4}exp[-a(k-k0)²] par la formule officielle déjà donnée dans le sujet (g(k) = √a(2π)^{-1/4}exp[-a²(k-k0)²/4]) et dérouler le calcul de (c) avec ce même a, pour éviter le changement de variable silencieux.
+- [X] `Partie 2/réponses-aux-questions.md` (question 2.2.1.d) : remplacer l'affirmation « l'intégration donnera bien 1 » par le calcul explicite de l'intégrale gaussienne.
+- [X] `Partie 2/PaquetOndeGauss1d2A.py` : soit passer le code en unités atomiques/nm-fs-eV comme indiqué dans votre propre réponse à la question (e), soit préciser dans le texte que le correctif n'est appliqué qu'à partir de la Partie 3.
 
 **Partie 3**
 
-- [ ] `Partie 3/réponses-aux-questions.md` (question 3.1.1.d) : corriger « schéma progressif, erreur d'ordre 1 » → schéma centré, erreur d'ordre 2 (cohérent avec le code).
-- [ ] `Partie 3/EquaSchro1d2A.py` ou le markdown : ajouter un test de convergence avec une fonction non polynomiale (ex. sin(x)) à plusieurs dx, et tracer log(erreur) vs log(dx) pour démontrer l'ordre 2 — le test sur x² actuel ne le permet pas (dérivées d'ordre 3+ nulles).
+- [X] `Partie 3/réponses-aux-questions.md` (question 3.1.1.d) : corriger « schéma progressif, erreur d'ordre 1 » → schéma centré, erreur d'ordre 2 (cohérent avec le code).
+- [X] `Partie 3/EquaSchro1d2A.py` ou le markdown : ajouter un test de convergence avec une fonction non polynomiale (ex. sin(x)) à plusieurs dx, et tracer log(erreur) vs log(dx) pour démontrer l'ordre 2 — le test sur x² actuel ne le permet pas (dérivées d'ordre 3+ nulles).
 
 **Support Soutenance**
 
@@ -23,8 +23,8 @@
 
 **Dépôt GitHub**
 
-- [x] Ajouter un `.gitignore` (au minimum : `__pycache__/`, `*.pyc`, `*.aux`, `*.log`, `*.fls`, `*.fdb_latexmk`, `*.synctex.gz`, `*.out`, `*.nav`, `*.snm`, `*.vrb`).
-- [x] Supprimer du dépôt les fichiers de compilation déjà commités (`Partie 3/__pycache__`, `Partie 4/__pycache__`, fichiers `.aux/.log/.fls/...` dans `Support Soutenance/` et `Support Soutenance/Scripts/`).
+- [X] Ajouter un `.gitignore` (au minimum : `__pycache__/`, `*.pyc`, `*.aux`, `*.log`, `*.fls`, `*.fdb_latexmk`, `*.synctex.gz`, `*.out`, `*.nav`, `*.snm`, `*.vrb`).
+- [X] Supprimer du dépôt les fichiers de compilation déjà commités (`Partie 3/__pycache__`, `Partie 4/__pycache__`, fichiers `.aux/.log/.fls/...` dans `Support Soutenance/` et `Support Soutenance/Scripts/`).
 
 **Révision générale (pas un fichier à corriger, mais à ne pas oublier)**
 

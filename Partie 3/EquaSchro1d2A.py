@@ -13,6 +13,7 @@ m = 1.0
 # ============================================================
 def derivee_premiere(y, dx):
     """Approximation numerique de la derivee premiere d'un tableau 1D."""
+    # Convertir en tableau NumPy si ce n'est pas deja le cas
     y = np.asarray(y)
     dy = np.zeros_like(y, dtype=np.result_type(y, float))
 
@@ -43,6 +44,7 @@ def double(x):
 # ============================================================
 def derivee_seconde(y, dx):
     """Approximation numerique de la derivee seconde d'un tableau 1D."""
+    # Convertir en tableau NumPy si ce n'est pas deja le cas
     y = np.asarray(y)
     d2y = np.zeros_like(y, dtype=np.result_type(y, float))
 
@@ -244,6 +246,56 @@ def main():
     if plt.get_backend().lower() != "agg":
         plt.show()
 
+    # ========================================================
+    # Nouveau test de convergence pour les derivees (sin(x))
+    # ========================================================
+    print("\n--- Test de convergence des derivees sur sin(x) ---")
+    
+    # Plage de dx a tester (en variant nx)
+    nx_values = np.array([100, 200, 400, 800, 1600, 3200, 6400])
+    dx_values = (xmax - xmin) / (nx_values - 1)
+    
+    errors_d1 = []
+    errors_d2 = []
+    
+    # Fonction a deriver et ses derivees analytiques
+    def f(x_arr):
+        return np.sin(x_arr)
+    def df(x_arr):
+        return np.cos(x_arr)
+    def d2f(x_arr):
+        return -np.sin(x_arr)
+
+    for current_nx, current_dx in zip(nx_values, dx_values):
+        x_test = np.linspace(xmin, xmax, current_nx)
+        y_test = f(x_test)
+        
+        # Erreur pour la derivee premiere
+        num_d1 = derivee_premiere(y_test, current_dx)
+        err_d1 = np.max(np.abs(num_d1[1:-1] - df(x_test)[1:-1])) # Exclure les bords pour l'ordre
+        errors_d1.append(err_d1)
+        
+        # Erreur pour la derivee seconde
+        num_d2 = derivee_seconde(y_test, current_dx)
+        err_d2 = np.max(np.abs(num_d2[1:-1] - d2f(x_test)[1:-1])) # Exclure les bords pour l'ordre
+        errors_d2.append(err_d2)
+        
+    # Affichage des resultats et trace log-log
+    print("dx\t\tErreur D1\tErreur D2")
+    for i in range(len(dx_values)):
+        print(f"{dx_values[i]:.4f}\t\t{errors_d1[i]:.3e}\t{errors_d2[i]:.3e}")
+
+    fig_conv, ax_conv = plt.subplots(1, 1, figsize=(8, 6))
+    ax_conv.loglog(dx_values, errors_d1, 'o-', label="Derivee premiere (ordre 2)")
+    ax_conv.loglog(dx_values, errors_d2, 'x-', label="Derivee seconde (ordre 2)")
+    ax_conv.set_xlabel("Pas spatial dx")
+    ax_conv.set_ylabel("Erreur maximale (log)")
+    ax_conv.set_title("Convergence des schemas de derivation")
+    ax_conv.legend()
+    ax_conv.grid(True, which="both", linestyle=":")
+    plt.tight_layout()
+    if plt.get_backend().lower() != "agg":
+        plt.show()
 
 if __name__ == "__main__":
     main()

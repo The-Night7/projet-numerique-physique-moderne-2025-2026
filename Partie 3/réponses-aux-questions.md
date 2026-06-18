@@ -44,7 +44,7 @@ def double(x):
 ```
 **d. À l’aide de votre algorithme, calculer numériquement la dérivée de la fonction x² et comparer les valeurs obtenues avec celles renvoyées par la fonction 2x. Vous pouvez, par exemple, regarder l’erreur relative commise par votre algorithme. <br>**
 
-**Réponse :** En appliquant l'algorithme à un tableau généré par np.linspace, on compare la dérivée numérique à la valeur théorique $2x$. L'erreur relative est d'ordre 1 par rapport au pas $dx$ pour un schéma progressif.Plus $dx$ est petit (nombre de points élevé), plus l'erreur diminue.
+**Réponse :** En appliquant l'algorithme à un tableau généré par np.linspace, on compare la dérivée numérique à la valeur théorique $2x$. L'erreur relative est d'ordre 2 par rapport au pas $dx$ pour un schéma centré.Plus $dx$ est petit (nombre de points élevé), plus l'erreur diminue.
 
 ### 2. Reprendre les questions précédentes, mais pour la dérivée seconde.
 

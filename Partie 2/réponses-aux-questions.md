@@ -48,22 +48,30 @@ En remplaçant $\omega$, l'expression générale devient :
 b. Donner l'expression générale d'un paquet d'ondes gaussien. <br>
 
 Un paquet d'ondes est gaussien si la fonction de distribution des nombres d'onde $g(k)$ est une fonction gaussienne. Son expression mathématique standard, centrée autour d'un nombre d'onde moyen $k_0$ avec une largeur liée à un paramètre $a$, est :
-**$g(k) = \left(\frac{2a}{\pi}\right)^{1/4} e^{-a(k-k_0)^2}$**
+**$g(k) = \sqrt{a}\left(2\pi\right)^{-1/4} e^{[\frac{-a^2(k-k_0)^2}{4}]}$**
 
 c. En calculant l'intégrale, déterminer l'expression du paquet d'ondes gaussien à l'instant $t$. <br>
 
-L'insertion de $g(k)$ dans l'expression de $\Psi(x,t)$ donne une intégrale gaussienne complexe. En effectuant l'intégration (généralement via une complétion du carré dans l'exponentielle), on obtient l'expression analytique du paquet d'ondes au cours du temps :
-**$$\Psi(x,t) = \left(\frac{2a}{\pi}\right)^{1/4} \frac{1}{\sqrt{2\alpha(t)}} \exp\left[ -\frac{(x - v_g t)^2}{4\alpha(t)} \right] \exp\left[ i\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$$**
+L'insertion de $g(k)$ dans l'expression de $\Psi(x,t)$ donne une intégrale gaussienne complexe suivante:
+
+$$\Psi(x,t) = \frac{\sqrt{a}}{(2\pi)^{3/4}} \int_{-\infty}^{+\infty} \exp\left[-\frac{a^2(k-k_0)^2}{4} + i\left(kx-\frac{\hbar k^2}{2m}t\right)\right] dk$$
+
+
+ En effectuant l'intégration (généralement via une complétion du carré dans l'exponentielle), on obtient l'expression analytique du paquet d'ondes au cours du temps :
+**$$\Psi(x,t) = \left(\frac{1}{8\pi^3}\right)^{1/4} \sqrt{\frac{4\pi ma}{\alpha(t)}} \exp\left[ -\frac{m(x - v_g t)^2}{\alpha(t)} \right] \exp\left[ i\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$$**
 Où :
 *   $v_g = \frac{\hbar k_0}{m}$ est la vitesse de groupe (vitesse classique de la particule).
-*   $\alpha(t) = \frac{a²}{4} + i\frac{\hbar t}{2m}$ est un paramètre complexe traduisant l'étalement temporel du paquet d'ondes.
+*   $\alpha(t) = ma^2 + 2i\hbar t$ est un paramètre complexe traduisant l'étalement temporel du paquet d'ondes.
 
 d. Vérifier que ce paquet d'ondes est normalisé. <br>
 
 Pour qu'un paquet d'ondes soit normalisé, il faut que $\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = 1$. 
-En calculant le module au carré de l'expression précédente, la phase complexe s'annule, et le terme en amplitude donne :
-$|\Psi(x,t)|^2 = \sqrt{\frac{2a}{\pi |\alpha(t)|^2}} \exp\left[-\frac{2a}{4|\alpha(t)|^2} (x - v_g t)^2\right]$
-L'intégration de cette densité de probabilité (qui est elle-même une gaussienne réelle dont l'écart-type augmente avec le temps) sur tout l'espace donnera bien **1**, confirmant que la probabilité totale de trouver la particule reste égale à 100 % au cours du temps, indépendamment de son étalement spatial. L'état est donc physiquement acceptable.
+La densité de probabilité $|\Psi(x,t)|^2 = \Psi \Psi^*$ se calcule en utilisant $\frac{1}{\alpha} + \frac{1}{\alpha^*} = \frac{2\text{Re}(\alpha)}{|\alpha|^2} = \frac{a^2/2}{|\alpha|^2}$. On obtient :
+$$|\Psi(x,t)|^2 = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \exp\left[ -\frac{(x - v_g t)^2}{4} \frac{a^2/2}{|\alpha(t)|^2} \right] = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \exp\left[ -\frac{a^2(x - v_g t)^2}{8|\alpha(t)|^2} \right]$$
+
+On vérifie la normalisation $\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = 1$ en résolvant l'intégrale gaussienne $\int e^{-A u^2}du = \sqrt{\pi/A}$ avec $A = \frac{a^2}{8|\alpha(t)|^2}$ :
+$$\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \sqrt{\frac{\pi}{A}} = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \frac{\sqrt{8\pi}|\alpha(t)|}{a} = 1$$
+La probabilité totale est conservée, l'état est physiquement acceptable.
 
 
 e. En utilisant les « Outils mathématiques » relatifs à la transformation de FOURIER ou avec les notions vus en Ondes, exprimer $g(k)$ en fonction de $\Psi(x, t = 0)$. <br>
@@ -91,3 +99,5 @@ e. Proposer une solution/astuce. <br>
 Pour contourner ce problème, il faut **changer de système d'unités (adimensionner le problème)**. 
 *   L'astuce principale consiste à travailler en **unités atomiques** (où on pose arbitrairement $\hbar = 1$ et $m = 1$). 
 *   Alternativement, vous pouvez utiliser des unités adaptées à l'échelle quantique, comme l'électron-volt (eV) pour l'énergie, le nanomètre (nm) pour les longueurs et la femtoseconde (fs) pour le temps. Cela ramène toutes les grandeurs numériques (y compris `hbar` et `m`) autour de l'unité ($\approx 1$), garantissant un calcul Python rapide et extrêmement précis.
+
+**Note :** Afin d'illustrer concrètement les difficultés numériques mentionnées à la question (d), le script `PaquetOndeGauss1d2A.py` de cette partie est maintenu en unités SI. Le passage aux unités adimensionnées ($\hbar=1, m=1$) est appliqué systématiquement à partir de la **Partie 3** pour garantir la stabilité des résolutions d'équations différentielles.
