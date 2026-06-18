@@ -1,6 +1,6 @@
 **Partie 4**
 
-- [ ] `Partie 4/réponses-aux-questions.md` : ajouter l'explication du décrochage de τ_t,num au-delà de a≈1.5 (filtrage spectral / signal transmis trop faible face au bruit numérique) — actuellement seule la remarque vague à la ligne 77 en parle, sans la justification claire qui est dans le README de soutenance.
+- [X] `Partie 4/réponses-aux-questions.md` : ajouter l'explication du décrochage de τ_t,num au-delà de a≈1.5 (filtrage spectral / signal transmis trop faible face au bruit numérique) — actuellement seule la remarque vague à la ligne 77 en parle, sans la justification claire qui est dans le README de soutenance.
 - [ ] `Partie 4/réponses-aux-questions.md` : ajouter l'explication de l'écart 8,1 % (mesuré) vs 2,5 % (|T(k₀)|² théorique) — paquet non monochromatique, transmission préférentielle des composantes rapides. Déjà bien rédigée diapo 8, juste à copier/adapter.
 - [ ] `Partie 4/Figure_3_influence_a.png` : corriger le titre (« saturation de τ_t ») qui contredit la courbe numérique affichée, ou n'afficher τ_t,num que pour a≤1 avec une annotation indiquant que la mesure n'est plus fiable au-delà.
 - [ ] `Partie 4/EffetTunnel1d2A.py` : relancer la simulation avec nx/nt doublés (ex. nx=3000, nt=6000) pour vérifier si l'écart de 33 % sur τ_t,num à a=1 se réduit — préparer ce chiffre pour la soutenance.

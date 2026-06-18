@@ -76,6 +76,9 @@ La probabilité de transmission est $|T|^2 \approx 2.5 \times 10^{-2}$, donc env
 
 **Remarque :** Pour les grandes valeurs de $a$ ($|T|^2 \lesssim 10^{-4}$), la détection numérique du pic transmis est limitée par la faiblesse du signal ; les valeurs analytiques (effet Hartman) restent les plus fiables.
 
+**Explication de l'écart sur la probabilité de transmission :**
+La simulation indique une norme transmise d'environ $8.1 \times 10^{-2}$, alors que la probabilité de transmission analytique $|T(k_0)|^2$ pour une onde plane de nombre d'onde $k_0$ est de $2.5 \times 10^{-2}$. Cet écart n'est pas une erreur numérique, mais s'explique par le fait que le paquet d'ondes n'est pas monochromatique. Il est une superposition de différentes composantes de nombres d'onde $k$. La barrière agit comme un filtre spectral, favorisant la transmission des composantes de haute énergie (plus rapides). Ces composantes sont mieux transmises que la composante centrale $k_0$ seule ne le laisserait penser, ce qui conduit à une probabilité de transmission totale mesurée plus élevée que le $|T(k_0)|^2$ théorique.
+
 ### 4.1.1.d – Influence de la largeur $a$
 
 | $a$ | $\kappa\cdot a$ | $\tau_0 = a/v_g$ | $\tau_{t,\rm th}$ | $\tau_{t,\rm th}/\tau_0$ | $\|T\|^2$ |
@@ -92,6 +95,11 @@ La probabilité de transmission est $|T|^2 \approx 2.5 \times 10^{-2}$, donc env
 - $\tau_{t,\rm th}$ croît d'abord pour les petites barrières ($\kappa a \lesssim 2$), puis **sature** autour de $\approx 0.179$ pour $\kappa a \gtrsim 3$.
 - Dans le régime opaque ($\kappa a \gg 1$), $\tau_{t,\rm th}$ devient **indépendant de $a$** : c'est l'**effet Hartman**. Cela signifie que la barrière est traversée en un temps qui ne dépend pas de son épaisseur, si celle-ci est suffisamment grande.
 - Simultanément, $|T|^2$ décroît exponentiellement avec $a$ : $|T|^2 \approx 16(E/V_0)(1-E/V_0)\,e^{-2\kappa a}$ pour $\kappa a \gg 1$.
+
+**Remarque sur le décrochage de $\tau_{t,\rm num}$ :**
+Au-delà de $a \approx 1.5$, on observe que la valeur numérique $\tau_{t,\rm num}$ s'écarte significativement de la valeur théorique $\tau_{t,\rm th}$. Cela s'explique par deux phénomènes principaux :
+1.  **Faiblesse du signal transmis :** Pour de grandes largeurs de barrière $a$, la probabilité de transmission $|T|^2$ décroît exponentiellement (par exemple, pour $a=2.0$, $|T|^2 \approx 2.9 \times 10^{-4}$). Le paquet transmis devient alors extrêmement faible, et sa détection numérique (recherche du pic) est fortement perturbée par le bruit numérique inhérent aux calculs en virgule flottante.
+2.  **Filtrage spectral :** Le paquet d'ondes n'est pas monochromatique, mais une superposition de nombres d'onde $k$. La barrière agit comme un filtre spectral, favorisant la transmission des composantes de haute énergie (plus rapides). Pour des barrières très opaques, les composantes les plus lentes du paquet sont presque entièrement réfléchies, et le signal transmis est dominé par les composantes les plus rapides. La mesure numérique du pic transmis, qui est une moyenne sur ces composantes filtrées, peut alors donner des résultats qui ne reflètent plus fidèlement le temps de groupe de Hartman calculé pour le $k_0$ initial, surtout lorsque le signal est noyé dans le bruit. Dans ces conditions, les valeurs analytiques de $\tau_{t,\rm th}$ restent les plus fiables.
 
 ### 4.1.1.e – Influence de $V_0$
 
