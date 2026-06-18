@@ -66,11 +66,11 @@ Où :
 d. Vérifier que ce paquet d'ondes est normalisé. <br>
 
 Pour qu'un paquet d'ondes soit normalisé, il faut que $\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = 1$. 
-La densité de probabilité $|\Psi(x,t)|^2 = \Psi \Psi^*$ se calcule en utilisant $\frac{1}{\alpha} + \frac{1}{\alpha^*} = \frac{2\text{Re}(\alpha)}{|\alpha|^2} = \frac{a^2/2}{|\alpha|^2}$. On obtient :
-$$|\Psi(x,t)|^2 = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \exp\left[ -\frac{(x - v_g t)^2}{4} \frac{a^2/2}{|\alpha(t)|^2} \right] = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \exp\left[ -\frac{a^2(x - v_g t)^2}{8|\alpha(t)|^2} \right]$$
+La densité de probabilité $|\Psi(x,t)|^2 = \Psi \Psi^*$ se calcule en utilisant $\frac{1}{\alpha} + \frac{1}{\alpha^*} = \frac{2\text{Re}(\alpha)}{|\alpha|^2} = \frac{2ma^2}{|\alpha(t)|^2}$ (puisque $\text{Re}(\alpha) = ma^2$). Compte tenu du facteur $m$ dans l'exponentielle de $\Psi$, on obtient :
+**$$|\Psi(x,t)|^2 = \frac{ma\sqrt{2/\pi}}{|\alpha(t)|} \exp\left[ -\frac{2m^2a^2(x - v_g t)^2}{|\alpha(t)|^2} \right]$$**
 
-On vérifie la normalisation $\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = 1$ en résolvant l'intégrale gaussienne $\int e^{-A u^2}du = \sqrt{\pi/A}$ avec $A = \frac{a^2}{8|\alpha(t)|^2}$ :
-$$\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \sqrt{\frac{\pi}{A}} = \frac{a}{\sqrt{8\pi}|\alpha(t)|} \frac{\sqrt{8\pi}|\alpha(t)|}{a} = 1$$
+On vérifie la normalisation avec $A = \frac{2m^2a^2}{|\alpha(t)|^2}$ :
+$$\int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx = \frac{ma\sqrt{2/\pi}}{|\alpha(t)|} \sqrt{\frac{\pi}{A}} = \frac{ma\sqrt{2/\pi}}{|\alpha(t)|} \frac{\sqrt{\pi}|\alpha(t)|}{ma\sqrt{2}} = 1$$
 La probabilité totale est conservée, l'état est physiquement acceptable.
 
 
