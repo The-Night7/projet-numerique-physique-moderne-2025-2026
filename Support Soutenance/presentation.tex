@@ -322,7 +322,7 @@ psi[1:-1] = (*\tikzmarknode{codethomas}{\color{codeaccent}\bfseries thomas}*)(
   % tracer de flèche par-dessus le texte.
   \begin{tikzpicture}[remember picture, overlay]
     \draw[-{Triangle[length=2mm]}, thick, bordeaux, looseness=0.8]
-      (eqsi.south) to[out=-90,in=90] (codesi.north);
+      (eqsi.south) to[out=-90,in=90] ([xshift=6pt, yshift=9pt]codesi.north);
   \end{tikzpicture}
 \end{frame}
 
@@ -370,7 +370,7 @@ def (*\tikzmarknode{codefn}{\color{codeaccent}\bfseries temps\_pic\_en}*)(psi, t
   $\Rightarrow$ le solveur est validé, on peut allumer la barrière.
   \begin{tikzpicture}[remember picture, overlay]
     \draw[-{Triangle[length=2mm]}, thick, bordeaux]
-      (eqtau.south) to[out=-90,in=90] (codefn.north);
+    	(eqtau.south) to[out=-90,in=90] ([yshift=9pt]codefn.north);
   \end{tikzpicture}
 \end{frame}
 
