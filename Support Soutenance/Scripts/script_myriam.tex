@@ -1,5 +1,5 @@
 % ============================================================
-% Script de soutenance — Myriam (diapos 1 à 4)
+% Script de soutenance — Myriam (diapos 1, 2, 4 et 5)
 % Compilation : pdflatex script_myriam.tex
 % ============================================================
 \documentclass[11pt,a4paper]{article}
@@ -14,217 +14,152 @@
 
 \newcommand{\diapo}[2]{\section*{Diapo #1 --- #2}}
 \newenvironment{comprendre}%
-  {\par\medskip\noindent\hrulefill\par\nopagebreak\textbf{Pour bien comprendre :}\itshape\par}%
-  {\par\nopagebreak\noindent\hrulefill\par\medskip}
+{\par\medskip\noindent\hrulefill\par\nopagebreak\textbf{Pour bien comprendre :}\itshape\par}%
+{\par\nopagebreak\noindent\hrulefill\par\medskip}
 
 \title{\textbf{Script de soutenance --- Myriam}\\
-\large Effet tunnel et temps de traversée d'une barrière de potentiel\\
-\normalsize Diapos 1 à 4 --- environ 5 minutes}
+	\large Effet tunnel et temps de traversée d'une barrière de potentiel\\
+	\normalsize Diapos 1, 2, 4--5 --- environ 5 minutes}
 \author{}
 \date{Soutenance juin 2026 --- oraux du 22 au 26 juin}
 
 \begin{document}
-\maketitle
-
-\subsection*{Répartition des rôles}
-
-\begin{center}
-\begin{tabular}{llc}
-\toprule
-Qui & Diapos & Durée visée \\
-\midrule
-\textbf{Myriam} & 1--4 : problématique, paquet d'ondes, états stationnaires & $\approx$ 5 min \\
-Sheryne & 5--8 : méthode numérique, validation, premiers résultats & $\approx$ 4,5 min \\
-Mattéo & 9--12 : effet Hartman, études paramétriques, conclusion & $\approx$ 5,5 min \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-Total : 15 minutes, puis 10 minutes de questions. Le texte ci-dessous est à dire
-à l'oral ; les phrases \textbf{en gras} sont les messages essentiels, à ne jamais
-sauter même si le temps presse.
-
-% ------------------------------------------------------------
-\diapo{1}{Page de titre (30 secondes)}
-
-Bonjour à toutes et à tous. Nous allons vous présenter notre projet numérique de
-physique moderne, qui porte sur \textbf{l'effet tunnel et le temps de traversée
-d'une barrière de potentiel} par un paquet d'ondes gaussien à une dimension.
-
-Je suis Myriam Bensaid, et je travaille avec Sheryne Ouarghi et Mattéo Knopes.
-Je vais d'abord poser le problème et les outils théoriques ; Sheryne présentera
-ensuite la méthode numérique et les premiers résultats ; et Mattéo terminera par
-l'étude détaillée du temps de traversée et la conclusion.
-
-% ------------------------------------------------------------
-\diapo{2}{Problématique (1 minute)}
-
-En mécanique classique, la situation est simple : une particule d'énergie $E$
-qui arrive sur une barrière de hauteur $V_0$ supérieure à $E$ rebondit, toujours.
-En mécanique quantique, c'est différent : la particule a une probabilité non
-nulle de passer de l'autre côté. C'est l'effet tunnel.
-
-Notre question centrale va un cran plus loin : \textbf{combien de temps met une
-particule quantique pour traverser une barrière qu'elle n'a classiquement pas le
-droit de franchir ?} Cette question paraît innocente, mais elle est encore
-débattue aujourd'hui, et nous verrons qu'elle réserve des surprises.
-
-Notre démarche suit cinq étapes, que vous voyez à l'écran : construire un paquet
-d'ondes gaussien ; déterminer les états stationnaires de la barrière ; résoudre
-numériquement l'équation de Schrödinger dépendante du temps ; mesurer le temps de
-traversée et le comparer à la théorie ; et enfin étudier l'influence des
-paramètres de la barrière.
-
-Tout le projet est en unités adimensionnées, $\hbar = m = 1$ : cela allège les
-équations sans rien changer à la physique.
-
-\begin{comprendre}
-Pourquoi la question du temps est-elle difficile ? Parce que sous la barrière,
-l'onde n'oscille pas : elle s'amortit (on dit qu'elle est « évanescente »). Il
-n'y a donc pas de vitesse de propagation évidente à l'intérieur, et il faut
-\emph{définir} ce qu'on appelle « temps de traversée ». Nous choisirons une
-définition opérationnelle : le temps qui sépare le passage du pic du paquet à
-l'entrée et à la sortie de la barrière.
-\end{comprendre}
-
-% ------------------------------------------------------------
-\diapo{3}{Le paquet d'ondes gaussien (1,5 minute)}
-
-Première étape : représenter une particule. Une onde plane unique ne convient
-pas, car elle est complètement délocalisée, présente partout dans l'espace. Pour
-obtenir une particule localisée, on superpose une infinité d'ondes planes : c'est
-l'intégrale à l'écran, où chaque onde de vecteur d'onde $k$ est pondérée par un
-poids gaussien $g(k)$ centré sur une valeur moyenne $k_0$.
-
-\textbf{Ce paquet a quatre propriétés clés.} Un : son centre avance à la vitesse
-de groupe $v_g = k_0$ dans nos unités --- c'est elle qui joue le rôle de la
-vitesse de la particule. Deux : les oscillations internes avancent à la vitesse
-de phase, qui vaut la moitié de $v_g$. Trois : sa largeur spectrale vaut
-$\Delta k = 1/(2\sqrt{a_{\rm wp}})$, où $a_{\rm wp}$ contrôle la largeur
-spatiale ; \textbf{plus le paquet est étroit en position, plus il est large en
-vecteur d'onde} --- c'est exactement le principe d'indétermination de Heisenberg.
-Quatre : le paquet s'étale au cours du temps, car la relation de dispersion
-$\omega = k^2/2$ n'est pas linéaire : les composantes rapides prennent de
-l'avance sur les lentes.
-
-Sur la figure de droite, vous voyez les parties réelle et imaginaire du paquet à
-l'instant initial : des oscillations sous une enveloppe gaussienne.
-
-\begin{comprendre}
-Retenez surtout $\Delta k$ : toute la fin de l'exposé repose dessus. Le paquet
-n'a pas \emph{une} énergie mais \emph{une plage} d'énergies de largeur liée à
-$\Delta k$. Or la barrière ne traite pas toutes ces composantes de la même
-façon : c'est ce « filtrage » qui expliquera les écarts entre nos mesures et la
-théorie onde plane.
-\end{comprendre}
-
-% ------------------------------------------------------------
-\diapo{4}{États stationnaires de la barrière (2 minutes --- diapo indispensable)}
-
-Deuxième outil, et c'est un point que le jury attend : les états stationnaires.
-On cherche les solutions d'énergie $E$ fixée, avec $E < V_0$, pour une barrière
-rectangulaire de hauteur $V_0$ et de largeur $a$.
-
-L'espace se découpe en trois zones. Avant la barrière : une onde incidente et une
-onde réfléchie d'amplitude $R$. Après la barrière : une onde transmise
-d'amplitude $T$. Et \textbf{dans la barrière, le vecteur d'onde devient
-imaginaire} : la solution n'est plus oscillante mais exponentielle, en
-$e^{\pm\kappa x}$, avec $\kappa = \sqrt{2m(V_0 - E)}/\hbar$. C'est l'onde
-évanescente : l'onde ne se propage pas sous la barrière, elle s'y amortit.
-
-Pour relier les trois zones, on impose la continuité de $\psi$ et de sa dérivée
-en $x = 0$ et en $x = a$ : quatre équations, quatre inconnues. On en tire
-l'amplitude de transmission $T(k)$ affichée dans l'encadré.
-
-Deux conséquences. D'abord, \textbf{$|T|^2$ n'est jamais nul : la transmission
-est toujours possible}, c'est la signature mathématique de l'effet tunnel.
-Ensuite, en régime opaque, c'est-à-dire $\kappa a \gg 1$, la transmission décroît
-comme $e^{-2\kappa a}$ : \textbf{une sensibilité exponentielle à la largeur et à
-la hauteur de la barrière}. C'est ce qui rend l'effet tunnel si sélectif --- et
-si utile, par exemple dans le microscope à effet tunnel.
-
-Enfin, notez que $T$ est un nombre complexe : il a un module, mais aussi une
-phase $\varphi_T$. \textbf{Cette phase contient l'information sur le temps de
-traversée} : Mattéo s'en servira pour construire la prédiction théorique.
-
-Je laisse maintenant la parole à Sheryne pour la résolution numérique.
-
-\begin{comprendre}
-Le raccordement est une question classique de jury : il faut savoir le refaire
-au tableau. La logique : dans chaque zone l'équation de Schrödinger est une
-équation différentielle linéaire d'ordre 2 à coefficients constants, donc la
-solution générale est une combinaison de deux exponentielles ; les conditions de
-continuité aux deux interfaces fixent les amplitudes relatives. La continuité de
-$\psi'$ vient du fait que le potentiel reste fini (il n'y a un saut de dérivée
-que pour un potentiel en pic de Dirac).
-\end{comprendre}
-
-% ------------------------------------------------------------
-\clearpage
-\section*{Vue d'ensemble de l'exposé (pour pouvoir répondre sur tout)}
-
-\textbf{Le fil rouge en quatre phrases.} Nous voulons mesurer le temps que met un
-paquet d'ondes à traverser une barrière par effet tunnel. Pour cela, nous avons
-besoin de deux outils : le paquet gaussien (partie de Myriam) et la transmission
-$T(k)$ des états stationnaires (Myriam aussi). Sheryne montre que notre solveur
-Crank--Nicolson est fiable (norme conservée, temps libre $\tau_0$ retrouvé à
-4\,\% près) et que le paquet se scinde en une partie réfléchie dominante et une
-petite partie transmise. Mattéo montre alors le résultat principal :
-\textbf{le paquet tunnel sort plus tôt que le paquet libre ($\tau_t < \tau_0$),
-c'est l'effet Hartman}, et son comportement face à la barrière (saturation
-avec $a$, diminution avec $V_0$). Il évoque en perspective l'influence des
-caractéristiques du paquet lui-même ($k_0$, $a_{\rm wp}$), explorée mais
-écartée du diaporama par souci de temps.
-
-\textbf{Les nombres à connaître par c\oe ur} (cas de référence $k_0 = 5$,
-$E = 12{,}5$, $V_0 = 15$, $a = 1$, $a_{\rm wp} = 1$) :
-
-\begin{center}
-\begin{tabular}{lcc}
-\toprule
-Grandeur & Numérique & Théorique \\
-\midrule
-Temps libre $\tau_0$ & 0{,}192 & 0{,}200 \\
-Temps tunnel $\tau_t$ & 0{,}112 & 0{,}168 (Hartman) \\
-Transmission & $P_{\rm trans} = 8{,}1\times10^{-2}$ & $|T(k_0)|^2 = 2{,}5\times10^{-2}$ \\
-Saturation de $\tau_t^{\rm th}$ avec $a$ & --- & $\approx 0{,}179$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section*{Questions probables du jury --- éléments de réponse}
-
-\textbf{Refaire le raccordement des états stationnaires au tableau.}
-Voir l'encadré de la diapo 4 ci-dessus : solutions par zone, continuité de
-$\psi$ et $\psi'$ en $0$ et $a$, résolution du système $4\times4$.
-
-\textbf{Pourquoi Crank--Nicolson plutôt qu'Euler explicite ?}
-Parce qu'il est \textbf{unitaire} (la norme, donc la probabilité totale, est
-conservée exactement par le schéma) et \textbf{inconditionnellement stable},
-alors qu'Euler explicite fait exploser la norme. C'est la partie de Sheryne,
-mais chacun doit savoir le dire.
-
-\textbf{Avez-vous étudié l'influence de $k_0$ et $a_{\rm wp}$ ? Les temps
-négatifs violent-ils la causalité ?}
-Oui, nous l'avons fait, mais écarté du diaporama final par souci de temps
-(perspective de la conclusion). Non, pas de violation : le pic du paquet
-transmis n'est pas un objet matériel qui se propage, il est \emph{reconstruit}
-à partir des composantes rapides du spectre, que la barrière favorise
-fortement. Aucune information ne va plus vite que prévu ; c'est un effet de
-filtrage spectral.
-
-\textbf{Pourquoi la probabilité transmise mesurée dépasse-t-elle $|T(k_0)|^2$ ?}
-Parce que le paquet n'est pas monochromatique : il contient des composantes
-$k > k_0$ bien mieux transmises, et $|T|^2$ croît très vite avec $k$. Dans la
-limite quasi monochromatique ($a_{\rm wp}$ grand, $\Delta k$ petit), la mesure
-convergerait vers $|T(k_0)|^2$ --- une piste creusée mais pas gardée dans le
-diaporama.
-
-\textbf{Effet Hartman et superluminalité apparente : que se passe-t-il pour
-$a \to \infty$ ?}
-$\tau_t^{\rm th}$ sature alors que la distance croît : la « vitesse » apparente
-$a/\tau_t$ deviendrait arbitrairement grande. Mais en pratique $|T|^2$ s'effondre
-en $e^{-2\kappa a}$ et la mesure du pic perd son sens bien avant : il n'y a pas
-de transport d'information superluminal.
-
+	\maketitle
+	
+	\subsection*{Répartition des rôles}
+	
+	\begin{center}
+		\begin{tabular}{llc}
+			\toprule
+			Qui & Diapos & Durée visée \\
+			\midrule
+			\textbf{Myriam} & 1, 2, 4--5 : problématique, paquet d'ondes, états stationnaires & $\approx$ 5 min \\
+			Sheryne & 3, 6--9 : motivation, méthode numérique, validation, premiers résultats & $\approx$ 5 min \\
+			Mattéo & 10--13 : effet Hartman, études paramétriques, conclusion & $\approx$ 5,5 min \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	
+	Total : $\approx$ 15,5 minutes, puis 10 minutes de questions. Le texte ci-dessous est à dire
+	à l'oral ; les phrases \textbf{en gras} sont les messages essentiels, à ne jamais
+	sauter même si le temps presse.
+	
+	% ------------------------------------------------------------
+	\diapo{1}{Page de titre (30 secondes)}
+	
+	Bonjour à toutes et à tous. Nous allons vous présenter notre projet numérique de
+	physique moderne, qui porte sur \textbf{l'effet tunnel et le temps de traversée
+		d'une barrière de potentiel} par un paquet d'ondes gaussien à une dimension.
+	
+	Je suis Myriam Bensaid, et je travaille avec Sheryne Ouarghi et Mattéo Knopes.
+	Je vais d'abord poser le problème et les outils théoriques ; Sheryne présentera
+	ensuite la méthode numérique et les premiers résultats ; et Mattéo terminera par
+	l'étude détaillée du temps de traversée et la conclusion.
+	
+	% ------------------------------------------------------------
+	\diapo{2}{Problématique (1 minute)}
+	
+	En mécanique classique, la situation est simple : une particule d'énergie $E$
+	qui arrive sur une barrière de hauteur $V_0$ supérieure à $E$ rebondit, toujours.
+	En mécanique quantique, c'est différent : la particule a une probabilité non
+	nulle de passer de l'autre côté. C'est l'effet tunnel.
+	
+	Notre question centrale va un cran plus loin : \textbf{combien de temps met une
+		particule quantique pour traverser une barrière qu'elle n'a classiquement pas le
+		droit de franchir ?} Cette question paraît innocente, mais elle est encore
+	débattue aujourd'hui, et nous verrons qu'elle réserve des surprises.
+	
+	Notre démarche suit cinq étapes, que vous voyez à l'écran : construire un paquet
+	d'ondes gaussien ; déterminer les états stationnaires de la barrière ; résoudre
+	numériquement l'équation de Schrödinger dépendante du temps ; mesurer le temps de
+	traversée et le comparer à la théorie ; et enfin étudier l'influence des
+	paramètres de la barrière.
+	
+	Tout le projet est en unités adimensionnées, $\hbar = m = 1$ : cela allège les
+	équations sans rien changer à la physique.
+	
+	\begin{comprendre}
+		Pourquoi la question du temps est-elle difficile ? Parce que sous la barrière,
+		l'onde n'oscille pas : elle s'amortit (on dit qu'elle est « évanescente »). Il
+		n'y a donc pas de vitesse de propagation évidente à l'intérieur, et il faut
+		\emph{définir} ce qu'on appelle « temps de traversée ». Nous choisirons une
+		définition opérationnelle : le temps qui sépare le passage du pic du paquet à
+		l'entrée et à la sortie de la barrière.
+	\end{comprendre}
+	
+	Je laisse Sheryne vous montrer d'où vient le paquet d'ondes que nous allons
+	utiliser, avant de revenir pour le détailler.
+	
+	% ------------------------------------------------------------
+	\diapo{4}{Le paquet d'ondes gaussien (1,5 minute)}
+	
+	Merci Sheryne. Passons à la limite continue qu'elle vient d'évoquer : au lieu
+	de superposer trois ondes planes, on en superpose une infinité, pondérées par
+	un poids gaussien $g(k)$ centré sur une valeur moyenne $k_0$ --- c'est
+	l'intégrale à l'écran.
+	
+	\textbf{Ce paquet a quatre propriétés clés.} Un : son centre avance à la vitesse
+	de groupe $v_g = k_0$ dans nos unités --- c'est elle qui joue le rôle de la
+	vitesse de la particule. Deux : les oscillations internes avancent à la vitesse
+	de phase, qui vaut la moitié de $v_g$. Trois : sa largeur spectrale vaut
+	$\Delta k = 1/(2\sqrt{a_{\rm wp}})$, où $a_{\rm wp}$ contrôle la largeur
+	spatiale ; \textbf{plus le paquet est étroit en position, plus il est large en
+		vecteur d'onde} --- c'est exactement le principe d'indétermination de Heisenberg.
+	Quatre : le paquet s'étale au cours du temps, car la relation de dispersion
+	$\omega = k^2/2$ n'est pas linéaire : les composantes rapides prennent de
+	l'avance sur les lentes.
+	
+	Sur la figure de droite, vous voyez les parties réelle et imaginaire du paquet à
+	l'instant initial : des oscillations sous une enveloppe gaussienne.
+	
+	\begin{comprendre}
+		Retenez surtout $\Delta k$ : toute la fin de l'exposé repose dessus. Le paquet
+		n'a pas \emph{une} énergie mais \emph{une plage} d'énergies de largeur liée à
+		$\Delta k$. Or la barrière ne traite pas toutes ces composantes de la même
+		façon : c'est ce « filtrage » qui expliquera les écarts entre nos mesures et la
+		théorie onde plane.
+	\end{comprendre}
+	
+	% ------------------------------------------------------------
+	\diapo{5}{États stationnaires de la barrière (2 minutes --- diapo indispensable)}
+	
+	Deuxième outil, et c'est un point que le jury attend : les états stationnaires.
+	On cherche les solutions d'énergie $E$ fixée, avec $E < V_0$, pour une barrière
+	rectangulaire de hauteur $V_0$ et de largeur $a$.
+	
+	L'espace se découpe en trois zones. Avant la barrière : une onde incidente et une
+	onde réfléchie d'amplitude $R$. Après la barrière : une onde transmise
+	d'amplitude $T$. Et \textbf{dans la barrière, le vecteur d'onde devient
+		imaginaire} : la solution n'est plus oscillante mais exponentielle, en
+	$e^{\pm\kappa x}$, avec $\kappa = \sqrt{2m(V_0 - E)}/\hbar$. C'est l'onde
+	évanescente : l'onde ne se propage pas sous la barrière, elle s'y amortit.
+	
+	Pour relier les trois zones, on impose la continuité de $\psi$ et de sa dérivée
+	en $x = 0$ et en $x = a$ : quatre équations, quatre inconnues. On en tire
+	l'amplitude de transmission $T(k)$ affichée dans l'encadré.
+	
+	Deux conséquences. D'abord, \textbf{$|T|^2$ n'est jamais nul : la transmission
+		est toujours possible}, c'est la signature mathématique de l'effet tunnel.
+	Ensuite, en régime opaque, c'est-à-dire $\kappa a \gg 1$, la transmission décroît
+	comme $e^{-2\kappa a}$ : \textbf{une sensibilité exponentielle à la largeur et à
+		la hauteur de la barrière}. C'est ce qui rend l'effet tunnel si sélectif --- et
+	si utile, par exemple dans le microscope à effet tunnel.
+	
+	Enfin, notez que $T$ est un nombre complexe : il a un module, mais aussi une
+	phase $\varphi_T$. \textbf{Cette phase contient l'information sur le temps de
+		traversée} : Mattéo s'en servira pour construire la prédiction théorique.
+	
+	Je laisse maintenant la parole à Sheryne pour la résolution numérique.
+	
+	\begin{comprendre}
+		Le raccordement est une question classique de jury : il faut savoir le refaire
+		au tableau. La logique : dans chaque zone l'équation de Schrödinger est une
+		équation différentielle linéaire d'ordre 2 à coefficients constants, donc la
+		solution générale est une combinaison de deux exponentielles ; les conditions de
+		continuité aux deux interfaces fixent les amplitudes relatives. La continuité de
+		$\psi'$ vient du fait que le potentiel reste fini (il n'y a un saut de dérivée
+		que pour un potentiel en pic de Dirac).
+	\end{comprendre}
+	
+	% ------------------------------------------------------------
 \end{document}
