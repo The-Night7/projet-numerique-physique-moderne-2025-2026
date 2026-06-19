@@ -57,17 +57,19 @@ $$\tau_{t,\rm num} = t_{\rm sortie,\,tunnel} - t_{\rm entrée}$$
 **Résultats numériques obtenus :**
 
 ```
-t_entree      = 1.999  (attendu 2.000)
-t_sortie libre= 2.191  (attendu 2.200)
-τ_{0,num}     = 0.192      τ_{0,th} = 0.200
+t_entree      = 1.9990  (attendu 2.0000) t_sortie      = 2.1910  (attendu 2.2000)
+τ_{0,num}    = 0.1920
+τ_{0,th}     = a/v_g = 0.2000
 
-t_sortie tunnel = 2.111
-τ_{t,num}       = 0.112
-τ_{t,th} (Hartman) = 0.168    →  τ_t/τ_0 = 0.841 < 1
+t_sortie tunnel   = 2.1110
+τ_{t,num}        = 0.1120
+τ_{t,th} (Hartman) = 0.1678
+τ_{t,th} / τ_{0,th} = 0.839  (< 1 : effet Hartman)
 
-Norme initiale   : 1.000000
-Norme finale     : 1.000000
-Norme transmise  : ~2.5 × 10⁻²  (conforme à |T|² analytique)
+Norme initiale : 1.000000
+Norme finale   : 1.000000
+Norme transmise (paquet numérique) : 8.1132e-02
+|T|² théorique (onde plane k0)      : 2.4705e-02
 ```
 
 $\tau_{t,\rm num} = 0.112 < \tau_{0,\rm num} = 0.192$ : la particule semble traverser la barrière **plus vite** que la particule libre ne traverse la même distance. C'est l'**effet Hartman** (voir partie analytique).
