@@ -13,14 +13,14 @@
 \usepackage{booktabs}
 \usepackage[sfdefault,light]{FiraSans}
 \usepackage{newtxsf}
-\usepackage{animate}
-
-\graphicspath{{figures/}}
 
 \usepackage{tikz}
+\usepackage{animate}
 \usetikzlibrary{tikzmark,arrows.meta}
 \usepackage[many]{tcolorbox}
 \tcbuselibrary{listings,skins}
+
+\graphicspath{{figures/}}
 
 % ----- Style fait main : sobre, papier ivoire, accent bordeaux -----
 \definecolor{encre}{HTML}{2B2B2B}      % texte principal
@@ -370,20 +370,14 @@ def (*\tikzmarknode{codefn}{\color{codeaccent}\bfseries temps\_pic\_en}*)(psi, t
 
 % ------------------------------------------------------------
 \begin{frame}{Évolution face à la barrière}
-	\vspace{-1em} % On force l'animation à remonter coller au titre
-	
-	{\centering
-		\animategraphics[type=png,loop,autoplay,width=0.55\textwidth]{25}{figures/frame-}{000}{119}
-		\par}
-	
-	\vspace{0.5em} % Un tout petit espace de respiration
-	\begin{itemize}
-		\item Le paquet incident se sépare en un paquet \textbf{réfléchi} (dominant)
-		et un paquet \textbf{transmis} de faible amplitude : l'effet tunnel.
-		\item Classiquement, la particule serait réfléchie avec certitude ($E < V_0$).
-		\item Comparaison directe avec le paquet libre (bleu) : même $v_g$,
-		mais amplitudes très différentes.
-	\end{itemize}
+  \includegraphics[width=\textwidth]{Figure_1_evolution.png}
+  \begin{itemize}
+    \item Le paquet incident se sépare en un paquet \textbf{réfléchi} (dominant)
+          et un paquet \textbf{transmis} de faible amplitude : l'effet tunnel.
+    \item Classiquement, la particule serait réfléchie avec certitude ($E < V_0$).
+    \item Comparaison directe avec le paquet libre (bleu) : même $v_g$,
+          mais amplitudes très différentes.
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------
