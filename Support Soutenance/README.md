@@ -1,7 +1,7 @@
 # Support de soutenance
 
-Présentation Beamer (16:9) pour la soutenance orale (22–26 juin), à déposer en PDF
-au plus tard le **vendredi 19 juin à 12h**.
+Présentation Beamer (16:9) pour la soutenance orale (23 juin), à déposer en PDF
+au plus tard le **samedi 20 juin à 12h**.
 
 ## Compilation
 
@@ -20,7 +20,7 @@ recopier les PNG mis à jour.
 > diaporama ; l'idée qu'elles portaient (filtrage spectral) reste mentionnée
 > en perspective sur la diapo de conclusion.
 
-## Plan et minutage suggéré (15 min)
+## Plan et minutage repéré quand je répétais (15 min)
 
 | Diapo | Contenu | Durée |
 |---|---|---|
