@@ -2,7 +2,7 @@
 ## Généralités
 L’équation de Schrödinger étant linéaire, si deux fonctions d’ondes sont solutions (pour un même potentiel), leur somme reste solution et constitue un état possible (superposition d’état qui amène à l’expérience du chat de Schrödinger). À trois dimensions d’espace, l’expression la plus générale d’une telle superposition est un paquet d’ondes d’expression :
 
-$$\Psi(\vec{r}, t) = [2\pi]^{-\frac{3}{2}} \iiint g(vec{k})e^{i\vec{r}\cdot\vec{k}-i\omega t}d³\vec{k}$$
+$$\Psi(\vec{r}, t) = [2\pi]^{-\frac{3}{2}} \iiint g(\vec{k})e^{i\vec{r}\cdot\vec{k}-i\omega t}d³\vec{k}$$
 
 où $\vec{k}$ est le vecteur d'onde et $\vec{r}$ le vecteur position (ou rayon vecteur). <br>
 

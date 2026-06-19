@@ -286,7 +286,8 @@ def main():
     norme_trans = norme(psi_barr[-1, mask_trans], dx)
     print(f"\n  Norme initiale    : {norme_init:.6f}")
     print(f"  Norme finale      : {norme_fin:.6f}")
-    print(f"  Norme transmise   : {norme_trans:.4e}  (|T|²={coeff_transmission(k0,a_b,V0):.4e})")
+    print(f"  Norme transmise (paquet numérique) : {norme_trans:.4e}")
+    print(f"  |T|² théorique (onde plane k0)      : {coeff_transmission(k0,a_b,V0):.4e}")
 
     # --------------------------------------------------------
     # 4.1.d - Influence de la largeur a
