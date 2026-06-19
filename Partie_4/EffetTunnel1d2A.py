@@ -376,7 +376,7 @@ def main():
         fontsize=10,
     )
     plt.tight_layout()
-    plt.savefig("Figure_1_evolution.png", dpi=100)
+    plt.savefig("/Patie 4/Figure_1_evolution.png", dpi=100)
 
     # --- Figure 2 : normes transmise / réfléchie ---
     mask_ref = x < x_b
@@ -401,7 +401,7 @@ def main():
     ax2.legend(fontsize=9)
     ax2.grid(True, linestyle=":")
     plt.tight_layout()
-    plt.savefig("Figure_2_normes.png", dpi=100)
+    plt.savefig("/Patie 4/Figure_2_normes.png", dpi=100)
 
    # --- Figure 3 : influence de a ---
     fig3, axes3 = plt.subplots(1, 2, figsize=(12, 4))
@@ -431,7 +431,7 @@ def main():
     axes3[1].grid(True, linestyle=":")
 
     plt.tight_layout()
-    plt.savefig("Figure_3_influence_a.png", dpi=100)
+    plt.savefig("/Patie 4/Figure_3_influence_a.png", dpi=100)
 
     # --- Figure 4 : influence de V0 ---
     if V0_valid:
@@ -453,7 +453,7 @@ def main():
         axes4[1].grid(True, linestyle=":")
 
         plt.tight_layout()
-        plt.savefig("Figure_4_influence_V0.png", dpi=100)
+        plt.savefig("/Patie 4/Figure_4_influence_V0.png", dpi=100)
 
     if plt.get_backend().lower() != "agg":
         plt.show()
