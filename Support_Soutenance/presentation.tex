@@ -328,9 +328,9 @@ psi[1:-1] = (*\tikzmarknode{codethomas}{\color{codeaccent}\bfseries thomas}*)(
   % mesure t_sortie et t_entrée : c'est elle qui fait tourner la simu et
   % repère où |psi|^2 est maximal, donc elle "contient" les deux temps.
   \[
-    \tikzmarknode{eqtau}{\color{bordeaux}\tau_0^{\text{num}} = t_{\text{sortie}} - t_{\text{entrée}}}
+    \tikzmarknode{eqtau}{\color{bordeaux}\tau_{0,num} = t_{\text{sortie}} - t_{\text{entrée}}}
     \qquad\text{à comparer à}\qquad
-    \tau_0^{\text{th}} = \frac{a}{v_g} = \frac{m\,a}{\hb\,k_0}
+    \tau_0,\text{th} = \frac{a}{v_g} = \frac{m\,a}{\hb\,k_0}
   \]
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
@@ -427,7 +427,7 @@ mask = x > x_b + a_b
 
 % ------------------------------------------------------------
 % Diapo dense (2 minutes, c'est LE résultat du projet) : on relie
-% uniquement tau_t^th = tau_0 + tau_g à la ligne "return tau0 + tau_g".
+% uniquement tau_t,th = tau_0 + tau_g à la ligne "return tau0 + tau_g".
 % On aurait pu aussi relier la formule de phi_T(k) (juste en dessous, en
 % \scriptsize) à la fonction phase_transmission(), mais il n'y a plus de
 % place pour une 2e flèche propre sans traverser tout le bloc, et ça
@@ -450,7 +450,7 @@ mask = x > x_b + a_b
     \begin{column}{0.56\textwidth}
       \begin{block}{Temps de traversée théorique}
         \[
-          \tikzmarknode{eqtaut}{\color{bordeaux}\tau_t^{\text{th}} = \tau_0 + \tau_g}
+          \tikzmarknode{eqtaut}{\color{bordeaux}\tau_{t,th} = \tau_0 + \tau_g}
         \]
         {\scriptsize avec $\varphi_T(k) = -ka
           - \arctan\!\left[\tfrac{\kappa^2 - k^2}{2k\kappa}\tanh(\kappa a)\right]$}
@@ -467,7 +467,7 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
   \end{columns}
   \vspace{-0.3em}
   \textbf{Résultat} ($k_0=5$, $a=1$, $V_0=15$) :
-  $\;\tau_t^{\text{num}} = 0.112 \;<\; \tau_t^{\text{th}} = 0.168 \;<\; \tau_0 = 0.200$
+  $\;\tau_{t,num} = 0.112 \;<\; \tau_{t,th} = 0.168 \;<\; \tau_0 = 0.200$
   — le paquet tunnel sort \emph{plus tôt} que le paquet libre :
   c'est l'\textbf{effet Hartman}.
   % codetaut ne couvre que "tau0 + tau_g", pas le mot-clé "return" qui le
@@ -489,7 +489,7 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
     \includegraphics[width=0.82\textwidth]{Figure_3_influence_a.png}
   \end{center}
   \begin{itemize}
-    \item $\tau_0 \propto a$ (libre) mais $\tau_t^{\text{th}}$ \textbf{sature}
+    \item $\tau_0 \propto a$ (libre) mais $\tau_{t,th}$ \textbf{sature}
           vers $0.179$ dès $\kappa a \gtrsim 3$ : le temps tunnel devient
           indépendant de l'épaisseur (Hartman, 1962).
     \item $|T|^2$ chute exponentiellement ($\sim \eg^{-2\kappa a}$),
@@ -532,7 +532,7 @@ return (*\tikzmarknode{codetaut}{\color{codeaccent}\bfseries tau0 + tau\_g}*)
     \item Le temps de traversée mesuré confirme l'\textbf{effet Hartman} :
           $\tau_t < \tau_0$.
     \item L'effet est robuste aux caractéristiques de la \textbf{barrière} :
-          $\tau_t^{\text{th}}$ sature avec $a$ et \textbf{diminue} avec $V_0$ —
+          $\tau_{t,th}$ sature avec $a$ et \textbf{diminue} avec $V_0$ —
           une barrière plus infranchissable se traverse (rarement) mais
           plus vite.
   \end{itemize}
