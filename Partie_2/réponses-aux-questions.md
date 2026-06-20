@@ -52,16 +52,23 @@ Un paquet d'ondes est gaussien si la fonction de distribution des nombres d'onde
 
 c. En calculant l'intégrale, déterminer l'expression du paquet d'ondes gaussien à l'instant $t$. <br>
 
-L'insertion de $g(k)$ dans l'expression de $\Psi(x,t)$ donne une intégrale gaussienne complexe suivante:
+**c. En calculant l'intégrale, déterminer l'expression du paquet d'ondes gaussien à l'instant $t$.**
 
-$$\Psi(x,t) = \frac{\sqrt{a}}{(2\pi)^{3/4}} \int_{-\infty}^{+\infty} \exp\left[-\frac{a^2(k-k_0)^2}{4} + i\left(kx-\frac{\hbar k^2}{2m}t\right)\right] dk$$
+L'insertion de $g(k)$ dans l'expression de $\Psi(x,t)$ donne l'intégrale gaussienne complexe suivante :
 
+$$\Psi(x,t) = \frac{\sqrt{a}}{(2\pi)^{3/4}} \int_{-\infty}^{+\infty} \exp\left[-\frac{a^2(k-k_0)^2}{4} + \mathrm{i}\left(kx-\frac{\hbar k^2}{2m}t\right)\right] \mathrm{d}k$$
 
- En effectuant l'intégration (généralement via une complétion du carré dans l'exponentielle), on obtient l'expression analytique du paquet d'ondes au cours du temps :
-**$$\Psi(x,t) = \left(\frac{1}{8\pi^3}\right)^{1/4} \sqrt{\frac{4\pi ma}{\alpha(t)}} \exp\left[ -\frac{m(x - v_g t)^2}{\alpha(t)} \right] \exp\left[ i\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$$**
+En effectuant l'intégration par complétion du carré dans l'exponentielle, on obtient l'expression analytique de l'évolution temporelle du paquet d'ondes :
+
+$$\Psi(x,t) = \left(\frac{1}{8\pi^3}\right)^{1/4} \sqrt{\frac{4\pi ma}{\alpha(t)}} \exp\left[ -\frac{m(x - v_g t)^2}{\alpha(t)} \right] \exp\left[ \mathrm{i}\left(k_0 x - \frac{\hbar k_0^2}{2m}t\right) \right]$$
+
 Où :
-*   $v_g = \frac{\hbar k_0}{m}$ est la vitesse de groupe (vitesse classique de la particule).
-*   $\alpha(t) = ma^2 + 2i\hbar t$ est un paramètre complexe traduisant l'étalement temporel du paquet d'ondes.
+* $v_g = \frac{\hbar k_0}{m}$ est la vitesse de groupe (correspondant à la vitesse classique de la particule).
+* $\alpha(t) = ma^2 + 2\mathrm{i}\hbar t$ est le paramètre complexe traduisant l'étalement (dispersion) du paquet au cours du temps.
+
+> **Remarque sur les conventions de notation (Lien Texte / Code) :**
+> Dans la formulation analytique ci-dessus (issue de l'énoncé standard), la largeur initiale du paquet d'ondes en espace dépend de $a$ de manière inverse. Pour faciliter l'implémentation informatique et la lisibilité du code numérique (notamment dans la fonction `GaussWP_centre` des parties suivantes), on effectue un changement de convention en redéfinissant le paramètre de largeur : $a_{\text{code}} = \frac{a^2}{4m}$. 
+> Avec cette convention de programmation, le facteur d'étalement se simplifie sous la forme $\alpha_{\text{code}}(t) = a_{\text{code}} + \mathrm{i}\frac{\hbar t}{2m}$, ce qui élimine les facteurs de masse redondants dans l'enveloppe exponentielle tout en décrivant exactement la même physique.
 
 d. Vérifier que ce paquet d'ondes est normalisé. <br>
 
